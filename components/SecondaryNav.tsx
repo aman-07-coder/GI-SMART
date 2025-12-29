@@ -2,6 +2,7 @@
 
 import { useState, useEffect, useRef } from 'react'
 import Link from 'next/link'
+import { FaExternalLinkAlt } from 'react-icons/fa'
 
 const SecondaryNav = () => {
   const [activeSection, setActiveSection] = useState<string>('curriculum')

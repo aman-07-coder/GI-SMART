@@ -2,6 +2,7 @@
 
 import { useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
+import { FaExternalLinkAlt } from 'react-icons/fa'
 
 const DegreeAccreditation = () => {
   const [expandedSection, setExpandedSection] = useState('recognized')

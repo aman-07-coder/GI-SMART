@@ -1,11 +1,11 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import { FaTarget, FaRocket, FaGlobe } from 'react-icons/fa'
+import { FaBullseye, FaRocket, FaGlobe } from 'react-icons/fa'
 
 const LeadingBeyondClassroom = () => {
   const items = [
-    { title: 'Student-Led Initiatives', description: 'Organize events, workshops, and community projects', icon: FaTarget },
+    { title: 'Student-Led Initiatives', description: 'Organize events, workshops, and community projects', icon: FaBullseye },
     { title: 'Startup Launches', description: 'Build and launch real businesses during your studies', icon: FaRocket },
     { title: 'Global Impact', description: 'Create solutions for real-world problems across continents', icon: FaGlobe },
   ]
