@@ -1,5 +1,7 @@
 'use client'
 
+import { FaExternalLinkAlt } from 'react-icons/fa'
+
 const AdmissionsProcess = () => {
   const steps = [
     {
