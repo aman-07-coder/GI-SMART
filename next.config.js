@@ -38,10 +38,6 @@ const nextConfig = {
     
     return config
   },
-  // Exclude src from page directory
-  experimental: {
-    appDir: true,
-  },
 }
 
 module.exports = nextConfig
