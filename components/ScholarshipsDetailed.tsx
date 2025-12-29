@@ -7,7 +7,7 @@ const undergraduateScholarships = [
   {
     id: 1,
     title: 'The Outliers Scholarship',
-    description: "Celebrating exceptional talents beyond academics. If you're leading in fields like dance, space science, or robotics, this scholarship is designed to propel your unique journey forward at Tetr.",
+    description: "Celebrating exceptional talents beyond academics. If you're leading in fields like dance, space science, or robotics, this scholarship is designed to propel your unique journey forward at GI-SMART.",
     eligibility: 'Recognized in the top 1% in any field.',
     expanded: true,
   },
@@ -87,7 +87,7 @@ const ScholarshipsDetailed = () => {
               transition={{ delay: 0.1 }}
               className="text-lg text-gray-700 mb-8 leading-relaxed"
             >
-              At Tetr, we believe financial barriers should never limit access to exceptional education. To support your journey, we offer 8 merit-based scholarships that recognize your achievements, ensuring your ambitions are fully realized without the burden of financial constraints. Scholarships can cover up to 100% of the tuition fee.
+              At GI-SMART, we believe financial barriers should never limit access to exceptional education. To support your journey, we offer 8 merit-based scholarships that recognize your achievements, ensuring your ambitions are fully realized without the burden of financial constraints. Scholarships can cover up to 100% of the tuition fee.
             </motion.p>
 
             {/* Tabs */}

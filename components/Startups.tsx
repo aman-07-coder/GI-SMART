@@ -2,6 +2,7 @@
 
 import { motion } from 'framer-motion'
 import Link from 'next/link'
+import { FaPlay, FaExternalLinkAlt } from 'react-icons/fa'
 
 const Startups = () => {
   return (
@@ -19,7 +20,7 @@ const Startups = () => {
               <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1522202176988-66273c2fd55f')] bg-cover bg-center" />
               <div className="absolute inset-0 flex items-center justify-center">
                 <div className="w-20 h-20 bg-[#ffd700] rounded-full flex items-center justify-center cursor-pointer hover:scale-110 transition-transform border-4 border-black">
-                  <span className="text-3xl text-black ml-1">▶</span>
+                  <FaPlay className="text-2xl text-black ml-1" />
                 </div>
               </div>
             </div>
@@ -39,10 +40,10 @@ const Startups = () => {
             className="bg-[#1a5d3a] text-white p-12 rounded-lg"
           >
             <h2 className="text-4xl md:text-5xl font-bold mb-6">
-              Projects <span className="italic font-bold">StartUps</span> at <span className="italic font-bold">Tetr</span>
+              Projects <span className="italic font-bold">StartUps</span> at <span className="italic font-bold">GI-SMART</span>
             </h2>
             <p className="text-xl text-white/80 mb-8 leading-relaxed">
-              From idea to <strong>execution</strong>, a sneak peek into the businesses incubated at Tetr.
+              From idea to <strong>execution</strong>, a sneak peek into the businesses incubated at GI-SMART.
             </p>
             <Link href="/startups">
               <motion.button
@@ -51,7 +52,7 @@ const Startups = () => {
                 className="bg-[#ffd700] text-black px-8 py-4 rounded-lg font-bold text-lg border-2 border-black flex items-center gap-2 hover:bg-[#ffed4e] transition-colors"
               >
                 HEAR THEIR STORY
-                <span className="transform rotate-[-45deg]">↗</span>
+                <FaExternalLinkAlt className="transform rotate-[-45deg]" />
               </motion.button>
             </Link>
           </motion.div>

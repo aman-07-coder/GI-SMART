@@ -1,8 +1,15 @@
 'use client'
 
 import { motion } from 'framer-motion'
+import { FaTarget, FaRocket, FaGlobe } from 'react-icons/fa'
 
 const LeadingBeyondClassroom = () => {
+  const items = [
+    { title: 'Student-Led Initiatives', description: 'Organize events, workshops, and community projects', icon: FaTarget },
+    { title: 'Startup Launches', description: 'Build and launch real businesses during your studies', icon: FaRocket },
+    { title: 'Global Impact', description: 'Create solutions for real-world problems across continents', icon: FaGlobe },
+  ]
+
   return (
     <section className="py-24 bg-white relative overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
@@ -16,16 +23,12 @@ const LeadingBeyondClassroom = () => {
             Leading Beyond the <span className="font-extrabold italic">Classroom</span>
           </h2>
           <p className="text-xl md:text-2xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-            Our students don't just learn—they lead. From organizing global events to launching startups, Tetr students are making their mark on the world.
+            Our students don't just learn—they lead. From organizing global events to launching startups, GI-SMART students are making their mark on the world.
           </p>
         </motion.div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {[
-            { title: 'Student-Led Initiatives', description: 'Organize events, workshops, and community projects', icon: '🎯' },
-            { title: 'Startup Launches', description: 'Build and launch real businesses during your studies', icon: '🚀' },
-            { title: 'Global Impact', description: 'Create solutions for real-world problems across continents', icon: '🌍' },
-          ].map((item, index) => (
+          {items.map((item, index) => (
             <motion.div
               key={index}
               initial={{ opacity: 0, y: 50, scale: 0.8 }}
@@ -56,9 +59,9 @@ const LeadingBeyondClassroom = () => {
                 whileInView={{ scale: 1, rotate: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.15 + 0.3, type: 'spring' }}
-                className="text-6xl mb-4 relative z-10"
+                className="mb-4 relative z-10 flex justify-center"
               >
-                {item.icon}
+                {item.icon && <item.icon className="text-6xl text-[#1a5d3a]" />}
               </motion.div>
               <h3 className="text-xl font-bold text-gray-900 mb-3 relative z-10">{item.title}</h3>
               <p className="text-gray-700 relative z-10">{item.description}</p>

@@ -2,6 +2,7 @@
 
 import { motion } from 'framer-motion'
 import Link from 'next/link'
+import { FaExternalLinkAlt } from 'react-icons/fa'
 
 const BachelorAIHero = () => {
   return (
@@ -32,7 +33,7 @@ const BachelorAIHero = () => {
                   className="bg-[#ffd700] text-black px-8 py-4 rounded-lg font-bold text-base md:text-lg flex items-center gap-2 hover:bg-[#ffed4e] transition-all duration-300"
                 >
                   APPLY NOW | DEADLINE: 16TH FEB
-                  <span className="text-sm">↗</span>
+                  <FaExternalLinkAlt className="text-sm" />
                 </motion.button>
               </Link>
               <motion.button
@@ -41,7 +42,7 @@ const BachelorAIHero = () => {
                 className="bg-white text-black px-8 py-4 rounded-lg font-bold text-base md:text-lg hover:bg-gray-100 transition-all duration-300 flex items-center gap-2"
               >
                 DOWNLOAD BROCHURE
-                <span className="text-sm">↗</span>
+                <FaExternalLinkAlt className="text-sm" />
               </motion.button>
             </div>
           </motion.div>

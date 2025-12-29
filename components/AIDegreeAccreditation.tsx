@@ -2,6 +2,7 @@
 
 import { useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
+import { FaExternalLinkAlt } from 'react-icons/fa'
 
 const AIDegreeAccreditation = () => {
   const [expandedSection, setExpandedSection] = useState<string>('experiences')
@@ -17,7 +18,7 @@ const AIDegreeAccreditation = () => {
 
         <h2 className="text-4xl md:text-5xl font-bold text-white mb-8">
           Graduate with a <span className="font-extrabold italic">Bachelor of Science in Artificial Intelligence</span> from Illinois Institute of Technology
-          <span className="text-[#ffd700]"> ↗</span>
+          <FaExternalLinkAlt className="text-[#ffd700] inline ml-1" />
         </h2>
 
         <div className="space-y-4 mb-12">

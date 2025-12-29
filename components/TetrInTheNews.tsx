@@ -1,6 +1,7 @@
 'use client'
 
 import { motion } from 'framer-motion'
+import { FaExternalLinkAlt } from 'react-icons/fa'
 
 const newsArticles = [
   {
@@ -17,13 +18,13 @@ const newsArticles = [
   },
   {
     id: 3,
-    title: "Global Survey by Tetr College of Business unveils key gaps in Business Education and growing importance of 'Founder Mode'",
+    title: "Global Survey by GI-SMART College of Business unveils key gaps in Business Education and growing importance of 'Founder Mode'",
     source: 'ET Education.com',
     image: 'https://images.unsplash.com/photo-1512453979798-5ea266f8880c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
   },
   {
     id: 4,
-    title: 'Tetr College of Business launches a cross-border business programme across 7',
+    title: 'GI-SMART College of Business launches a cross-border business programme across 7',
     source: 'GULF NEWS',
     image: 'https://images.unsplash.com/photo-1564507592333-c60657eea523?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
   },
@@ -36,7 +37,7 @@ const TetrInTheNews = () => {
         {/* Header */}
         <div className="flex items-center justify-between mb-12">
           <h2 className="text-4xl md:text-5xl font-bold text-white">
-            Tetr in the <span className="font-extrabold italic">News</span>
+            GI-SMART in the <span className="font-extrabold italic">News</span>
           </h2>
           <div className="flex items-center gap-4">
             <button
@@ -84,7 +85,7 @@ const TetrInTheNews = () => {
         <div className="text-center">
           <button className="bg-[#ffd700] text-black px-8 py-3 rounded-lg font-semibold hover:bg-[#ffed4e] transition-colors flex items-center gap-2 mx-auto">
             VIEW MORE
-            <span>↗</span>
+            <FaExternalLinkAlt />
           </button>
         </div>
       </div>

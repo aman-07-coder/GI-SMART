@@ -2,6 +2,7 @@
 
 import { motion } from 'framer-motion'
 import Link from 'next/link'
+import { FaExternalLinkAlt } from 'react-icons/fa'
 
 const newsItems = [
   {
@@ -16,12 +17,12 @@ const newsItems = [
   },
   {
     source: 'ET Education.com',
-    title: 'Global Survey by Tetr College of Business unveils key gaps in Business Education and growing importance of \'Founder Mode\'.',
+    title: 'Global Survey by GI-SMART College of Business unveils key gaps in Business Education and growing importance of \'Founder Mode\'.',
     image: 'https://images.unsplash.com/photo-1524178232363-1fb2b075b655',
   },
   {
     source: 'GULF NEWS',
-    title: 'Tetr College of Business launches a cross-border business programme across 7 continents',
+    title: 'GI-SMART College of Business launches a cross-border business programme across 7 continents',
     image: 'https://images.unsplash.com/photo-1522202176988-66273c2fd55f',
   },
 ]
@@ -37,7 +38,7 @@ const TetrNews = () => {
             viewport={{ once: true }}
             className="text-5xl md:text-6xl font-bold text-white"
           >
-            Tetr in the News
+            GI-SMART in the News
           </motion.h2>
           <div className="flex gap-4">
             <button className="w-12 h-12 bg-white/10 hover:bg-white/20 rounded-lg flex items-center justify-center text-white transition-colors">
@@ -66,7 +67,7 @@ const TetrNews = () => {
                   style={{ backgroundImage: `url(${item.image})` }}
                 />
                 <div className="absolute top-4 right-4 w-8 h-8 bg-black rounded flex items-center justify-center">
-                  <span className="text-white text-sm">↗</span>
+                  <FaExternalLinkAlt className="text-white text-sm" />
                 </div>
               </div>
               <div className="p-6">
@@ -85,7 +86,7 @@ const TetrNews = () => {
               className="bg-[#ffd700] text-black px-8 py-4 rounded-lg font-bold text-lg flex items-center gap-2 mx-auto hover:bg-[#ffed4e] transition-colors"
             >
               VIEW MORE
-              <span>↗</span>
+              <FaExternalLinkAlt />
             </motion.button>
           </Link>
         </div>

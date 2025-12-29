@@ -1,6 +1,7 @@
 'use client'
 
 import { motion } from 'framer-motion'
+import { FaCheck, FaPlay } from 'react-icons/fa'
 
 const CareerLabsStudentLife = () => {
   return (
@@ -22,7 +23,7 @@ const CareerLabsStudentLife = () => {
             viewport={{ once: true }}
           >
             <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-6">
-              Career Labs at <span className="font-extrabold italic">Tetr</span>
+              Career Labs at <span className="font-extrabold italic">GI-SMART</span>
             </h2>
             <p className="text-xl md:text-2xl text-gray-600 mb-8 leading-relaxed">
               Get hands-on experience with real companies, build your portfolio, and launch your career before you graduate.
@@ -56,7 +57,7 @@ const CareerLabsStudentLife = () => {
                     whileHover={{ scale: 1.2, rotate: 360 }}
                     className="w-6 h-6 bg-[#1a5d3a] rounded-full flex items-center justify-center flex-shrink-0 mt-1"
                   >
-                    <span className="text-white text-sm font-bold">✓</span>
+                    <FaCheck className="text-white text-sm font-bold" />
                   </motion.div>
                   <motion.span
                     className="text-gray-700 text-lg group-hover:text-[#1a5d3a] transition-colors"
@@ -97,7 +98,7 @@ const CareerLabsStudentLife = () => {
                     animate={{ x: [0, 3, 0] }}
                     transition={{ duration: 1, repeat: Infinity, repeatDelay: 2 }}
                   >
-                    ▶
+                    <FaPlay />
                   </motion.span>
                 </motion.div>
                 <motion.div

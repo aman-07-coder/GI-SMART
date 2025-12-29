@@ -1,6 +1,7 @@
 'use client'
 
 import { motion } from 'framer-motion'
+import { FaPlay } from 'react-icons/fa'
 
 const BehindScenes = () => {
   return (
@@ -26,13 +27,13 @@ const BehindScenes = () => {
             viewport={{ once: true }}
           >
             <h2 className="text-5xl md:text-6xl font-bold text-gray-900 mb-6">
-              Go Behind the Scenes at <span className="font-bold">Tetr</span>
+              Go Behind the Scenes at <span className="font-bold">GI-SMART</span>
             </h2>
             <p className="text-xl text-gray-700 mb-4 font-semibold">
-              The story behind Tetr
+              The story behind GI-SMART
             </p>
             <p className="text-lg text-gray-600 leading-relaxed">
-              Our Leaders discuss how Tetr is redefining education through 'learning by doing'.
+              Our Leaders discuss how GI-SMART is redefining education through 'learning by doing'.
             </p>
           </motion.div>
 
@@ -50,7 +51,7 @@ const BehindScenes = () => {
                   whileHover={{ scale: 1.1 }}
                   className="w-20 h-20 bg-[#ffd700] rounded-full flex items-center justify-center shadow-lg"
                 >
-                  <span className="text-3xl text-black ml-1">▶</span>
+                  <FaPlay className="text-2xl text-black ml-1" />
                 </motion.div>
               </div>
             </div>

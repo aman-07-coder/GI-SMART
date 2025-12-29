@@ -2,6 +2,7 @@
 
 import { useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
+import { FaExternalLinkAlt } from 'react-icons/fa'
 
 const CurriculumSection = () => {
   const [activeTerm, setActiveTerm] = useState<number | string>(1)
@@ -12,7 +13,7 @@ const CurriculumSection = () => {
       id: 1,
       type: 'term',
       location: 'Dubai',
-      badges: ['TETR BASE CAMP'],
+      badges: ['GI-SMART BASE CAMP'],
       termProject: 'Build an eCommerce dropshipping business selling globally sourced products to audiences in the Middle East. Target a revenue of $10,000.',
       cohortLink: 'REVIEW COHORT 1 PROGRESS',
       courses: [
@@ -30,7 +31,7 @@ const CurriculumSection = () => {
       id: 2,
       type: 'term',
       location: 'India',
-      badges: ['TETR BASE CAMP', 'FITT-IIT IMMERSION'],
+      badges: ['GI-SMART BASE CAMP', 'FITT-IIT IMMERSION'],
       termProject: 'Launch a Consumer brand in food, clothing, or accessories catering to the suburban audiences in India. Target 5 SKUs, $25,000 in revenue & a margin of 30%.',
       cohortLink: 'REVIEW COHORT 1 PROGRESS',
       courses: [
@@ -53,7 +54,7 @@ const CurriculumSection = () => {
       id: 3,
       type: 'term',
       location: 'Singapore & Malaysia',
-      badges: ['TETR BASE CAMP'],
+      badges: ['GI-SMART BASE CAMP'],
       termProject: 'Start a Kickstarter campaign to sell a hardware product that you\'ve designed to solve a critical problem identified using design thinking. Target to raise a minimum of $20,000 from a minimum of 100 backers.',
       cohortLink: 'REVIEW COHORT 1 PROGRESS',
       courses: [
@@ -69,7 +70,7 @@ const CurriculumSection = () => {
       id: 4,
       type: 'term',
       location: 'Ghana',
-      badges: ['TETR BASE CAMP'],
+      badges: ['GI-SMART BASE CAMP'],
       termProject: 'Pilot an NGO focused on addressing a local cause in Ghana, emphasising community engagement, and positive impact. Target to touch at least 200 local lives through partnerships, & fundraising.',
       cohortLink: 'REVIEW COHORT 1 PROGRESS',
       courses: [
@@ -90,7 +91,7 @@ const CurriculumSection = () => {
       id: 5,
       type: 'term',
       location: 'United States*',
-      badges: ['TETR BASE CAMP', 'CORNELL UNIVERSITY IMMERSION'],
+      badges: ['GI-SMART BASE CAMP', 'CORNELL UNIVERSITY IMMERSION'],
       termProject: 'Build a tech startup to solve a problem you identified during your travels – leveraging Silicon Valley ecosystem, network, and resources.',
       cohortLink: 'REVIEW COHORT 1 PROGRESS',
       courses: [
@@ -106,7 +107,7 @@ const CurriculumSection = () => {
       id: 6,
       type: 'term',
       location: 'Argentina',
-      badges: ['TETR BASE CAMP'],
+      badges: ['GI-SMART BASE CAMP'],
       termProject: 'Launch a green initiatives to further sustainable practices or products within the realm of renewables, electric vehicles, carbon credits, or wildlife conservation. Target to offset at least 1000 Kgs of CO2.',
       cohortLink: 'REVIEW COHORT 1 PROGRESS',
       courses: [
@@ -122,7 +123,7 @@ const CurriculumSection = () => {
       id: 7,
       type: 'term',
       location: 'Europe',
-      badges: ['TETR BASE CAMP', 'INSEAD IMMERSION'],
+      badges: ['GI-SMART BASE CAMP', 'INSEAD IMMERSION'],
       termProject: 'Build a YouTube channel in a niche of your choice, create a loyal community, build creator partnerships and strike brand deals. Target at least 50 content pieces, 20,000 subscribers, & 2 brand deals.',
       cohortLink: 'REVIEW COHORT 1 PROGRESS',
       courses: [
@@ -248,7 +249,7 @@ const CurriculumSection = () => {
                                 className="text-[#1a5d3a] font-semibold text-sm hover:underline flex items-center gap-1"
                               >
                                 {term.cohortLink}
-                                <span>↗</span>
+                                <FaExternalLinkAlt />
                               </a>
                             )}
                           </div>

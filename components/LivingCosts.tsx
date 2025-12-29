@@ -59,7 +59,7 @@ const LivingCosts = () => {
             </div>
 
             <p className="text-sm text-gray-500 mt-8 italic">
-              *The above mentioned costs are indicative, do not account for food and personal preferences. These costs are handled by Tetr and collected as part of the fees.
+              *The above mentioned costs are indicative, do not account for food and personal preferences. These costs are handled by GI-SMART and collected as part of the fees.
             </p>
           </div>
         </div>

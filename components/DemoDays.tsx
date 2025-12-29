@@ -2,11 +2,12 @@
 
 import { motion } from 'framer-motion'
 import { useState } from 'react'
+import { FaPlay } from 'react-icons/fa'
 
 const categories = [
   { id: 'pitch', label: 'Pitch Please', subtitle: '(Reality Show)', active: true },
   { id: 'brand', label: 'Brand Wars', subtitle: '(D2C Challenge)', active: false },
-  { id: 'tank', label: 'Tetr Tank', subtitle: '(Dropshipping Challenge)', active: false },
+  { id: 'tank', label: 'GI-SMART Tank', subtitle: '(Dropshipping Challenge)', active: false },
 ]
 
 const videos = [
@@ -16,7 +17,7 @@ const videos = [
     description: 'Watch founders from 45 nations hustle, adapt, and pitch their way to D2C success in India.',
     category: 'pitch',
     image: 'https://images.unsplash.com/photo-1522202176988-66273c2fd55f',
-    badge: 'CO-CREATED BY TETR & WTF',
+    badge: 'CO-CREATED BY GI-SMART & WTF',
     badgeText: 'PITCH PLEASE',
   },
   {
@@ -110,7 +111,7 @@ const DemoDays = () => {
                     whileHover={{ scale: 1.1 }}
                     className="w-16 h-16 bg-[#ffd700] rounded-full flex items-center justify-center shadow-lg opacity-0 group-hover:opacity-100 transition-opacity"
                   >
-                    <span className="text-2xl text-black ml-1">▶</span>
+                    <FaPlay className="text-xl text-black ml-1" />
                   </motion.div>
                 </div>
               </div>

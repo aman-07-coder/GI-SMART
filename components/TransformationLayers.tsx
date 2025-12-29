@@ -23,7 +23,7 @@ const TransformationLayers = () => {
           className="text-center mb-16"
         >
           <h2 className="text-5xl md:text-6xl font-bold text-white mb-4">
-            Tetr Transformation Layers: Rooted in Science & First Principles
+            GI-SMART Transformation Layers: Rooted in Science & First Principles
           </h2>
           <p className="text-xl text-white/80">
             Our curriculum is structured around four key tenets.
@@ -81,7 +81,7 @@ const TransformationLayers = () => {
                   Focus on <span className="italic">applicable skills</span> instead of rote memorization
                 </h3>
                 <p className="text-lg text-white/90 mb-6 leading-relaxed">
-                  Tetr's curriculum is rooted in <strong>Workshops</strong>, where students learn applied skills in a real world context from experienced practitioners.
+                  GI-SMART's curriculum is rooted in <strong>Workshops</strong>, where students learn applied skills in a real world context from experienced practitioners.
                 </p>
                 <ul className="space-y-4 text-white/90">
                   <li className="flex items-start gap-3">

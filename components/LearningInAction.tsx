@@ -1,6 +1,7 @@
 'use client'
 
 import { motion } from 'framer-motion'
+import { FaExternalLinkAlt } from 'react-icons/fa'
 
 const LearningInAction = () => {
   const projects = [
@@ -64,7 +65,7 @@ const LearningInAction = () => {
               <div className="text-[#1a5d3a] font-semibold">Review Cohort 1 Progress</div>
             </div>
             <div className="w-8 h-8 bg-purple-600 rounded flex items-center justify-center text-white font-bold">
-              ↗
+              <FaExternalLinkAlt />
             </div>
           </div>
 
@@ -85,7 +86,7 @@ const LearningInAction = () => {
                 <div className={`absolute bottom-2 right-2 w-8 h-8 rounded flex items-center justify-center text-white font-bold ${
                   project.color === 'pink' ? 'bg-pink-500' : 'bg-blue-500'
                 }`}>
-                  ↗
+                  <FaExternalLinkAlt />
                 </div>
               </div>
               <div className="p-4">

@@ -2,6 +2,7 @@
 
 import { motion } from 'framer-motion'
 import Link from 'next/link'
+import { FaExternalLinkAlt } from 'react-icons/fa'
 
 const ContactSection = () => {
   return (
@@ -48,14 +49,14 @@ const ContactSection = () => {
 
                 <div className="space-y-6 mb-8">
                   <div>
-                    <div className="font-semibold mb-2">TETR INC (USA):</div>
+                    <div className="font-semibold mb-2">GI-SMART INC (USA):</div>
                     <div className="text-white/90 text-sm">
                       121 Stewart St Apt 803,<br />
                       Seattle, WA 98101
                     </div>
                   </div>
                   <div>
-                    <div className="font-semibold mb-2">TETR L.L.C-FZ (UAE):</div>
+                    <div className="font-semibold mb-2">GI-SMART L.L.C-FZ (UAE):</div>
                     <div className="text-white/90 text-sm">
                       Meydan Grandstand,<br />
                       6th Floor, Meydan Road,<br />
@@ -63,14 +64,14 @@ const ContactSection = () => {
                     </div>
                   </div>
                   <div>
-                    <div className="font-semibold mb-2">TETR (INDIA):</div>
+                    <div className="font-semibold mb-2">GI-SMART (INDIA):</div>
                     <div className="text-white/90 text-sm">
                       383 Udyog Vihar Phase 3,<br />
                       Gurgaon, Haryana 122008
                     </div>
                   </div>
                   <div>
-                    <div className="font-semibold mb-2">TETR LIMITED (UK):</div>
+                    <div className="font-semibold mb-2">GI-SMART LIMITED (UK):</div>
                     <div className="text-white/90 text-sm">
                       3A Station Road, Amersham,<br />
                       Buckinghamshire HP7 OBQ
@@ -105,20 +106,20 @@ const ContactSection = () => {
               <div className="space-y-6">
                 <div>
                   <p className="text-white/90 mb-2">For UG admission-related inquiries, please contact us at:</p>
-                  <Link href="mailto:studentsupport-ug@tetr.org" className="text-[#ffd700] underline">
-                    studentsupport-ug@tetr.org
+                  <Link href="mailto:studentsupport-ug@GI-SMART.org" className="text-[#ffd700] underline">
+                    studentsupport-ug@GI-SMART.org
                   </Link>
                 </div>
                 <div>
                   <p className="text-white/90 mb-2">For PG admission-related inquiries, please contact us at:</p>
-                  <Link href="mailto:studentsupport-pg@tetr.com" className="text-[#ffd700] underline">
-                    studentsupport-pg@tetr.com
+                  <Link href="mailto:studentsupport-pg@GI-SMART.com" className="text-[#ffd700] underline">
+                    studentsupport-pg@GI-SMART.com
                   </Link>
                 </div>
                 <div>
                   <p className="text-white/90 mb-2">For general inquiries, reach out to:</p>
-                  <Link href="mailto:info@tetr.org" className="text-[#ffd700] underline">
-                    info@tetr.org
+                  <Link href="mailto:info@GI-SMART.org" className="text-[#ffd700] underline">
+                    info@GI-SMART.org
                   </Link>
                 </div>
               </div>
@@ -134,7 +135,7 @@ const ContactSection = () => {
                     className="bg-white/10 hover:bg-white/20 p-4 rounded-lg cursor-pointer flex items-center justify-between transition-colors"
                   >
                     <span className="text-lg font-semibold">Bachelor's Admissions Counsellor</span>
-                    <span className="text-[#ffd700]">↗</span>
+                    <FaExternalLinkAlt className="text-[#ffd700]" />
                   </motion.div>
                 </Link>
                 <Link href="/consultation/masters">
@@ -143,7 +144,7 @@ const ContactSection = () => {
                     className="bg-white/10 hover:bg-white/20 p-4 rounded-lg cursor-pointer flex items-center justify-between transition-colors"
                   >
                     <span className="text-lg font-semibold">Master's Admissions Counsellor</span>
-                    <span className="text-[#ffd700]">↗</span>
+                    <FaExternalLinkAlt className="text-[#ffd700]" />
                   </motion.div>
                 </Link>
               </div>

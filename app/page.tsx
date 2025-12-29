@@ -2,6 +2,8 @@ import Navbar from '@/components/Navbar'
 import Hero from '@/components/Hero'
 import Curriculum from '@/components/Curriculum'
 import ExplorePrograms from '@/components/ExplorePrograms'
+import FourCampuses from '@/components/FourCampuses'
+import WhyChooseGI from '@/components/WhyChooseGI'
 import UniversityCollaborations from '@/components/UniversityCollaborations'
 import TetrWay from '@/components/TetrWay'
 import EducationTetrWay from '@/components/EducationTetrWay'
@@ -11,7 +13,6 @@ import BuildBusinesses from '@/components/BuildBusinesses'
 import CareerLabs from '@/components/CareerLabs'
 import BehindScenes from '@/components/BehindScenes'
 import TetrTalks from '@/components/TetrTalks'
-import LearningInAction from '@/components/LearningInAction'
 import Mentorship from '@/components/Mentorship'
 import TetrLaunchpad from '@/components/TetrLaunchpad'
 import DemoDays from '@/components/DemoDays'
@@ -30,6 +31,8 @@ export default function Home() {
       <Hero />
       <Curriculum />
       <ExplorePrograms />
+      <FourCampuses />
+      <WhyChooseGI />
       <UniversityCollaborations />
       <TetrWay />
       <EducationTetrWay />
@@ -39,7 +42,6 @@ export default function Home() {
       <CareerLabs />
       <BehindScenes />
       <TetrTalks />
-      <LearningInAction />
       <Mentorship />
       <TetrLaunchpad />
       <DemoDays />

@@ -1,6 +1,5 @@
 import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
-import SecondaryNav from '@/components/SecondaryNav'
 import BachelorAIHero from '@/components/BachelorAIHero'
 import ProgramOverview from '@/components/ProgramOverview'
 import AICurriculumSection from '@/components/AICurriculumSection'
@@ -21,7 +20,6 @@ export default function BachelorScienceAIPage() {
   return (
     <main className="min-h-screen bg-white">
       <Navbar />
-      <SecondaryNav />
       <BachelorAIHero />
       <ProgramOverview />
       <AICurriculumSection />

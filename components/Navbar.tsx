@@ -35,16 +35,17 @@ const Navbar = () => {
   }, [isProgramsDropdownOpen])
 
   const programsMenuItems = [
-    { href: '/programs/bachelor-management-technology', label: 'Bachelor of Management & Technology' },
+    { href: '/programs/bachelor-ai-design', label: 'Bachelor of Artificial Intelligence Design (BAID)' },
     { href: '/programs/bachelor-science-ai', label: 'Bachelor of Science in Artificial Intelligence' },
-    { href: '/programs/master-management-technology', label: 'Master in Management of Technology' },
-    { href: '/programs/high-school-gap-year', label: 'High School & Gap Year Programs' },
+    { href: '/programs/master-applied-ai-data-systems', label: 'MSc in Applied AI & Data Systems' },
+    { href: '/programs/bachelor-tourism-hospitality', label: 'BBA in Tourism & Hospitality Innovation' },
+    { href: '/programs/bachelor-strategic-management', label: 'BSc in Strategic Management' },
   ]
 
   const overviewMenuItems = [
     { href: '/programs/curriculum', label: 'Curriculum' },
     { href: '/programs/accreditation', label: 'Accreditation' },
-    { href: '/programs/week-at-tetr', label: 'Week at Tetr' },
+    { href: '/programs/week-at-GI-SMART', label: 'Week at GI-SMART' },
     { href: '/programs/courses', label: 'Courses' },
     { href: '/programs/faculty', label: 'Faculty' },
     { href: '/programs/admission', label: 'Admission' },
@@ -54,8 +55,8 @@ const Navbar = () => {
     { href: '/', label: 'HOME' },
     { href: '/about', label: 'ABOUT' },
     { href: '/programs', label: 'PROGRAMS', hasDropdown: true },
-    { href: '/faculty', label: 'FACULTY' },
-    { href: '/student-life', label: 'STUDENT LIFE' },
+    { href: '/admissions', label: 'ADMISSIONS' },
+    { href: '/international', label: 'INTERNATIONAL' },
   ]
 
   return (
@@ -75,7 +76,7 @@ const Navbar = () => {
             {/* Logo */}
             <Link href="/" className="flex items-center gap-3">
               <img 
-                src="/gi-removebg-preview.png" 
+                src="/gi-smart.jpeg" 
                 alt="GI-SMART Logo" 
                 className="h-12 w-auto object-contain"
               />
@@ -95,7 +96,6 @@ const Navbar = () => {
                         }`}
                       >
                         {link.label}
-                        <span className="text-xs">▼</span>
                       </button>
                       <AnimatePresence>
                         {isProgramsDropdownOpen && (

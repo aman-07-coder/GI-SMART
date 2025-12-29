@@ -2,6 +2,7 @@
 
 import { useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
+import { FaExternalLinkAlt } from 'react-icons/fa'
 
 const AICurriculumSection = () => {
   const [activeTerm, setActiveTerm] = useState<number | string>(1)
@@ -12,7 +13,7 @@ const AICurriculumSection = () => {
       id: 1,
       type: 'term',
       location: 'Dubai',
-      badges: ['TETR BASE CAMP'],
+      badges: ['GI-SMART BASE CAMP'],
       termProject: 'Build a tech-driven ecommerce platform that integrates AI-powered product recommendations, virtual try-ons, and real-time inventory management. Target a revenue of $10,000 over at least 5 SKUs.',
       cohortLink: 'REVIEW COHORT 1 PROGRESS',
       courses: [
@@ -30,7 +31,7 @@ const AICurriculumSection = () => {
       id: 2,
       type: 'term',
       location: 'India',
-      badges: ['TETR BASE CAMP', 'FITT-IIT IMMERSION'],
+      badges: ['GI-SMART BASE CAMP', 'FITT-IIT IMMERSION'],
       termProject: 'Develop a SaaS platform tailored for small retail stores to manage daily sales, expenses, and customer credits through a digital ledger and analytics dashboard. Aim to onboard 10 stores, achieve a 90% weekly user engagement rate.',
       cohortLink: 'REVIEW COHORT 1 PROGRESS',
       courses: [
@@ -53,7 +54,7 @@ const AICurriculumSection = () => {
       id: 3,
       type: 'term',
       location: 'Singapore & Malaysia',
-      badges: ['TETR BASE CAMP'],
+      badges: ['GI-SMART BASE CAMP'],
       termProject: 'Program a drone to navigate a simulated environment autonomously, using sensors for obstacle detection and path planning. The drone should be tested in 5+ realistic simulations.',
       cohortLink: 'REVIEW COHORT 1 PROGRESS',
       courses: [
@@ -71,7 +72,7 @@ const AICurriculumSection = () => {
       id: 4,
       type: 'term',
       location: 'Ghana',
-      badges: ['TETR BASE CAMP'],
+      badges: ['GI-SMART BASE CAMP'],
       termProject: 'Develop an AI app that identifies and matches NGOs with donors based on shared goals and impact metrics. Onboard at least five NGOs and facilitate a 25% increase in donation amounts within the first quarter.',
       cohortLink: 'REVIEW COHORT 1 PROGRESS',
       courses: [
@@ -94,7 +95,7 @@ const AICurriculumSection = () => {
       id: 5,
       type: 'term',
       location: 'Europe',
-      badges: ['TETR BASE CAMP', 'INSEAD IMMERSION'],
+      badges: ['GI-SMART BASE CAMP', 'INSEAD IMMERSION'],
       termProject: 'Develop an AI-driven platform to create engaging, localized content for diverse European markets and Integrate translation and localization tools. Generate content across 10+ European languages, ensuring 95% localization accuracy.',
       cohortLink: 'REVIEW COHORT 1 PROGRESS',
       courses: [
@@ -112,7 +113,7 @@ const AICurriculumSection = () => {
       id: 6,
       type: 'term',
       location: 'United States',
-      badges: ['TETR BASE CAMP'],
+      badges: ['GI-SMART BASE CAMP'],
       termProject: 'Build a tech startup to solve a problem you identified during your travels – leveraging Silicon Valley ecosystem, network, and resources.',
       cohortLink: 'REVIEW COHORT 1 PROGRESS',
       courses: [
@@ -255,7 +256,7 @@ const AICurriculumSection = () => {
                                   className="text-[#1a5d3a] font-semibold text-sm hover:underline flex items-center gap-1"
                                 >
                                   {term.cohortLink}
-                                  <span>↗</span>
+                                  <FaExternalLinkAlt />
                                 </a>
                               )}
                             </div>

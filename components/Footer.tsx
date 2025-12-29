@@ -1,6 +1,7 @@
 'use client'
 
 import Link from 'next/link'
+import { FaExternalLinkAlt, FaInstagram, FaPlay, FaLinkedin } from 'react-icons/fa'
 
 const Footer = () => {
   return (
@@ -20,7 +21,7 @@ const Footer = () => {
             <Link href="/admissions">
               <button className="bg-[#ffd700] text-black px-6 py-3 rounded-lg font-semibold text-sm flex items-center gap-2 hover:bg-[#ffed4e] transition-colors mb-8">
                 APPLY NOW
-                <span>↗</span>
+                <FaExternalLinkAlt />
               </button>
             </Link>
           </div>
@@ -61,44 +62,26 @@ const Footer = () => {
           <div>
             <h4 className="font-semibold mb-4 text-sm">Experiences</h4>
             <ul className="space-y-2">
-              <li><Link href="/experiences" className="text-white/70 hover:text-white text-sm transition-colors">Experiences at Tetr</Link></li>
+              <li><Link href="/experiences" className="text-white/70 hover:text-white text-sm transition-colors">Experiences at GI-SMART</Link></li>
               <li><Link href="/experiences/kickstarter" className="text-white/70 hover:text-white text-sm transition-colors">Kickstarter</Link></li>
               <li><Link href="/experiences/dropshipping" className="text-white/70 hover:text-white text-sm transition-colors">Dropshipping</Link></li>
             </ul>
           </div>
         </div>
 
-        {/* QS Award Section */}
+        {/* Social Media Section */}
         <div className="border-t border-white/20 pt-8 mb-8">
-          <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
-            <div className="flex items-center gap-6">
-              <div>
-                <div className="text-white font-bold text-lg mb-1">QS Gold Winner</div>
-                <div className="text-white/80 text-sm">Most Innovative Business School of 2025</div>
-              </div>
-              <div className="relative">
-                <div className="w-20 h-20 bg-gradient-to-br from-yellow-400 via-yellow-500 to-yellow-600 rounded-lg flex items-center justify-center shadow-lg border-2 border-yellow-300">
-                  <div className="text-center p-2">
-                    <div className="text-black font-bold text-sm leading-tight mb-0.5">QS</div>
-                    <div className="text-black text-[9px] leading-tight">Top Business</div>
-                    <div className="text-black text-[9px] leading-tight">School</div>
-                    <div className="text-black text-[9px] font-bold leading-tight mt-0.5">2025</div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            {/* Social Media */}
-            <div className="flex flex-col gap-4 items-end">
+          <div className="flex flex-col md:flex-row items-start md:items-center justify-end gap-6">
+            <div className="flex flex-col gap-4 items-start md:items-end">
               <div className="flex gap-3">
                 <a href="#" className="w-10 h-10 bg-white/10 hover:bg-white/20 rounded-lg flex items-center justify-center transition-colors">
-                  <span className="text-white text-xl">📷</span>
+                  <FaInstagram className="text-white text-xl" />
                 </a>
                 <a href="#" className="w-10 h-10 bg-white/10 hover:bg-white/20 rounded-lg flex items-center justify-center transition-colors">
-                  <span className="text-white text-xl">▶</span>
+                  <FaPlay className="text-white text-xl" />
                 </a>
                 <a href="#" className="w-10 h-10 bg-white/10 hover:bg-white/20 rounded-lg flex items-center justify-center transition-colors">
-                  <span className="text-white font-semibold">in</span>
+                  <FaLinkedin className="text-white text-xl" />
                 </a>
               </div>
               <div className="text-white/80 text-sm">

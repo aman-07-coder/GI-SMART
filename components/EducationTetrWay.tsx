@@ -1,6 +1,7 @@
 'use client'
 
 import { motion } from 'framer-motion'
+import { FaPlay, FaBriefcase, FaGlobe } from 'react-icons/fa'
 
 const EducationTetrWay = () => {
   return (
@@ -13,7 +14,7 @@ const EducationTetrWay = () => {
           className="text-center mb-16"
         >
           <h2 className="text-5xl md:text-6xl font-bold text-white mb-4">
-            Education The Tetr Way
+            Education The GI-SMART Way
           </h2>
         </motion.div>
 
@@ -29,7 +30,7 @@ const EducationTetrWay = () => {
               <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1524178232363-1fb2b075b655')] bg-cover bg-center" />
               <div className="absolute inset-0 flex items-center justify-center">
                 <div className="w-20 h-20 bg-[#ffd700] rounded-full flex items-center justify-center cursor-pointer hover:scale-110 transition-transform">
-                  <span className="text-3xl text-black ml-1">▶</span>
+                  <FaPlay className="text-2xl text-black ml-1" />
                 </div>
               </div>
             </div>
@@ -47,7 +48,7 @@ const EducationTetrWay = () => {
               <div className="flex-shrink-0">
                 <div className="w-1 h-full bg-[#ff69b4] ml-2" />
                 <div className="w-12 h-12 bg-[#ff69b4] rounded-lg flex items-center justify-center -mt-6">
-                  <span className="text-2xl">💼</span>
+                  <FaBriefcase className="text-2xl text-white" />
                 </div>
               </div>
               <div className="flex-1 text-white">
@@ -74,7 +75,7 @@ const EducationTetrWay = () => {
               <div className="flex-shrink-0">
                 <div className="w-1 h-full bg-[#ff69b4] ml-2" />
                 <div className="w-12 h-12 bg-[#ff69b4] rounded-lg flex items-center justify-center -mt-6">
-                  <span className="text-2xl">🌍</span>
+                  <FaGlobe className="text-2xl text-white" />
                 </div>
               </div>
               <div className="flex-1 text-white">

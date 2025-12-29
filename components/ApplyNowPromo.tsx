@@ -21,7 +21,7 @@ const promoImages = [
   },
   {
     image: 'https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
-    caption: 'Turn Ideas Into Reality With Tetr Launchpad',
+    caption: 'Turn Ideas Into Reality With GI-SMART Launchpad',
   },
   {
     image: 'https://images.unsplash.com/photo-1521737604893-d14cc237f11d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
@@ -38,7 +38,7 @@ const ApplyNowPromo = () => {
       className="space-y-8"
     >
       <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 leading-tight">
-        Join Tetr Where The <span className="font-extrabold italic">World Is Your Classroom</span>
+        Join GI-SMART Where The <span className="font-extrabold italic">World Is Your Classroom</span>
       </h1>
 
       <div className="grid grid-cols-2 gap-4">

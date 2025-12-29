@@ -6,8 +6,8 @@ import { motion, AnimatePresence } from 'framer-motion'
 const faqs = [
   {
     id: 'process',
-    question: 'How long does the Tetr application process take?',
-    answer: 'The initial registration is a quick 30 minute process, followed by The Tetr Trial lasting approximately 75 minutes. The final interview, which is an essential part of the process, typically lasts around 30 minutes.',
+    question: 'How long does the GI-SMART application process take?',
+    answer: 'The initial registration is a quick 30 minute process, followed by The GI-SMART Trial lasting approximately 75 minutes. The final interview, which is an essential part of the process, typically lasts around 30 minutes.',
   },
   {
     id: 'prepare',
@@ -17,7 +17,7 @@ const faqs = [
   {
     id: 'internships',
     question: 'Are there opportunities for internships or work experience during the program?',
-    answer: 'Yes! Tetr offers extensive internship opportunities through our Career Labs program. Students can intern during terms (evenings and weekends) and during summer breaks, gaining real-world experience across multiple countries.',
+    answer: 'Yes! GI-SMART offers extensive internship opportunities through our Career Labs program. Students can intern during terms (evenings and weekends) and during summer breaks, gaining real-world experience across multiple countries.',
   },
   {
     id: 'host-countries',
@@ -26,13 +26,13 @@ const faqs = [
   },
   {
     id: 'financial',
-    question: 'Does Tetr provide financial assistance?',
-    answer: 'Yes, Tetr offers multiple scholarship programs covering up to 100% of tuition fees. These include merit-based scholarships, need-based aid, and specialized scholarships for entrepreneurs, community leaders, and exceptional talents.',
+    question: 'Does GI-SMART provide financial assistance?',
+    answer: 'Yes, GI-SMART offers multiple scholarship programs covering up to 100% of tuition fees. These include merit-based scholarships, need-based aid, and specialized scholarships for entrepreneurs, community leaders, and exceptional talents.',
   },
   {
     id: 'job-support',
-    question: 'What kind of job support does Tetr provide?',
-    answer: 'Tetr provides comprehensive career support including resume building, interview preparation, networking opportunities with 100+ hiring partners, career counseling, and access to exclusive job postings from top companies worldwide.',
+    question: 'What kind of job support does GI-SMART provide?',
+    answer: 'GI-SMART provides comprehensive career support including resume building, interview preparation, networking opportunities with 100+ hiring partners, career counseling, and access to exclusive job postings from top companies worldwide.',
   },
   {
     id: 'faculty-travel',

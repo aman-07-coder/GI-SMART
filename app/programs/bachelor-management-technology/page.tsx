@@ -1,6 +1,5 @@
 import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
-import SecondaryNav from '@/components/SecondaryNav'
 import BachelorProgramHero from '@/components/BachelorProgramHero'
 import CurriculumSection from '@/components/CurriculumSection'
 import DegreeAccreditation from '@/components/DegreeAccreditation'
@@ -20,7 +19,6 @@ export default function BachelorManagementTechnologyPage() {
   return (
     <main className="min-h-screen bg-white">
       <Navbar />
-      <SecondaryNav />
       <BachelorProgramHero />
       <CurriculumSection />
       <DegreeAccreditation />

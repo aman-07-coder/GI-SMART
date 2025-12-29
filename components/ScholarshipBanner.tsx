@@ -1,6 +1,7 @@
 'use client'
 
 import { motion } from 'framer-motion'
+import { FaVolumeUp } from 'react-icons/fa'
 
 const ScholarshipBanner = () => {
   return (
@@ -16,10 +17,10 @@ const ScholarshipBanner = () => {
           transition={{ duration: 2, repeat: Infinity }}
           className="text-2xl"
         >
-          🔊
+          <FaVolumeUp />
         </motion.div>
         <p className="text-white font-medium">
-          Tetr scholarships cover up to 100% of the tuition fees for undergraduate and postgraduate candidates.
+          GI-SMART scholarships cover up to 100% of the tuition fees for undergraduate and postgraduate candidates.
         </p>
       </div>
     </motion.div>

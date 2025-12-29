@@ -34,7 +34,7 @@ const FacultyMentorship = () => {
             <div className="bg-white p-4 rounded-lg border-4 border-[#1a5d3a] shadow-2xl">
               <div className="w-64 h-[500px] bg-gray-100 rounded-lg overflow-hidden">
                 <div className="bg-[#1a5d3a] p-4 text-white text-center">
-                  <div className="text-2xl font-bold">TETR</div>
+                  <div className="text-2xl font-bold">GI-SMART</div>
                 </div>
                 <div className="p-4 space-y-4">
                   <div className="bg-white p-4 rounded shadow">

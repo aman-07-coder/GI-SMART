@@ -1,23 +1,24 @@
 'use client'
 
 import { motion } from 'framer-motion'
+import { FaPlay } from 'react-icons/fa'
 
 const videos = [
   {
     id: 1,
-    title: "Parents' Message to the Tetr Tribe",
-    description: "Meet the proud Parents of Tetr's first landmark cohort.",
+    title: "Parents' Message to the GI-SMART Tribe",
+    description: "Meet the proud Parents of GI-SMART's first landmark cohort.",
     image: 'https://images.unsplash.com/photo-1522202176988-66273c2fd55f',
   },
   {
     id: 2,
-    title: "Tetr Talks Ep 2: Sabeer Bhatia, Inventor of Email",
+    title: "GI-SMART Talks Ep 2: Sabeer Bhatia, Inventor of Email",
     description: "Sabeer Bhatia shares his insights on entrepreneurship, Silicon Valley and AI's future.",
     image: 'https://images.unsplash.com/photo-1552664730-d307ca884978',
   },
   {
     id: 3,
-    title: "Meet the Tetr Tribe: Class of 2028",
+    title: "Meet the GI-SMART Tribe: Class of 2028",
     description: "Our diverse cohort of 120 exceptional achievers come from 45 nations.",
     image: 'https://images.unsplash.com/photo-1524178232363-1fb2b075b655',
   },
@@ -48,7 +49,7 @@ const TetrTalks = () => {
                     whileHover={{ scale: 1.1 }}
                     className="w-16 h-16 bg-[#ffd700] rounded-full flex items-center justify-center shadow-lg opacity-0 group-hover:opacity-100 transition-opacity"
                   >
-                    <span className="text-2xl text-black ml-1">▶</span>
+                    <FaPlay className="text-xl text-black ml-1" />
                   </motion.div>
                 </div>
               </div>

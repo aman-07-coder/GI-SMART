@@ -14,12 +14,11 @@ export default function ApplyNowPage() {
       <Navbar />
       
       {/* Main Form Section */}
-      <section className="py-16 md:py-24 bg-white">
+      <section className="py-16 md:py-24 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <ScholarshipBanner />
           
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
-            <ApplyNowPromo />
+          <div className="mt-8">
             <ApplyNowForm />
           </div>
         </div>

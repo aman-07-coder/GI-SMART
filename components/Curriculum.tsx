@@ -7,7 +7,7 @@ const terms = [
   {
     id: 1,
     location: 'Dubai',
-    tag: 'TETR BASE CAMP',
+    tag: 'GI-SMART BASE CAMP',
     description: 'Build your own dropshipping business while learning team dynamics. Explore industry giants like Emaar and Emirates, attend business summits like GITEX, visit Dubai\'s iconic Gold Souk and experience the local culture with a Desert Safari and Dhow Cruise.',
     workshops: '18 WORKSHOPS',
     businessImmersions: '06 BUSINESS IMMERSIONS',
@@ -17,7 +17,7 @@ const terms = [
   {
     id: 2,
     location: 'India',
-    tag: 'TETR BASE CAMP',
+    tag: 'GI-SMART BASE CAMP',
     tag2: 'FITT-IIT IMMERSION',
     description: 'Launch a consumer brand in India while learning go-to-market strategies, mental models and budgeting. Visit leading companies like Zomato, Tata to study entrepreneurship and innovation first-hand.',
     workshops: '16 WORKSHOPS',
@@ -28,7 +28,7 @@ const terms = [
   {
     id: 3,
     location: 'Singapore & Malaysia',
-    tag: 'TETR BASE CAMP',
+    tag: 'GI-SMART BASE CAMP',
     description: 'Start a kickstarter campaign while immersing yourself in Singapore and Malaysia\'s vibrant culture. Experience the Monetary Authority\'s financial hub, explore global trade at the Port, celebrate grand parades, discover the vibrant Chinatown.',
     workshops: '16 WORKSHOPS',
     businessImmersions: '05 BUSINESS IMMERSIONS',
@@ -38,7 +38,7 @@ const terms = [
   {
     id: 4,
     location: 'Ghana',
-    tag: 'TETR BASE CAMP',
+    tag: 'GI-SMART BASE CAMP',
     description: 'Build an NGO while developing skills in fundraising, rural marketing, machine learning, and gamification. Delve into African economics at the Ghana International Trade Fair, and witness grassroot bioenergy innovations.',
     workshops: '16 WORKSHOPS',
     businessImmersions: '05 BUSINESS IMMERSIONS',
@@ -48,7 +48,7 @@ const terms = [
   {
     id: 5,
     location: 'United States',
-    tag: 'TETR BASE CAMP',
+    tag: 'GI-SMART BASE CAMP',
     tag2: 'CORNELL UNIVERSITY IMMERSION',
     description: 'Build a SaaS or software MVP, pitch to VCs and secure your first angel cheque. Visit the Google office, attend the YC/TechStars demo day and connect with early-stage AI startups.',
     workshops: '18 WORKSHOPS',
@@ -59,7 +59,7 @@ const terms = [
   {
     id: 6,
     location: 'Argentina',
-    tag: 'TETR BASE CAMP',
+    tag: 'GI-SMART BASE CAMP',
     description: 'Launch a sustainability venture in renewable energy. Explore innovations at Los Grobo and YPF Luz, while immersing yourself in Buenos Aires\' entrepreneurial hubs and the vibrant culture of San Telmo and La Boca.',
     workshops: '16 WORKSHOPS',
     businessImmersions: '06 BUSINESS IMMERSIONS',
@@ -69,7 +69,7 @@ const terms = [
   {
     id: 7,
     location: 'Europe',
-    tag: 'TETR BASE CAMP',
+    tag: 'GI-SMART BASE CAMP',
     tag2: 'INSEAD IMMERSION',
     description: 'Build a content channel around niches like travel, fashion, or careers. Explore La Nave Innovation Hub in Madrid, gain insights at Prada Headquarters in Milan, and immerse yourself in European culture at the Louvre and Prado Museum.',
     workshops: '15 WORKSHOPS',

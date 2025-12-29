@@ -1,6 +1,7 @@
 'use client'
 
 import { motion } from 'framer-motion'
+import { FaExternalLinkAlt } from 'react-icons/fa'
 import Link from 'next/link'
 
 const ScholarshipsSection = () => {
@@ -28,7 +29,7 @@ const ScholarshipsSection = () => {
             className="bg-white p-6 lg:p-8"
           >
             <p className="text-xl md:text-2xl lg:text-3xl text-gray-900 mb-8 leading-relaxed">
-              Tetr scholarships cover up to <strong className="font-bold">the full tuition fee</strong> for undergraduate and postgraduate candidates.
+              GI-SMART scholarships cover up to <strong className="font-bold">the full tuition fee</strong> for undergraduate and postgraduate candidates.
             </p>
             <Link href="/admissions#scholarships">
               <motion.button
@@ -37,7 +38,7 @@ const ScholarshipsSection = () => {
                 className="bg-[#ffd700] text-black px-6 py-3 rounded-lg font-semibold text-sm flex items-center gap-2 hover:bg-[#ffed4e] transition-colors"
               >
                 APPLY NOW
-                <span className="text-xs">↗</span>
+                <FaExternalLinkAlt className="text-xs" />
               </motion.button>
             </Link>
           </motion.div>

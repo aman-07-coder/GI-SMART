@@ -1,35 +1,36 @@
 'use client'
 
 import { motion } from 'framer-motion'
+import { FaGlobe, FaGraduationCap, FaBriefcase, FaRocket, FaHandshake, FaTrophy } from 'react-icons/fa'
 
 const features = [
   {
-    icon: '🌍',
+    icon: FaGlobe,
     title: 'Global Exposure',
     description: 'Study across multiple countries and experience diverse business cultures.',
   },
   {
-    icon: '🎓',
+    icon: FaGraduationCap,
     title: 'Expert Faculty',
     description: 'Learn from industry leaders and renowned academicians.',
   },
   {
-    icon: '💼',
+    icon: FaBriefcase,
     title: 'Industry Partnerships',
     description: 'Direct connections with top companies for internships and placements.',
   },
   {
-    icon: '🚀',
+    icon: FaRocket,
     title: 'Innovation Focus',
     description: 'Cutting-edge curriculum aligned with future business needs.',
   },
   {
-    icon: '🤝',
+    icon: FaHandshake,
     title: 'Networking',
     description: 'Build lifelong connections with peers and professionals worldwide.',
   },
   {
-    icon: '🏆',
+    icon: FaTrophy,
     title: 'Accreditation',
     description: 'Recognized by leading international accreditation bodies.',
   },
@@ -66,8 +67,8 @@ const WhyChooseUs = () => {
               whileHover={{ y: -10, scale: 1.02 }}
               className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-8 hover:border-primary/50 transition-all duration-300 group"
             >
-              <div className="text-5xl mb-4 transform group-hover:scale-110 transition-transform duration-300">
-                {feature.icon}
+              <div className="mb-4 transform group-hover:scale-110 transition-transform duration-300">
+                {feature.icon && <feature.icon className="text-5xl text-primary" />}
               </div>
               <h3 className="text-xl font-bold text-white mb-3 group-hover:text-primary transition-colors">
                 {feature.title}

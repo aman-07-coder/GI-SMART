@@ -2,6 +2,7 @@
 
 import { motion } from 'framer-motion'
 import { useState } from 'react'
+import { FaMapMarkerAlt, FaEnvelope, FaPhone } from 'react-icons/fa'
 
 const ContactForm = () => {
   const [formData, setFormData] = useState({
@@ -38,7 +39,7 @@ const ContactForm = () => {
             <div className="space-y-6">
               <div className="flex items-start space-x-4">
                 <div className="w-12 h-12 bg-white/5 rounded-lg flex items-center justify-center">
-                  <span className="text-2xl">📍</span>
+                  <FaMapMarkerAlt className="text-2xl" />
                 </div>
                 <div>
                   <h3 className="text-white font-semibold mb-1">Address</h3>
@@ -48,7 +49,7 @@ const ContactForm = () => {
 
               <div className="flex items-start space-x-4">
                 <div className="w-12 h-12 bg-white/5 rounded-lg flex items-center justify-center">
-                  <span className="text-2xl">📧</span>
+                  <FaEnvelope className="text-2xl" />
                 </div>
                 <div>
                   <h3 className="text-white font-semibold mb-1">Email</h3>
@@ -58,7 +59,7 @@ const ContactForm = () => {
 
               <div className="flex items-start space-x-4">
                 <div className="w-12 h-12 bg-white/5 rounded-lg flex items-center justify-center">
-                  <span className="text-2xl">📞</span>
+                  <FaPhone className="text-2xl" />
                 </div>
                 <div>
                   <h3 className="text-white font-semibold mb-1">Phone</h3>

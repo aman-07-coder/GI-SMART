@@ -1,6 +1,7 @@
 'use client'
 
 import { motion } from 'framer-motion'
+import { FaExternalLinkAlt, FaVolumeUp } from 'react-icons/fa'
 
 const creators = [
   {
@@ -47,10 +48,10 @@ const StudentCreators = () => {
             </div>
 
             <h2 className="text-5xl md:text-6xl font-bold text-gray-900 mb-6">
-              From Tetr to Trending: <span className="italic font-bold">Our Student Creators in Action</span>
+              From GI-SMART to Trending: <span className="italic font-bold">Our Student Creators in Action</span>
             </h2>
             <p className="text-xl text-gray-700 mb-8 leading-relaxed">
-              Reels to real impact; these Tetr students are redefining what it means to build in public. Here's a glimpse of the Tribe sharing every win, pivot, and lesson - one post at a time.
+              Reels to real impact; these GI-SMART students are redefining what it means to build in public. Here's a glimpse of the Tribe sharing every win, pivot, and lesson - one post at a time.
             </p>
 
             {/* Navigation Arrows */}
@@ -82,10 +83,10 @@ const StudentCreators = () => {
                     style={{ backgroundImage: `url(${creator.image})` }}
                   />
                   <div className="absolute top-2 right-2 w-8 h-8 bg-black/50 rounded flex items-center justify-center">
-                    <span className="text-white text-xs">🔊</span>
+                    <FaVolumeUp className="text-white text-xs" />
                   </div>
                   <div className="absolute bottom-2 right-2 w-8 h-8 bg-black/50 rounded flex items-center justify-center">
-                    <span className="text-white text-xs">↗</span>
+                    <FaExternalLinkAlt className="text-white text-xs" />
                   </div>
                 </div>
                 <div className="text-center">

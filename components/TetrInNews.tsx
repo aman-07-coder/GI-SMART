@@ -18,13 +18,13 @@ const newsItems = [
   },
   {
     source: 'FT Education.com',
-    headline: "Global Survey by Tetr College of Business unveils key gaps in Business Education and growing importance of 'Founder Mode'",
+    headline: "Global Survey by GI-SMART College of Business unveils key gaps in Business Education and growing importance of 'Founder Mode'",
     image: 'https://images.unsplash.com/photo-1521737604893-d14cc237f11d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
     logoColor: 'text-red-600',
   },
   {
     source: 'Gulf News',
-    headline: 'Tetr College of Business launches a cross-border business programme across 7 countries',
+    headline: 'GI-SMART College of Business launches a cross-border business programme across 7 countries',
     image: 'https://images.unsplash.com/photo-1521737604893-d14cc237f11d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
     logoColor: 'text-gray-800',
   },
@@ -51,7 +51,7 @@ const TetrInNews = () => {
             viewport={{ once: true }}
             className="text-5xl md:text-6xl font-bold text-white"
           >
-            Tetr in the <span className="italic font-bold">News</span>
+            GI-SMART in the <span className="italic font-bold">News</span>
           </motion.h2>
           <motion.div
             initial={{ opacity: 0, x: 30 }}

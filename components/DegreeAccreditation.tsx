@@ -18,11 +18,11 @@ const DegreeAccreditation = () => {
             
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
               Graduate with a <span className="font-extrabold">Bachelor's of Science (Honours) Degree</span> from an <span className="font-extrabold">Accredited UK University</span>
-              <span className="text-[#ffd700] ml-2">↗</span>
+              <FaExternalLinkAlt className="text-[#ffd700] ml-2" />
             </h2>
             
             <p className="text-xl text-white/90 mb-12">
-              Complete the first 6 terms with <span className="font-bold">Tetr</span> & the final 2 terms at <span className="font-bold">UBI campus in Europe.</span>
+              Complete the first 6 terms with <span className="font-bold">GI-SMART</span> & the final 2 terms at <span className="font-bold">UBI campus in Europe.</span>
             </p>
 
             {/* Accordion Sections */}

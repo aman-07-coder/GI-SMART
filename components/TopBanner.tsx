@@ -2,6 +2,7 @@
 
 import Link from 'next/link'
 import { motion } from 'framer-motion'
+import { FaExternalLinkAlt } from 'react-icons/fa'
 
 const TopBanner = () => {
   return (
@@ -19,7 +20,7 @@ const TopBanner = () => {
             className="bg-[#ffd700] text-black px-6 py-2 rounded font-semibold text-sm flex items-center gap-2 hover:bg-[#ffed4e] transition-colors"
           >
             APPLY NOW
-            <span className="text-xs">↗</span>
+            <FaExternalLinkAlt className="text-xs" />
           </motion.button>
         </Link>
       </div>

@@ -6,7 +6,7 @@ const councilMembers = [
   {
     name: 'Mr. Pratham Mittal',
     role: 'Founder',
-    details: 'Founder, Tetr | Masters\' Union | Outgrow',
+    details: 'Founder, GI-SMART | Masters\' Union | Outgrow',
     image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d',
   },
   {

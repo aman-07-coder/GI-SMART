@@ -5,19 +5,19 @@ import { motion } from 'framer-motion'
 const ContactInfo = () => {
   const locations = [
     {
-      name: 'TETR INC (USA)',
+      name: 'GI-SMART INC (USA)',
       address: '121 Stewart St Apt 803, Seattle, WA 98101',
     },
     {
-      name: 'TETR L.L.C-FZ (UAE)',
+      name: 'GI-SMART L.L.C-FZ (UAE)',
       address: 'Meydan Grandstand, 6th Floor, Meydan Road, NAD AL SHEBA, Dubai',
     },
     {
-      name: 'TETR (INDIA)',
+      name: 'GI-SMART (INDIA)',
       address: '383 Udyog Vihar Phase 3, Gurgaon, Haryana 122008',
     },
     {
-      name: 'TETR LIMITED (UK)',
+      name: 'GI-SMART LIMITED (UK)',
       address: '3A Station Road, Amersham, Buckinghamshire HP7 OBQ',
     },
   ]
@@ -144,10 +144,10 @@ const ContactInfo = () => {
                 >
                   <p className="text-white/80 mb-2 text-sm">For admission-related inquiries, please contact us at:</p>
                   <a
-                    href="mailto:studentsupport-ug@tetr.org"
+                    href="mailto:studentsupport-ug@GI-SMART.org"
                     className="font-bold text-lg md:text-xl text-[#00ff88] hover:underline inline-block group-hover:text-[#00ff88] transition-colors"
                   >
-                    studentsupport-ug@tetr.org
+                    studentsupport-ug@GI-SMART.org
                   </a>
                 </motion.div>
                 <motion.div
@@ -160,10 +160,10 @@ const ContactInfo = () => {
                 >
                   <p className="text-white/80 mb-2 text-sm">For PG admission-related inquiries, please contact us at:</p>
                   <a
-                    href="mailto:studentsupport-pg@tetr.com"
+                    href="mailto:studentsupport-pg@GI-SMART.com"
                     className="font-bold text-lg md:text-xl text-[#00ff88] hover:underline inline-block group-hover:text-[#00ff88] transition-colors"
                   >
-                    studentsupport-pg@tetr.com
+                    studentsupport-pg@GI-SMART.com
                   </a>
                 </motion.div>
                 <motion.div
@@ -176,10 +176,10 @@ const ContactInfo = () => {
                 >
                   <p className="text-white/80 mb-2 text-sm">For general inquiries, reach out to:</p>
                   <a
-                    href="mailto:info@tetr.org"
+                    href="mailto:info@GI-SMART.org"
                     className="font-bold text-lg md:text-xl text-[#00ff88] hover:underline inline-block group-hover:text-[#00ff88] transition-colors"
                   >
-                    info@tetr.org
+                    info@GI-SMART.org
                   </a>
                 </motion.div>
               </div>

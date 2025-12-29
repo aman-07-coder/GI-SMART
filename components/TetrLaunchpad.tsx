@@ -2,6 +2,7 @@
 
 import { motion } from 'framer-motion'
 import Link from 'next/link'
+import { FaExternalLinkAlt, FaPlay } from 'react-icons/fa'
 
 const TetrLaunchpad = () => {
   return (
@@ -15,7 +16,7 @@ const TetrLaunchpad = () => {
             viewport={{ once: true }}
           >
             <h2 className="text-5xl md:text-6xl font-bold text-gray-900 mb-6">
-              Tetr Launchpad
+              GI-SMART Launchpad
             </h2>
             <p className="text-xl text-gray-700 mb-8 leading-relaxed">
               A <strong>$10 million</strong> fund backing the next generation of bold innovators. From capital, mentorship to global connections we help you turn game-changing ideas into reality.
@@ -27,7 +28,7 @@ const TetrLaunchpad = () => {
                 className="bg-[#ffd700] text-black px-8 py-4 rounded-lg font-bold text-lg flex items-center gap-2 hover:bg-[#ffed4e] transition-colors"
               >
                 LEARN MORE
-                <span>↗</span>
+                <FaExternalLinkAlt />
               </motion.button>
             </Link>
           </motion.div>
@@ -46,7 +47,7 @@ const TetrLaunchpad = () => {
                   whileHover={{ scale: 1.1 }}
                   className="w-20 h-20 bg-[#ffd700] rounded-full flex items-center justify-center shadow-lg"
                 >
-                  <span className="text-3xl text-black ml-1">▶</span>
+                  <FaPlay className="text-2xl text-black ml-1" />
                 </motion.div>
               </div>
             </div>

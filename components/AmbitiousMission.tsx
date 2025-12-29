@@ -2,6 +2,7 @@
 
 import { motion } from 'framer-motion'
 import Link from 'next/link'
+import { FaExternalLinkAlt } from 'react-icons/fa'
 
 const AmbitiousMission = () => {
   return (
@@ -49,18 +50,18 @@ const AmbitiousMission = () => {
                   whileHover={{ scale: 1.05 }}
                   className="bg-[#ffd700] text-[#1a5d3a] p-6 rounded-lg cursor-pointer relative min-w-[200px]"
                 >
-                  <div className="absolute top-3 right-3 text-[#1a5d3a] text-lg">↗</div>
-                  <h3 className="text-xl font-bold">Careers at Tetr</h3>
+                  <FaExternalLinkAlt className="absolute top-3 right-3 text-[#1a5d3a] text-lg" />
+                  <h3 className="text-xl font-bold">Careers at GI-SMART</h3>
                 </motion.div>
               </Link>
-              <Link href="mailto:recruitment@tetr.org">
+              <Link href="mailto:recruitment@GI-SMART.org">
                 <motion.div
                   whileHover={{ scale: 1.05 }}
                   className="bg-[#1a5d3a] text-white p-6 rounded-lg cursor-pointer relative min-w-[200px]"
                 >
-                  <div className="absolute top-3 right-3 text-white text-lg">↗</div>
+                  <FaExternalLinkAlt className="absolute top-3 right-3 text-white text-lg" />
                   <h3 className="text-lg font-bold mb-2">Write to Us</h3>
-                  <p className="text-sm text-white/80">recruitment@tetr.org</p>
+                  <p className="text-sm text-white/80">recruitment@GI-SMART.org</p>
                 </motion.div>
               </Link>
             </div>

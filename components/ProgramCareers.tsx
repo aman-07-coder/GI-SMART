@@ -1,6 +1,7 @@
 'use client'
 
 import { motion } from 'framer-motion'
+import { FaExternalLinkAlt } from 'react-icons/fa'
 
 const ProgramCareers = () => {
   return (
@@ -20,7 +21,7 @@ const ProgramCareers = () => {
           {/* Left - White Box */}
           <div className="bg-white rounded-lg p-8 shadow-lg">
             <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-              Career Labs at <span className="font-extrabold italic">Tetr</span>
+              Career Labs at <span className="font-extrabold italic">GI-SMART</span>
             </h2>
           </div>
 
@@ -116,7 +117,7 @@ const ProgramCareers = () => {
 
               <button className="bg-[#ffd700] text-black px-6 py-3 rounded-lg font-semibold hover:bg-[#ffed4e] transition-colors flex items-center gap-2">
                 VIEW CAREER LAB REPORT
-                <span>↗</span>
+                <FaExternalLinkAlt />
               </button>
             </div>
 

@@ -15,7 +15,7 @@ const TetrWay = () => {
             className="text-white"
           >
             <h2 className="text-5xl md:text-6xl font-bold mb-8">
-              Redefining Business Education <span className="italic font-bold">The Tetr Way</span>
+              Redefining Business Education <span className="italic font-bold">The GI-SMART Way</span>
             </h2>
           </motion.div>
 

@@ -1,8 +1,30 @@
 'use client'
 
 import { motion } from 'framer-motion'
+import { FaBriefcase, FaClipboardList, FaHandshake } from 'react-icons/fa'
 
 const CareerLabs = () => {
+  const careerItems = [
+    {
+      icon: FaBriefcase,
+      color: 'bg-pink-500',
+      title: 'Shadow Top CXOs & Teams',
+      description: 'Work with business leaders and companies while enriching your resume.',
+    },
+    {
+      icon: FaClipboardList,
+      color: 'bg-blue-400',
+      title: 'Work on Real Life Assignments',
+      description: 'From EV mobility to large real estate deals, witness the world change firsthand',
+    },
+    {
+      icon: FaHandshake,
+      color: 'bg-purple-500',
+      title: 'Collaborate Across Functions',
+      description: 'Gain executive-level exposure by working with cross-functional teams and understanding what drives real business success',
+    },
+  ]
+
   return (
     <section className="py-24 bg-white relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -13,31 +35,12 @@ const CareerLabs = () => {
           className="mb-16"
         >
           <h2 className="text-5xl md:text-6xl font-bold text-gray-900 mb-4">
-            Career Labs at <span className="italic font-bold">Tetr</span>
+            Career Labs at <span className="italic font-bold">GI-SMART</span>
           </h2>
         </motion.div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
-          {[
-            {
-              icon: '💼',
-              color: 'bg-pink-500',
-              title: 'Shadow Top CXOs & Teams',
-              description: 'Work with business leaders and companies while enriching your resume.',
-            },
-            {
-              icon: '📋',
-              color: 'bg-blue-400',
-              title: 'Work on Real Life Assignments',
-              description: 'From EV mobility to large real estate deals, witness the world change firsthand',
-            },
-            {
-              icon: '🤝',
-              color: 'bg-purple-500',
-              title: 'Collaborate Across Functions',
-              description: 'Gain executive-level exposure by working with cross-functional teams and understanding what drives real business success',
-            },
-          ].map((item, index) => (
+          {careerItems.map((item, index) => (
             <motion.div
               key={index}
               initial={{ opacity: 0, y: 50 }}
@@ -46,8 +49,8 @@ const CareerLabs = () => {
               transition={{ delay: index * 0.1 }}
               className="bg-gray-50 rounded-lg p-8"
             >
-              <div className={`w-16 h-16 ${item.color} rounded-lg flex items-center justify-center text-3xl mb-6 transform rotate-[-5deg]`}>
-                {item.icon}
+              <div className={`w-16 h-16 ${item.color} rounded-lg flex items-center justify-center mb-6 transform rotate-[-5deg]`}>
+                {item.icon && <item.icon className="text-3xl text-white" />}
               </div>
               <h3 className="text-xl font-bold text-gray-900 mb-3">{item.title}</h3>
               <p className="text-gray-600 leading-relaxed">{item.description}</p>

@@ -59,13 +59,13 @@ const WeekAtTetr = () => {
   ]
 
   return (
-    <section id="week-at-tetr" className="py-24 bg-white">
+    <section id="week-at-GI-SMART" className="py-24 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-          What's a <span className="font-extrabold italic">Week at Tetr</span> Like?
+          What's a <span className="font-extrabold italic">Week at GI-SMART</span> Like?
         </h2>
         <p className="text-lg text-gray-600 mb-12">
-          Start your day with ambition and end it with impact. At Tetr, every week pushes boundaries.
+          Start your day with ambition and end it with impact. At GI-SMART, every week pushes boundaries.
         </p>
 
         {/* Weekly Schedule Grid */}

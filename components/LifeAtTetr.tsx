@@ -1,6 +1,7 @@
 'use client'
 
 import { motion } from 'framer-motion'
+import { FaPlay } from 'react-icons/fa'
 import { useState } from 'react'
 
 const LifeAtTetr = () => {
@@ -50,7 +51,7 @@ const LifeAtTetr = () => {
             className="text-center mb-12"
           >
             <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-6">
-              Life at Tetr: Real-World Learning in <span className="font-extrabold italic">Action</span>
+              Life at GI-SMART: Real-World Learning in <span className="font-extrabold italic">Action</span>
             </h2>
           </motion.div>
         </div>
@@ -153,7 +154,7 @@ const LifeAtTetr = () => {
             viewport={{ once: true }}
             className="mb-8"
           >
-            <p className="text-sm text-gray-600 mb-2">Explore Tetr's Immersions</p>
+            <p className="text-sm text-gray-600 mb-2">Explore GI-SMART's Immersions</p>
             <div className="flex items-center justify-between mb-8">
               <h3 className="text-3xl md:text-4xl font-bold text-gray-900">Business Immersions</h3>
               <div className="relative">
@@ -232,7 +233,7 @@ const LifeAtTetr = () => {
                   whileHover={{ scale: 1.1 }}
                   className="w-20 h-20 bg-[#ffd700] rounded-full flex items-center justify-center"
                 >
-                  <span className="text-3xl text-black ml-1">▶</span>
+                  <FaPlay className="text-2xl text-black ml-1" />
                 </motion.div>
               </div>
             </motion.div>
@@ -258,7 +259,7 @@ const LifeAtTetr = () => {
             viewport={{ once: true }}
             className="mb-8"
           >
-            <p className="text-sm text-gray-600 mb-2">Explore Tetr's Immersions</p>
+            <p className="text-sm text-gray-600 mb-2">Explore GI-SMART's Immersions</p>
             <div className="flex items-center justify-between mb-8">
               <h3 className="text-3xl md:text-4xl font-bold text-gray-900">Cultural Immersions</h3>
               <div className="relative">

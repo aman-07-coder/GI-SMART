@@ -1,14 +1,15 @@
 'use client'
 
 import { motion } from 'framer-motion'
+import { FaMapMarkerAlt, FaClock, FaCalendar, FaExternalLinkAlt } from 'react-icons/fa'
 
 const events = [
   {
     location: 'Katy, Texas, USA',
     time: '4:00-6:00 PM CT (Central Time, USA)',
     date: '10th January, 2026',
-    title: 'Tetr Connect: Katy, Texas Edition',
-    description: 'Spend a day discovering what life at Tetr feels like. Engage with our team, explore our immersive 7-country curriculum, and experience how learning by doing shapes...',
+    title: 'GI-SMART Connect: Katy, Texas Edition',
+    description: 'Spend a day discovering what life at GI-SMART feels like. Engage with our team, explore our immersive 7-country curriculum, and experience how learning by doing shapes...',
     image: 'https://images.unsplash.com/photo-1522202176988-66273c2fd55f',
     fullDate: 'Sat, Jan 10, 2026',
     fullTime: '04:00 PM - 06:00 PM (CST)',
@@ -17,8 +18,8 @@ const events = [
     location: 'Bali, Indonesia',
     time: '2:00-4:00 PM WITA (UTC+8)',
     date: '10th January, 2026',
-    title: 'Tetr Connect: Bali, Indonesia Edition',
-    description: 'Spend a day discovering what life at Tetr feels like. Engage with our team, explore our immersive 7-country curriculum, and experience how learning by doing shapes...',
+    title: 'GI-SMART Connect: Bali, Indonesia Edition',
+    description: 'Spend a day discovering what life at GI-SMART feels like. Engage with our team, explore our immersive 7-country curriculum, and experience how learning by doing shapes...',
     image: 'https://images.unsplash.com/photo-1552664730-d307ca884978',
     fullDate: 'Sat, Jan 10, 2026',
     fullTime: '02:00 PM - 04:00 PM (WITA)',
@@ -27,8 +28,8 @@ const events = [
     location: 'Bengaluru, India',
     time: '03:00 PM - 05:00 PM (IST)',
     date: '10th January, 2026',
-    title: 'Tetr Connect: Bengaluru, India Edition',
-    description: 'Spend a day discovering what life at Tetr feels like. Engage with our team, explore our immersive 7-country curriculum, and experience how learning by doing shapes...',
+    title: 'GI-SMART Connect: Bengaluru, India Edition',
+    description: 'Spend a day discovering what life at GI-SMART feels like. Engage with our team, explore our immersive 7-country curriculum, and experience how learning by doing shapes...',
     image: 'https://images.unsplash.com/photo-1524178232363-1fb2b075b655',
     fullDate: 'Sat, Jan 10, 2026',
     fullTime: '03:00 PM - 05:00 PM (IST)',
@@ -46,7 +47,7 @@ const EventsAtTetr = () => {
             viewport={{ once: true }}
             className="text-5xl md:text-6xl font-bold text-white"
           >
-            Events at Tetr
+            Events at GI-SMART
           </motion.h2>
           <div className="flex gap-4">
             <button className="w-12 h-12 bg-white/10 hover:bg-white/20 rounded-lg flex items-center justify-center text-white transition-colors">
@@ -71,19 +72,19 @@ const EventsAtTetr = () => {
             >
               {/* Top Green Box */}
               <div className="bg-[#1a5d3a] text-white p-6">
-                <div className="text-xs font-semibold mb-2">TETR CONNECT</div>
-                <div className="text-sm mb-4">Step Into a Day at Tetr</div>
+                <div className="text-xs font-semibold mb-2">GI-SMART CONNECT</div>
+                <div className="text-sm mb-4">Step Into a Day at GI-SMART</div>
                 <div className="space-y-2 text-xs">
                   <div className="flex items-center gap-2">
-                    <span>📍</span>
+                    <FaMapMarkerAlt className="text-sm" />
                     <span>{event.location}</span>
                   </div>
                   <div className="flex items-center gap-2">
-                    <span>🕐</span>
+                    <FaClock className="text-sm" />
                     <span>{event.time}</span>
                   </div>
                   <div className="flex items-center gap-2">
-                    <span>📅</span>
+                    <FaCalendar className="text-sm" />
                     <span>{event.date}</span>
                   </div>
                 </div>
@@ -96,7 +97,7 @@ const EventsAtTetr = () => {
                   style={{ backgroundImage: `url(${event.image})` }}
                 />
                 <div className="absolute top-4 right-4 w-8 h-8 bg-white rounded flex items-center justify-center">
-                  <span className="text-black text-xs">↗</span>
+                  <FaExternalLinkAlt className="text-black text-xs" />
                 </div>
               </div>
 
@@ -106,11 +107,11 @@ const EventsAtTetr = () => {
                 <p className="text-gray-600 text-sm mb-4">{event.description}</p>
                 <div className="space-y-2 text-sm text-gray-600 mb-4">
                   <div className="flex items-center gap-2">
-                    <span>📅</span>
+                    <FaCalendar className="text-sm" />
                     <span>{event.fullDate}</span>
                   </div>
                   <div className="flex items-center gap-2">
-                    <span>🕐</span>
+                    <FaClock className="text-sm" />
                     <span>{event.fullTime}</span>
                   </div>
                 </div>

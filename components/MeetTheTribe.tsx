@@ -1,6 +1,7 @@
 'use client'
 
 import { motion } from 'framer-motion'
+import { FaPlay } from 'react-icons/fa'
 
 const students = [
   { name: 'Brandon', country: 'USA', flag: '🇺🇸', image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d' },
@@ -89,7 +90,7 @@ const MeetTheTribe = () => {
                       animate={{ x: [0, 2, 0] }}
                       transition={{ duration: 1, repeat: Infinity, repeatDelay: 1 }}
                     >
-                      ▶
+                      <FaPlay className="text-xl" />
                     </motion.span>
                   </motion.div>
                 </div>

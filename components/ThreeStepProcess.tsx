@@ -13,7 +13,7 @@ const steps = [
   {
     number: 2,
     title: 'Attempt the',
-    highlight: 'Tetr Trial, an AI-Powered Aptitude test',
+    highlight: 'GI-SMART Trial, an AI-Powered Aptitude test',
     color: 'blue',
     borderColor: 'border-blue-500',
   },

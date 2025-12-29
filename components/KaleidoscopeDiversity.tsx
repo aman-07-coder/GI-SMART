@@ -23,7 +23,7 @@ const KaleidoscopeDiversity = () => {
             A Kaleidoscope of <span className="font-extrabold italic">Diversity</span>
           </h2>
           <p className="text-xl md:text-2xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-            At Tetr, diversity isn't just a word—it's our reality. Our students come from over 50 countries, bringing unique perspectives, cultures, and experiences that enrich our global community.
+            At GI-SMART, diversity isn't just a word—it's our reality. Our students come from over 50 countries, bringing unique perspectives, cultures, and experiences that enrich our global community.
           </p>
         </motion.div>
 

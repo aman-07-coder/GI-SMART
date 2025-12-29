@@ -23,7 +23,7 @@ const UniversityCollaborations = () => {
             Our University <span className="italic font-bold">Collaborations</span>
           </h2>
           <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-            Eligible Tetr students can enroll in programs at one of our highly ranked university partners.
+            Eligible GI-SMART students can enroll in programs at one of our highly ranked university partners.
           </p>
         </motion.div>
 

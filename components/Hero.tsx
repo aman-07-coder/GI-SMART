@@ -2,6 +2,7 @@
 
 import { motion } from 'framer-motion'
 import Link from 'next/link'
+import { FaExternalLinkAlt } from 'react-icons/fa'
 
 const Hero = () => {
   return (
@@ -20,11 +21,17 @@ const Hero = () => {
             transition={{ duration: 0.8 }}
             className="text-white"
           >
-            <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-tight">
-              Learn Business by Doing Business Across the World
-            </h1>
-            <p className="text-xl md:text-2xl text-white/90 mb-8">
-              Global Bachelor's & Master's Programs in Management & Technology
+            <div className="mb-4">
+              <p className="text-lg md:text-xl text-[#ffd700] font-semibold mb-2">Welcome to the Future of Education</p>
+              <h1 className="text-4xl md:text-6xl font-bold mb-3 leading-tight">
+                Where Intelligence Meets Imagination
+              </h1>
+            </div>
+            <p className="text-lg md:text-xl text-white/90 mb-4">
+              GI-SMART – The Global Institute for Strategic Management & Advanced Research Technologies
+            </p>
+            <p className="text-base md:text-lg text-white/80 mb-8 leading-relaxed">
+              In an age defined by artificial intelligence, data systems, and digital transformation, GI-SMART is more than an academic institution — it's a global innovation ecosystem. We are cultivating a new generation of thinkers, designers, and strategists who will lead the industries of the 21st century.
             </p>
             
             <Link href="/programs">
@@ -34,7 +41,7 @@ const Hero = () => {
                 className="bg-[#ffd700] text-black px-8 py-4 rounded-lg font-bold text-lg mb-6 flex items-center gap-2 hover:bg-[#ffed4e] transition-all duration-300"
               >
                 EXPLORE CURRICULUM
-                <span>↗</span>
+                <FaExternalLinkAlt />
               </motion.button>
             </Link>
 

@@ -9,7 +9,7 @@ const AdmissionsProcess = () => {
     },
     {
       number: 2,
-      title: 'Attempt the **Tetr Trial**, a 75 minutes AI-Powered Aptitude test',
+      title: 'Attempt the **GI-SMART Trial**, a 75 minutes AI-Powered Aptitude test',
       color: 'blue'
     },
     {
@@ -36,7 +36,7 @@ const AdmissionsProcess = () => {
             </h2>
             <button className="bg-[#ffd700] text-black px-8 py-4 rounded-lg font-bold text-lg hover:bg-[#ffed4e] transition-colors flex items-center gap-2">
               APPLY NOW
-              <span>↗</span>
+              <FaExternalLinkAlt />
             </button>
           </div>
 

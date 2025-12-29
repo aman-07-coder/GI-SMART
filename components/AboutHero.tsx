@@ -60,7 +60,7 @@ const principles = [
     content: {
       label: 'SKILLS',
       headline: 'Focus on *applicable skills* instead of rote memorization',
-      description: "Tetr's curriculum is rooted in **Workshops**, where students learn applied skills in a real world context from experienced practitioners.",
+      description: "GI-SMART's curriculum is rooted in **Workshops**, where students learn applied skills in a real world context from experienced practitioners.",
       bullets: [
         'Students enroll in gamified & engaging workshops, rather than long theoretical courses',
         'Inspiring practitioners teach what they hire for and what they practice everyday',

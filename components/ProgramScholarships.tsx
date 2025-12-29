@@ -7,7 +7,7 @@ const scholarships = [
   {
     id: 'outliers',
     title: 'The Outliers Scholarship',
-    description: "Celebrating exceptional talents beyond academics. If you're leading in fields like dance, space science, or robotics, this scholarship is designed to propel your unique journey forward at Tetr.",
+    description: "Celebrating exceptional talents beyond academics. If you're leading in fields like dance, space science, or robotics, this scholarship is designed to propel your unique journey forward at GI-SMART.",
     eligibility: 'Recognized in the top 1% in any field.',
   },
   {
@@ -75,7 +75,7 @@ const ProgramScholarships = () => {
               Empowering Dreams Through <span className="font-extrabold">Scholarships</span>
             </h2>
             <p className="text-lg text-gray-700 mb-12 text-center lg:text-left">
-              At Tetr, we never let financial hardships stand in the way of quality education. Scholarships will cover up to 100% of the tuition for Bachelor's in Management & Technology.
+              At GI-SMART, we never let financial hardships stand in the way of quality education. Scholarships will cover up to 100% of the tuition for Bachelor's in Management & Technology.
             </p>
 
             <div className="space-y-4">

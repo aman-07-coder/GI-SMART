@@ -1,6 +1,5 @@
 import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
-import SecondaryNav from '@/components/SecondaryNav'
 import FacultyHero from '@/components/FacultyHero'
 import FacultySection from '@/components/FacultySection'
 import FacultyMentors from '@/components/FacultyMentors'
@@ -11,7 +10,6 @@ export default function ProgramsFacultyPage() {
   return (
     <main className="min-h-screen bg-white">
       <Navbar />
-      <SecondaryNav />
       <FacultyHero />
       <FacultySection />
       <FacultyMentors />

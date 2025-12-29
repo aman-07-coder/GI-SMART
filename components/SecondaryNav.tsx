@@ -10,7 +10,7 @@ const SecondaryNav = () => {
   const secondaryNavLinks = [
     { id: 'curriculum', label: 'CURRICULUM' },
     { id: 'accreditation', label: 'ACCREDITATION' },
-    { id: 'week-at-tetr', label: 'A WEEK AT TETR' },
+    { id: 'week-at-GI-SMART', label: 'A WEEK AT GI-SMART' },
     { id: 'courses', label: 'COURSES' },
     { id: 'faculty', label: 'FACULTY' },
     { id: 'admissions', label: 'ADMISSIONS' },
@@ -109,7 +109,7 @@ const SecondaryNav = () => {
           <Link href="/admissions">
             <button className="bg-[#ffd700] text-black px-4 py-2 rounded font-semibold text-sm hover:bg-[#ffed4e] transition-colors flex items-center gap-1 whitespace-nowrap">
               APPLY NOW
-              <span className="text-xs">↗</span>
+              <FaExternalLinkAlt className="text-xs" />
             </button>
           </Link>
         </div>

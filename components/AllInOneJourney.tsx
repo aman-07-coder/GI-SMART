@@ -1,6 +1,7 @@
 'use client'
 
 import { motion } from 'framer-motion'
+import { FaPlay } from 'react-icons/fa'
 
 const videos = [
   {
@@ -20,7 +21,7 @@ const videos = [
     image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71',
   },
   {
-    title: 'Tetr Tribe @ GITEX 2024 Dubai',
+    title: 'GI-SMART Tribe @ GITEX 2024 Dubai',
     image: 'https://images.unsplash.com/photo-1522202176988-66273c2fd55f',
   },
 ]
@@ -64,7 +65,7 @@ const AllInOneJourney = () => {
                     whileHover={{ scale: 1.1 }}
                     className="w-16 h-16 bg-[#ffd700] rounded-full flex items-center justify-center shadow-lg opacity-0 group-hover:opacity-100 transition-opacity"
                   >
-                    <span className="text-2xl text-black ml-1">▶</span>
+                    <FaPlay className="text-xl text-black ml-1" />
                   </motion.div>
                 </div>
               </div>

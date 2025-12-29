@@ -1,6 +1,7 @@
 'use client'
 
 import { motion } from 'framer-motion'
+import { FaExternalLinkAlt } from 'react-icons/fa'
 import Link from 'next/link'
 
 const AboutTopHero = () => {
@@ -30,7 +31,7 @@ const AboutTopHero = () => {
               className="mb-6"
             >
               <span className="text-[#ffd700] text-sm font-semibold uppercase tracking-wider">
-                About Tetr
+                About GI-SMART
               </span>
             </motion.div>
             
@@ -46,7 +47,7 @@ const AboutTopHero = () => {
               transition={{ duration: 0.6, delay: 0.4 }}
               className="text-xl md:text-2xl text-white/90 mb-8 leading-relaxed"
             >
-              At Tetr, students learn business by building businesses while traveling across the world and getting mentored by top professors & practitioners.
+              At GI-SMART, students learn business by building businesses while traveling across the world and getting mentored by top professors & practitioners.
             </motion.p>
             
             <motion.div
@@ -62,7 +63,7 @@ const AboutTopHero = () => {
                   className="bg-[#ffd700] text-black px-8 py-4 rounded-lg font-bold text-lg flex items-center gap-2 hover:bg-[#ffed4e] transition-all duration-300"
                 >
                   EXPLORE PROGRAMS
-                  <span>↗</span>
+                  <FaExternalLinkAlt />
                 </motion.button>
               </Link>
               

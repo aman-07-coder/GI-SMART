@@ -2,31 +2,53 @@
 
 import { motion } from 'framer-motion'
 import Link from 'next/link'
+import { FaExternalLinkAlt } from 'react-icons/fa'
 
 const programs = [
   {
     id: 1,
+    title: 'Bachelor of Artificial Intelligence Design (BAID)',
+    tags: ['4 Years', '12 Terms', 'Hybrid Model'],
+    partner: 'PEARSON HIGHER EDUCATION',
+    partnerText: 'Anchor Publisher: Pearson Higher Education',
+    image: 'https://images.unsplash.com/photo-1485827404703-89b55fcc595e',
+    link: '/programs/bachelor-ai-design',
+  },
+  {
+    id: 2,
     title: 'Bachelor of Science in Artificial Intelligence',
     tags: ['4 Years', '7 Countries', 'US Degree (STEM)'],
     partner: 'ILLINOIS TECH',
     partnerText: 'Bachelor\'s Degree Awarded by Illinois Tech, Chicago',
     image: 'https://images.unsplash.com/photo-1524178232363-1fb2b075b655',
-  },
-  {
-    id: 2,
-    title: 'Bachelor of Management & Technology',
-    tags: ['4 Years', '7 Countries', 'UK Degree'],
-    partner: 'UBI BUSINESS SCHOOL',
-    partnerText: 'In Collaboration with UBI, Brussels',
-    image: 'https://images.unsplash.com/photo-1522202176988-66273c2fd55f',
+    link: '/programs/bachelor-science-ai',
   },
   {
     id: 3,
-    title: 'Master in Management of Technology',
-    tags: ['1 Year', '3 Countries'],
-    partner: 'UBI BUSINESS SCHOOL',
-    partnerText: 'In Collaboration with UBI, Brussels',
-    image: 'https://images.unsplash.com/photo-1552664730-d307ca884978',
+    title: 'MSc in Applied AI & Data Systems',
+    tags: ['2 Years', '6 Terms', 'Hybrid Model'],
+    partner: 'RNCP LEVEL 7 / UAE NQF 9',
+    partnerText: 'Dubai-first global program with Paris mobility',
+    image: 'https://images.unsplash.com/photo-1555949963-ff9fe0c870eb?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80',
+    link: '/programs/master-applied-ai-data-systems',
+  },
+  {
+    id: 4,
+    title: 'BBA in Tourism & Hospitality Innovation',
+    tags: ['4 Years', '12 Terms', 'Global Service'],
+    partner: 'GI-SMART',
+    partnerText: 'Smart tourism, luxury experiences & sustainable hospitality',
+    image: 'https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80',
+    link: '/programs/bachelor-tourism-hospitality',
+  },
+  {
+    id: 5,
+    title: 'BSc in Strategic Management',
+    tags: ['4 Years', '12 Terms', 'Global Leadership'],
+    partner: 'GI-SMART',
+    partnerText: 'Strategic analysis, financial literacy & technological innovation',
+    image: 'https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80',
+    link: '/programs/bachelor-strategic-management',
   },
 ]
 
@@ -87,14 +109,14 @@ const ExplorePrograms = () => {
                   <p className="text-sm text-white/80">Round 1 Deadline: 16th Feb 2026</p>
                 </div>
 
-                <Link href={`/programs/${program.id}`}>
+                <Link href={program.link || `/programs/${program.id}`}>
                   <motion.button
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
                     className="w-full bg-[#ffd700] text-black py-3 rounded font-semibold flex items-center justify-center gap-2 hover:bg-[#ffed4e] transition-colors"
                   >
                     LEARN MORE
-                    <span>↗</span>
+                    <FaExternalLinkAlt />
                   </motion.button>
                 </Link>
               </div>
