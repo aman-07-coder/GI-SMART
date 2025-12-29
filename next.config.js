@@ -6,17 +6,41 @@ const nextConfig = {
   images: {
     domains: [],
   },
-  // Only look for pages in app directory (ignore src)
-  pageExtensions: ['tsx', 'ts', 'jsx', 'js', 'mdx', 'md'],
   // Exclude src folder from webpack build
-  webpack: (config) => {
-    // Add rule to ignore src folder
-    config.module.rules.push({
-      test: /\.(js|jsx|ts|tsx)$/,
-      include: [path.resolve(__dirname, 'src')],
-      use: 'null-loader',
+  webpack: (config, { isServer }) => {
+    // Exclude src folder from being processed
+    config.resolve.alias = {
+      ...config.resolve.alias,
+    }
+    
+    // Ignore src directory completely in webpack
+    config.watchOptions = {
+      ...config.watchOptions,
+      ignored: [
+        ...(Array.isArray(config.watchOptions?.ignored) ? config.watchOptions.ignored : []),
+        '**/src/**',
+      ],
+    }
+    
+    // Modify module rules to exclude src
+    config.module.rules.forEach((rule) => {
+      if (rule.test && (rule.test.toString().includes('tsx') || rule.test.toString().includes('jsx'))) {
+        if (!rule.exclude) {
+          rule.exclude = []
+        }
+        if (Array.isArray(rule.exclude)) {
+          rule.exclude.push(path.resolve(__dirname, 'src'))
+        } else {
+          rule.exclude = [rule.exclude, path.resolve(__dirname, 'src')]
+        }
+      }
     })
+    
     return config
+  },
+  // Exclude src from page directory
+  experimental: {
+    appDir: true,
   },
 }
 
