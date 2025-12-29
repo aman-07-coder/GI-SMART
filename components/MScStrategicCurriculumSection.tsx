@@ -56,7 +56,7 @@ const MScStrategicCurriculumSection = () => {
       id: 6,
       term: 'Term 6',
       courses: [
-        'Master's Thesis / Strategic Capstone Project',
+        'Master\'s Thesis / Strategic Capstone Project',
         'Professional Integration Seminar'
       ]
     }

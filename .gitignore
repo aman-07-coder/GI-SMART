@@ -32,3 +32,6 @@ yarn-error.log*
 # TypeScript
 *.tsbuildinfo
 next-env.d.ts
+
+# Exclude old src folder (React Router project)
+/src/
