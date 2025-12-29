@@ -44,6 +44,7 @@ const Footer = () => {
               <li><Link href="/news" className="text-white/70 hover:text-white text-sm transition-colors">News</Link></li>
               <li><Link href="/reviews" className="text-white/70 hover:text-white text-sm transition-colors">Reviews</Link></li>
               <li><Link href="/career-labs" className="text-white/70 hover:text-white text-sm transition-colors">Career Labs</Link></li>
+              <li><Link href="/tuition-pathway" className="text-white/70 hover:text-white text-sm transition-colors">Tuition Pathway</Link></li>
             </ul>
           </div>
 
@@ -99,6 +100,7 @@ const Footer = () => {
           <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4 mb-4">
             <div className="flex flex-wrap gap-6 text-white/70 text-sm">
               <Link href="/contact" className="hover:text-white transition-colors uppercase">CONTACT US</Link>
+              <Link href="/tuition-pathway" className="hover:text-white transition-colors uppercase">TUITION PATHWAY</Link>
               <Link href="/refund-policy" className="hover:text-white transition-colors uppercase">REFUND POLICY</Link>
               <Link href="/privacy-policy" className="hover:text-white transition-colors uppercase">PRIVACY POLICY</Link>
               <Link href="/terms" className="hover:text-white transition-colors uppercase">TERMS & CONDITIONS</Link>
