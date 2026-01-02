@@ -194,11 +194,11 @@ const CurriculumSection = () => {
                           {term.location}
                         </h3>
                         {term.badges && term.badges.length > 0 && (
-                          <div className="flex flex-wrap gap-2 mt-2">
+                          <div className="flex flex-nowrap gap-2 mt-2">
                             {term.badges.map((badge, idx) => (
                               <span
                                 key={idx}
-                                className="bg-[#1a5d3a] text-white px-3 py-1 rounded text-xs font-semibold"
+                                className="bg-[#1a5d3a] text-white px-3 py-1 rounded text-xs font-semibold whitespace-nowrap"
                               >
                                 {badge}
                               </span>

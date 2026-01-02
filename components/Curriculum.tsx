@@ -156,15 +156,15 @@ const Curriculum = () => {
                     <div className="flex items-center gap-4 flex-1">
                       <span className="text-[#1a5d3a] font-bold text-xl flex-shrink-0">■</span>
                       <div className="flex-1">
-                        <div className="flex items-center gap-3 flex-wrap">
+                        <div className="flex items-center gap-3 flex-nowrap">
                           <h3 className="text-xl md:text-2xl font-bold text-gray-900">{term.location}</h3>
                           {term.tag && (
-                            <span className="bg-[#1a5d3a] text-white text-xs px-3 py-1 rounded font-semibold">
+                            <span className="bg-[#1a5d3a] text-white text-xs px-3 py-1 rounded font-semibold whitespace-nowrap">
                               {term.tag}
                             </span>
                           )}
                           {term.tag2 && (
-                            <span className="bg-[#1a5d3a] text-white text-xs px-3 py-1 rounded font-semibold">
+                            <span className="bg-[#1a5d3a] text-white text-xs px-3 py-1 rounded font-semibold whitespace-nowrap">
                               {term.tag2}
                             </span>
                           )}

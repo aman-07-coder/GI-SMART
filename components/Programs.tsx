@@ -42,11 +42,11 @@ const ProgramCard = ({ program, index }: { program: typeof programs[0]; index: n
       viewport={{ once: true, margin: '-100px' }}
       transition={{ duration: 0.6, delay: index * 0.1 }}
       whileHover={{ y: -10 }}
-      className="group relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-8 hover:border-primary/50 transition-all duration-300"
+      className="group relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-8 hover:border-primary/50 transition-all duration-300 flex flex-col"
     >
       <div className="absolute inset-0 bg-gradient-primary opacity-0 group-hover:opacity-10 rounded-xl transition-opacity duration-300" />
       
-      <div className="relative z-10">
+      <div className="relative z-10 flex flex-col h-full">
         <div className="flex items-start justify-between mb-4">
           <h3 className="text-2xl font-bold text-white group-hover:text-primary transition-colors">
             {program.title}
@@ -65,15 +65,17 @@ const ProgramCard = ({ program, index }: { program: typeof programs[0]; index: n
           ))}
         </ul>
 
-        <Link href={`/programs/${program.id}`}>
-          <motion.button
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-            className="w-full py-3 bg-white/10 hover:bg-gradient-primary text-white hover:text-dark font-semibold rounded-lg transition-all duration-300 border border-white/20 hover:border-transparent"
-          >
-            Learn More
-          </motion.button>
-        </Link>
+        <div className="mt-auto">
+          <Link href={`/programs/${program.id}`}>
+            <motion.button
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              className="w-full py-3 bg-white/10 hover:bg-gradient-primary text-white hover:text-dark font-semibold rounded-lg transition-all duration-300 border border-white/20 hover:border-transparent"
+            >
+              Learn More
+            </motion.button>
+          </Link>
+        </div>
       </div>
     </motion.div>
   )

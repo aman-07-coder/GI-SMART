@@ -34,16 +34,20 @@ const Hero = () => {
               In an age defined by artificial intelligence, data systems, and digital transformation, GI-SMART is more than an academic institution — it's a global innovation ecosystem. We are cultivating a new generation of thinkers, designers, and strategists who will lead the industries of the 21st century.
             </p>
             
-            <Link href="/programs">
-              <motion.button
-                whileHover={{ scale: 1.05, y: -3 }}
-                whileTap={{ scale: 0.95 }}
-                className="bg-[#ffd700] text-black px-8 py-4 rounded-lg font-bold text-lg mb-6 flex items-center gap-2 hover:bg-[#ffed4e] transition-all duration-300"
-              >
-                EXPLORE CURRICULUM
-                <FaExternalLinkAlt />
-              </motion.button>
-            </Link>
+            <motion.button
+              onClick={() => {
+                const element = document.getElementById('explore-programs')
+                if (element) {
+                  element.scrollIntoView({ behavior: 'smooth', block: 'start' })
+                }
+              }}
+              whileHover={{ scale: 1.05, y: -3 }}
+              whileTap={{ scale: 0.95 }}
+              className="bg-[#ffd700] text-black px-8 py-4 rounded-lg font-bold text-lg mb-6 flex items-center gap-2 hover:bg-[#ffed4e] transition-all duration-300"
+            >
+              EXPLORE CURRICULUM
+              <FaExternalLinkAlt />
+            </motion.button>
 
             <p className="text-white/80 text-sm">
               Round 1 Deadline: 16th Feb 2026

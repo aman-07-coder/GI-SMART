@@ -60,25 +60,21 @@ const Navbar = () => {
   ]
 
   return (
-    <>
+    <> 
       <motion.nav
         initial={{ y: -100 }}
         animate={{ y: 0 }}
         transition={{ duration: 0.5 }}
-        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-          isScrolled 
-            ? 'backdrop-blur-sm shadow-md' 
-            : 'bg-transparent'
-        }`}
+        className="fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-white shadow-md"
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-20">
             {/* Logo */}
             <Link href="/" className="flex items-center gap-3">
               <img 
-                src="/gi-smart.jpeg" 
+                src="/gi-removebg-preview.png" 
                 alt="GI-SMART Logo" 
-                className="h-12 w-auto object-contain"
+                className="h-10 sm:h-12 w-auto object-contain"
               />
               {/* <span className={`font-bold text-xl transition-colors duration-300 ${isScrolled ? 'text-gray-800' : 'text-white'}`}>GI-SMART</span> */}
             </Link>
@@ -91,9 +87,7 @@ const Navbar = () => {
                     <>
                       <button
                         onClick={() => setIsProgramsDropdownOpen(!isProgramsDropdownOpen)}
-                        className={`hover:text-[#1a5d3a] transition-colors duration-300 font-medium text-sm uppercase tracking-wide flex items-center gap-1 ${
-                          isScrolled ? 'text-gray-800' : 'text-white drop-shadow-md'
-                        }`}
+                        className="hover:text-[#1a5d3a] transition-colors duration-300 font-medium text-sm uppercase tracking-wide flex items-center gap-1 text-gray-800"
                       >
                         {link.label}
                       </button>
@@ -148,9 +142,7 @@ const Navbar = () => {
                   ) : (
                     <Link
                       href={link.href}
-                      className={`hover:text-[#1a5d3a] transition-colors duration-300 font-medium text-sm uppercase tracking-wide ${
-                        isScrolled ? 'text-gray-800' : 'text-white drop-shadow-md'
-                      }`}
+                      className="hover:text-[#1a5d3a] transition-colors duration-300 font-medium text-sm uppercase tracking-wide text-gray-800"
                     >
                       {link.label}
                     </Link>
@@ -184,104 +176,131 @@ const Navbar = () => {
             {/* Mobile Menu Button */}
             <button
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-              className={`md:hidden p-2 transition-colors duration-300 ${
-                isScrolled ? 'text-gray-800' : 'text-white'
-              }`}
+              className="md:hidden p-2 transition-colors duration-300 text-gray-800"
             >
               <div className="w-6 h-6 flex flex-col justify-center space-y-1.5">
                 <span
-                  className={`block h-0.5 transition-all duration-300 ${
-                    isScrolled ? 'bg-gray-800' : 'bg-white'
-                  } ${isMobileMenuOpen ? 'rotate-45 translate-y-2' : ''}`}
+                  className={`block h-0.5 transition-all duration-300 bg-gray-800 ${isMobileMenuOpen ? 'rotate-45 translate-y-2' : ''}`}
                 />
                 <span
-                  className={`block h-0.5 transition-all duration-300 ${
-                    isScrolled ? 'bg-gray-800' : 'bg-white'
-                  } ${isMobileMenuOpen ? 'opacity-0' : ''}`}
+                  className={`block h-0.5 transition-all duration-300 bg-gray-800 ${isMobileMenuOpen ? 'opacity-0' : ''}`}
                 />
                 <span
-                  className={`block h-0.5 transition-all duration-300 ${
-                    isScrolled ? 'bg-gray-800' : 'bg-white'
-                  } ${isMobileMenuOpen ? '-rotate-45 -translate-y-2' : ''}`}
+                  className={`block h-0.5 transition-all duration-300 bg-gray-800 ${isMobileMenuOpen ? '-rotate-45 -translate-y-2' : ''}`}
                 />
               </div>
             </button>
           </div>
         </div>
 
-        {/* Mobile Menu */}
+        {/* Mobile Menu Overlay */}
         <AnimatePresence>
           {isMobileMenuOpen && (
-            <motion.div
-              initial={{ opacity: 0, height: 0 }}
-              animate={{ opacity: 1, height: 'auto' }}
-              exit={{ opacity: 0, height: 0 }}
-              className="md:hidden bg-white border-t border-gray-200"
-            >
-              <div className="px-4 py-6 space-y-4">
-                {navLinks.map((link) => (
-                  <div key={link.href}>
-                    {link.hasDropdown ? (
-                      <div>
-                        <div className="text-gray-800 font-medium uppercase tracking-wide mb-2">
-                          {link.label}
-                        </div>
-                        <div className="pl-4 space-y-2 mb-4">
-                          {programsMenuItems.map((item) => (
-                            <Link
-                              key={item.href}
-                              href={item.href}
-                              onClick={() => setIsMobileMenuOpen(false)}
-                              className="block text-gray-600 hover:text-[#1a5d3a] transition-colors text-sm"
-                            >
-                              {item.label}
-                            </Link>
-                          ))}
-                        </div>
-                        <div className="pl-4 space-y-2">
-                          <div className="flex items-center gap-2 mb-2">
-                            <div className="w-2 h-2 bg-purple-600"></div>
-                            <h3 className="text-gray-800 font-semibold text-xs uppercase tracking-wide">
-                              UNDERGRADUATE OVERVIEW
-                            </h3>
-                          </div>
-                          {overviewMenuItems.map((item) => (
-                            <Link
-                              key={item.href}
-                              href={item.href}
-                              onClick={() => setIsMobileMenuOpen(false)}
-                              className="block text-gray-600 hover:text-[#1a5d3a] transition-colors text-sm pl-4"
-                            >
-                              {item.label}
-                            </Link>
-                          ))}
-                        </div>
-                      </div>
-                    ) : (
-                      <Link
-                        href={link.href}
-                        onClick={() => setIsMobileMenuOpen(false)}
-                        className="block text-gray-800 hover:text-[#1a5d3a] transition-colors font-medium uppercase tracking-wide"
-                      >
-                        {link.label}
-                      </Link>
-                    )}
-                  </div>
-                ))}
-                <div className="pt-4 space-y-3 border-t border-gray-200">
-                  <Link href="/admissions">
-                    <button className="w-full py-2 bg-[#ffd700] text-black rounded font-semibold text-sm">
-                      APPLY NOW
-                    </button>
+            <>
+              {/* Backdrop */}
+              <motion.div
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                exit={{ opacity: 0 }}
+                onClick={() => setIsMobileMenuOpen(false)}
+                className="fixed inset-0 bg-black bg-opacity-50 z-40 md:hidden"
+              />
+              {/* Mobile Menu Panel */}
+              <motion.div
+                initial={{ x: '100%' }}
+                animate={{ x: 0 }}
+                exit={{ x: '100%' }}
+                transition={{ type: 'tween', duration: 0.3 }}
+                className="fixed top-0 right-0 bottom-0 w-full max-w-sm bg-white z-50 shadow-2xl md:hidden overflow-y-auto"
+              >
+                {/* Mobile Menu Header */}
+                <div className="flex items-center justify-between px-4 py-4 border-b border-gray-200 sticky top-0 bg-white z-10">
+                  <Link href="/" className="flex items-center gap-2" onClick={() => setIsMobileMenuOpen(false)}>
+                    <img 
+                      src="/gi-removebg-preview.png" 
+                      alt="GI-SMART Logo" 
+                      className="h-10 w-auto object-contain"
+                    />
                   </Link>
-                  <Link href="/contact">
-                    <button className="w-full py-2 bg-white text-black rounded font-semibold text-sm border-2 border-[#ffd700]">
-                      CONTACT US
-                    </button>
-                  </Link>
+                  <button
+                    onClick={() => setIsMobileMenuOpen(false)}
+                    className="p-2 text-gray-800 hover:text-gray-600 transition-colors"
+                    aria-label="Close menu"
+                  >
+                    <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                    </svg>
+                  </button>
                 </div>
-              </div>
-            </motion.div>
+
+                {/* Mobile Menu Content */}
+                <div className="px-4 py-6 space-y-1">
+                  {navLinks.map((link) => (
+                    <div key={link.href} className="border-b border-gray-100 last:border-b-0 pb-4 last:pb-0">
+                      {link.hasDropdown ? (
+                        <div>
+                          <div className="text-gray-800 font-semibold uppercase tracking-wide mb-3 text-sm">
+                            {link.label}
+                          </div>
+                          <div className="space-y-2 mb-4">
+                            {programsMenuItems.map((item) => (
+                              <Link
+                                key={item.href}
+                                href={item.href}
+                                onClick={() => setIsMobileMenuOpen(false)}
+                                className="block py-2 text-gray-700 hover:text-[#1a5d3a] transition-colors text-sm pl-2"
+                              >
+                                {item.label}
+                              </Link>
+                            ))}
+                          </div>
+                          <div className="space-y-2">
+                            <div className="flex items-center gap-2 mb-3 pl-2">
+                              <div className="w-2 h-2 bg-purple-600 rounded-full"></div>
+                              <h3 className="text-gray-800 font-semibold text-xs uppercase tracking-wide">
+                                UNDERGRADUATE OVERVIEW
+                              </h3>
+                            </div>
+                            {overviewMenuItems.map((item) => (
+                              <Link
+                                key={item.href}
+                                href={item.href}
+                                onClick={() => setIsMobileMenuOpen(false)}
+                                className="block py-2 text-gray-700 hover:text-[#1a5d3a] transition-colors text-sm pl-4"
+                              >
+                                {item.label}
+                              </Link>
+                            ))}
+                          </div>
+                        </div>
+                      ) : (
+                        <Link
+                          href={link.href}
+                          onClick={() => setIsMobileMenuOpen(false)}
+                          className="block py-3 text-gray-800 hover:text-[#1a5d3a] transition-colors font-semibold uppercase tracking-wide text-sm"
+                        >
+                          {link.label}
+                        </Link>
+                      )}
+                    </div>
+                  ))}
+                  
+                  {/* CTA Buttons */}
+                  <div className="pt-6 space-y-3 border-t border-gray-200 mt-4">
+                    <Link href="/admissions" onClick={() => setIsMobileMenuOpen(false)}>
+                      <button className="w-full py-3 bg-[#ffd700] text-black rounded font-semibold text-sm hover:bg-[#ffed4e] transition-colors">
+                        APPLY NOW
+                      </button>
+                    </Link>
+                    <Link href="/contact" onClick={() => setIsMobileMenuOpen(false)}>
+                      <button className="w-full py-3 bg-white text-black rounded font-semibold text-sm border-2 border-[#ffd700] hover:bg-gray-50 transition-colors">
+                        CONTACT US
+                      </button>
+                    </Link>
+                  </div>
+                </div>
+              </motion.div>
+            </>
           )}
         </AnimatePresence>
       </motion.nav>

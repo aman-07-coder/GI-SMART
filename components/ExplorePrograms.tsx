@@ -54,7 +54,7 @@ const programs = [
 
 const ExplorePrograms = () => {
   return (
-    <section className="py-24 bg-white">
+    <section id="explore-programs" className="py-24 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -76,7 +76,7 @@ const ExplorePrograms = () => {
               viewport={{ once: true }}
               transition={{ delay: index * 0.1 }}
               whileHover={{ y: -10 }}
-              className="bg-[#1a5d3a] rounded-lg overflow-hidden group cursor-pointer"
+              className="bg-[#1a5d3a] rounded-lg overflow-hidden group cursor-pointer flex flex-col"
             >
               <div className="relative h-64 overflow-hidden">
                 <div
@@ -86,7 +86,7 @@ const ExplorePrograms = () => {
                 <div className="absolute inset-0 bg-gradient-to-t from-[#1a5d3a] to-transparent" />
               </div>
 
-              <div className="p-6 text-white">
+              <div className="p-6 text-white flex flex-col h-full">
                 <h3 className="text-xl font-bold mb-4">{program.title}</h3>
                 
                 <div className="flex flex-wrap gap-2 mb-4">
@@ -109,16 +109,18 @@ const ExplorePrograms = () => {
                   <p className="text-sm text-white/80">Round 1 Deadline: 16th Feb 2026</p>
                 </div>
 
-                <Link href={program.link || `/programs/${program.id}`}>
-                  <motion.button
-                    whileHover={{ scale: 1.05 }}
-                    whileTap={{ scale: 0.95 }}
-                    className="w-full bg-[#ffd700] text-black py-3 rounded font-semibold flex items-center justify-center gap-2 hover:bg-[#ffed4e] transition-colors"
-                  >
-                    LEARN MORE
-                    <FaExternalLinkAlt />
-                  </motion.button>
-                </Link>
+                <div className="mt-auto">
+                  <Link href={program.link || `/programs/${program.id}`}>
+                    <motion.button
+                      whileHover={{ scale: 1.05 }}
+                      whileTap={{ scale: 0.95 }}
+                      className="w-full bg-[#ffd700] text-black py-3 rounded font-semibold flex items-center justify-center gap-2 hover:bg-[#ffed4e] transition-colors"
+                    >
+                      LEARN MORE
+                      <FaExternalLinkAlt />
+                    </motion.button>
+                  </Link>
+                </div>
               </div>
             </motion.div>
           ))}
