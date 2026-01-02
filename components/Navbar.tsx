@@ -10,33 +10,40 @@ const Navbar = () => {
   const [isProgramsDropdownOpen, setIsProgramsDropdownOpen] = useState(false)
 
   useEffect(() => {
-    const handleScroll = () => {
-      // Find the hero section element
-      const heroSection = document.querySelector('section[class*="bg-gradient-to-b"]') as HTMLElement
+    const checkIfOverGreenBackground = () => {
+      const navbarHeight = 80 // navbar height in pixels
+      const scrollPosition = window.scrollY
+      const navbarBottom = scrollPosition + navbarHeight
       
-      if (heroSection) {
-        const navbarHeight = 80 // navbar height in pixels
-        const heroBottom = heroSection.offsetTop + heroSection.offsetHeight
-        const scrollPosition = window.scrollY
+      // Find all sections with green backgrounds
+      const greenSections = document.querySelectorAll('section[class*="bg-gradient-to-b"], section[class*="bg-[#1a5d3a]"], section[class*="bg-[#0a1f0f]"]')
+      
+      // Check if navbar is over any green section
+      let isOverGreen = false
+      
+      greenSections.forEach((section) => {
+        const element = section as HTMLElement
+        const sectionTop = element.offsetTop
+        const sectionBottom = sectionTop + element.offsetHeight
         
-        // Navbar is over hero if scroll position + navbar height is less than hero bottom
-        setIsOverHero(scrollPosition + navbarHeight < heroBottom)
-      } else {
-        // Fallback: use viewport height if hero section not found
-        const heroHeight = window.innerHeight // min-h-screen
-        setIsOverHero(window.scrollY < heroHeight - 80)
-      }
+        // Check if navbar bottom is within the green section
+        if (navbarBottom >= sectionTop && scrollPosition < sectionBottom) {
+          isOverGreen = true
+        }
+      })
+      
+      setIsOverHero(isOverGreen)
     }
 
     // Check initial state
-    handleScroll()
+    checkIfOverGreenBackground()
     
     // Throttle scroll events for better performance
     let ticking = false
     const throttledHandleScroll = () => {
       if (!ticking) {
         window.requestAnimationFrame(() => {
-          handleScroll()
+          checkIfOverGreenBackground()
           ticking = false
         })
         ticking = true
@@ -44,9 +51,13 @@ const Navbar = () => {
     }
 
     window.addEventListener('scroll', throttledHandleScroll, { passive: true })
+    
+    // Also check on resize in case layout changes
+    window.addEventListener('resize', throttledHandleScroll, { passive: true })
 
     return () => {
       window.removeEventListener('scroll', throttledHandleScroll)
+      window.removeEventListener('resize', throttledHandleScroll)
     }
   }, [])
 
