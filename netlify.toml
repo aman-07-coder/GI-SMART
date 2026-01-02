@@ -7,4 +7,9 @@
 
 [build.environment]
   NODE_VERSION = "18"
+  NPM_FLAGS = "--prefer-offline --no-audit"
+
+# Increase timeout for large builds
+[functions]
+  node_bundler = "esbuild"
 
