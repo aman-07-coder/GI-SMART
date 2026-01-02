@@ -100,8 +100,8 @@ const Navbar = () => {
         transition={{ duration: 0.5 }}
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
           isOverHero 
-            ? 'bg-[#1a5d3a]' 
-            : 'bg-transparent shadow-md'
+            ? 'bg-white shadow-md' 
+            : 'bg-transparent'
         }`}
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -109,7 +109,7 @@ const Navbar = () => {
             {/* Logo */}
             <Link href="/" className="flex items-center gap-3">
               <img 
-                src="/gi-smart.jpeg" 
+                src="/gi-removebg-preview.png" 
                 alt="GI-SMART Logo" 
                 className="h-12 w-auto object-contain"
               />
@@ -124,7 +124,11 @@ const Navbar = () => {
                     <>
                       <button
                         onClick={() => setIsProgramsDropdownOpen(!isProgramsDropdownOpen)}
-                        className="text-white hover:text-[#ffd700] transition-colors duration-300 font-medium text-sm uppercase tracking-wide flex items-center gap-1 drop-shadow-md"
+                        className={`transition-colors duration-300 font-medium text-sm uppercase tracking-wide flex items-center gap-1 ${
+                          isOverHero 
+                            ? 'text-black hover:text-[#1a5d3a]' 
+                            : 'text-white hover:text-[#ffd700] drop-shadow-md'
+                        }`}
                       >
                         {link.label}
                       </button>
@@ -179,7 +183,11 @@ const Navbar = () => {
                   ) : (
                     <Link
                       href={link.href}
-                      className="text-white hover:text-[#ffd700] transition-colors duration-300 font-medium text-sm uppercase tracking-wide drop-shadow-md"
+                      className={`transition-colors duration-300 font-medium text-sm uppercase tracking-wide ${
+                        isOverHero 
+                          ? 'text-black hover:text-[#1a5d3a]' 
+                          : 'text-white hover:text-[#ffd700] drop-shadow-md'
+                      }`}
                     >
                       {link.label}
                     </Link>
@@ -213,23 +221,25 @@ const Navbar = () => {
             {/* Mobile Menu Button */}
             <button
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-              className="md:hidden p-2 transition-colors duration-300 text-white"
+              className={`md:hidden p-2 transition-colors duration-300 ${
+                isOverHero ? 'text-black' : 'text-white'
+              }`}
             >
               <div className="w-6 h-6 flex flex-col justify-center space-y-1.5">
                 <span
-                  className={`block h-0.5 transition-all duration-300 bg-white ${
-                    isMobileMenuOpen ? 'rotate-45 translate-y-2' : ''
-                  }`}
+                  className={`block h-0.5 transition-all duration-300 ${
+                    isOverHero ? 'bg-black' : 'bg-white'
+                  } ${isMobileMenuOpen ? 'rotate-45 translate-y-2' : ''}`}
                 />
                 <span
-                  className={`block h-0.5 transition-all duration-300 bg-white ${
-                    isMobileMenuOpen ? 'opacity-0' : ''
-                  }`}
+                  className={`block h-0.5 transition-all duration-300 ${
+                    isOverHero ? 'bg-black' : 'bg-white'
+                  } ${isMobileMenuOpen ? 'opacity-0' : ''}`}
                 />
                 <span
-                  className={`block h-0.5 transition-all duration-300 bg-white ${
-                    isMobileMenuOpen ? '-rotate-45 -translate-y-2' : ''
-                  }`}
+                  className={`block h-0.5 transition-all duration-300 ${
+                    isOverHero ? 'bg-black' : 'bg-white'
+                  } ${isMobileMenuOpen ? '-rotate-45 -translate-y-2' : ''}`}
                 />
               </div>
             </button>
