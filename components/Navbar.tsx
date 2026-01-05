@@ -160,7 +160,7 @@ const Navbar = () => {
                                     key={item.href}
                                     href={item.href}
                                     onClick={() => setIsProgramsDropdownOpen(false)}
-                                    className="block py-2 text-gray-900 font-bold hover:text-[#1a5d3a] transition-colors text-sm"
+                                    className="block py-2 text-gray-800 hover:text-[#1a5d3a] transition-colors text-sm"
                                   >
                                     {item.label}
                                   </Link>
@@ -176,13 +176,14 @@ const Navbar = () => {
                                   </h3>
                                 </div>
                                 {overviewMenuItems.map((item) => (
-                                  <div
+                                  <Link
                                     key={item.href}
-                                    className="block py-2 text-gray-900 font-bold text-sm"
-                                    style={{ cursor: 'default' }}
+                                    href={item.href}
+                                    onClick={() => setIsProgramsDropdownOpen(false)}
+                                    className="block py-2 text-gray-800 hover:text-[#1a5d3a] transition-colors text-sm"
                                   >
                                     {item.label}
-                                  </div>
+                                  </Link>
                                 ))}
                               </div>
                             </div>
@@ -279,7 +280,7 @@ const Navbar = () => {
                               key={item.href}
                               href={item.href}
                               onClick={() => setIsMobileMenuOpen(false)}
-                              className="block text-gray-900 font-bold hover:text-[#1a5d3a] transition-colors text-sm"
+                              className="block text-gray-600 hover:text-[#1a5d3a] transition-colors text-sm"
                             >
                               {item.label}
                             </Link>
@@ -293,13 +294,14 @@ const Navbar = () => {
                             </h3>
                           </div>
                           {overviewMenuItems.map((item) => (
-                            <div
+                            <Link
                               key={item.href}
-                              className="block text-gray-900 font-bold text-sm pl-4"
-                              style={{ cursor: 'default' }}
+                              href={item.href}
+                              onClick={() => setIsMobileMenuOpen(false)}
+                              className="block text-gray-600 hover:text-[#1a5d3a] transition-colors text-sm pl-4"
                             >
                               {item.label}
-                            </div>
+                            </Link>
                           ))}
                         </div>
                       </div>
