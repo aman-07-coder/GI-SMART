@@ -34,7 +34,7 @@ const Hero = () => {
               In an age defined by artificial intelligence, data systems, and digital transformation, GI-SMART is more than an academic institution — it's a global innovation ecosystem. We are cultivating a new generation of thinkers, designers, and strategists who will lead the industries of the 21st century.
             </p>
             
-            <Link href="/programs">
+            <Link href="/programs/bachelor-ai-design">
               <motion.button
                 whileHover={{ scale: 1.05, y: -3 }}
                 whileTap={{ scale: 0.95 }}

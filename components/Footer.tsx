@@ -7,9 +7,9 @@ const Footer = () => {
   return (
     <footer className="bg-[#1a5d3a] text-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-8 mb-12">
+        <div className="mb-12">
           {/* Logo and CTA */}
-          <div className="lg:col-span-2">
+          <div>
             <div className="flex items-center gap-3 mb-6">
               <img 
                 src="/gi-removebg-preview.png" 
@@ -24,49 +24,6 @@ const Footer = () => {
                 <FaExternalLinkAlt />
               </button>
             </Link>
-          </div>
-
-          {/* About Column */}
-          <div>
-            <h4 className="font-semibold mb-4 text-sm">About</h4>
-            <ul className="space-y-2">
-              <li><Link href="/about" className="text-white/70 hover:text-white text-sm transition-colors">About</Link></li>
-              <li><Link href="/faculty" className="text-white/70 hover:text-white text-sm transition-colors">Faculty</Link></li>
-              <li><Link href="/blog" className="text-white/70 hover:text-white text-sm transition-colors">Blog</Link></li>
-              <li><Link href="/events" className="text-white/70 hover:text-white text-sm transition-colors">Events</Link></li>
-            </ul>
-          </div>
-
-          {/* Resources Column */}
-          <div>
-            <h4 className="font-semibold mb-4 text-sm">Resources</h4>
-            <ul className="space-y-2">
-              <li><Link href="/news" className="text-white/70 hover:text-white text-sm transition-colors">News</Link></li>
-              <li><Link href="/reviews" className="text-white/70 hover:text-white text-sm transition-colors">Reviews</Link></li>
-              <li><Link href="/career-labs" className="text-white/70 hover:text-white text-sm transition-colors">Career Labs</Link></li>
-              <li><Link href="/tuition-pathway" className="text-white/70 hover:text-white text-sm transition-colors">Tuition Pathway</Link></li>
-            </ul>
-          </div>
-
-          {/* Reports/Brochures Column */}
-          <div>
-            <h4 className="font-semibold mb-4 text-sm">Reports & Brochures</h4>
-            <ul className="space-y-2">
-              <li><Link href="/reports/dropshipping" className="text-white/70 hover:text-white text-sm transition-colors">Dropshipping Report</Link></li>
-              <li><Link href="/reports/d2c" className="text-white/70 hover:text-white text-sm transition-colors">D2C Report</Link></li>
-              <li><Link href="/brochures/ug" className="text-white/70 hover:text-white text-sm transition-colors">UG Brochure</Link></li>
-              <li><Link href="/brochures/pg" className="text-white/70 hover:text-white text-sm transition-colors">PG Brochure</Link></li>
-            </ul>
-          </div>
-
-          {/* Experiences Column */}
-          <div>
-            <h4 className="font-semibold mb-4 text-sm">Experiences</h4>
-            <ul className="space-y-2">
-              <li><Link href="/experiences" className="text-white/70 hover:text-white text-sm transition-colors">Experiences at GI-SMART</Link></li>
-              <li><Link href="/experiences/kickstarter" className="text-white/70 hover:text-white text-sm transition-colors">Kickstarter</Link></li>
-              <li><Link href="/experiences/dropshipping" className="text-white/70 hover:text-white text-sm transition-colors">Dropshipping</Link></li>
-            </ul>
           </div>
         </div>
 
