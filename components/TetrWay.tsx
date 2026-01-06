@@ -4,7 +4,7 @@ import { motion } from 'framer-motion'
 
 const TetrWay = () => {
   return (
-    <section className="py-24 bg-[#1a5d3a] relative overflow-hidden">
+    <section className="py-24 bg-gradient-to-br from-[#0a1628] to-[#1a2332] relative overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           {/* Left - Text */}

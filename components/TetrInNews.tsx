@@ -14,7 +14,7 @@ const newsItems = [
     source: 'Entrepreneur',
     headline: 'Learn business by doing business across the Globe: The next revolution in Entrepreneurship',
     image: 'https://images.unsplash.com/photo-1524178232363-1fb2b075b655?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
-    logoColor: 'text-[#1a5d3a]',
+    logoColor: 'text-[#8b1538]',
   },
   {
     source: 'FT Education.com',
@@ -42,7 +42,7 @@ const TetrInNews = () => {
   }
 
   return (
-    <section className="py-24 bg-[#1a5d3a]">
+    <section className="py-24 bg-gradient-to-br from-[#0a1628] to-[#1a2332]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between mb-12">
           <motion.h2
@@ -102,7 +102,7 @@ const TetrInNews = () => {
                 <h3 className={`text-sm font-bold mb-2 ${item.logoColor}`}>
                   {item.source}
                 </h3>
-                <p className="text-gray-900 font-semibold text-sm leading-tight group-hover:text-[#1a5d3a] transition-colors">
+                <p className="text-gray-900 font-semibold text-sm leading-tight group-hover:text-[#8b1538] transition-colors">
                   {item.headline}
                 </p>
               </div>

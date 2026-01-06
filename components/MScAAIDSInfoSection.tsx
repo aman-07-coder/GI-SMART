@@ -143,7 +143,7 @@ const MScAAIDSInfoSection = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: idx * 0.1 }}
-                className="bg-gradient-to-br from-[#1a5d3a] to-[#0a1f0f] rounded-lg p-6 text-white"
+                className="bg-gradient-to-br from-[#0a1628] to-[#8b1538] rounded-lg p-6 text-white"
               >
                 <h3 className="text-xl font-bold mb-2">{item.name}</h3>
                 <p className="text-white/80 text-sm">{item.details}</p>
@@ -193,7 +193,7 @@ const MScAAIDSInfoSection = () => {
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-8 text-center">
             Implementation Timeline
           </h2>
-          <div className="bg-gradient-to-r from-[#1a5d3a] to-[#0a1f0f] rounded-lg p-8 text-white">
+          <div className="bg-gradient-to-r from-[#0a1628] to-[#8b1538] rounded-lg p-8 text-white">
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               {[
                 { quarter: 'Q1 2025', task: 'Infrastructure Design' },

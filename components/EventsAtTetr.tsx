@@ -38,7 +38,7 @@ const events = [
 
 const EventsAtTetr = () => {
   return (
-    <section className="py-24 bg-[#1a5d3a]">
+    <section className="py-24 bg-gradient-to-br from-[#0a1628] to-[#1a2332]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between mb-12">
           <motion.h2
@@ -71,7 +71,7 @@ const EventsAtTetr = () => {
               className="bg-white rounded-lg overflow-hidden cursor-pointer group"
             >
               {/* Top Green Box */}
-              <div className="bg-[#1a5d3a] text-white p-6">
+              <div className="bg-gradient-to-br from-[#0a1628] to-[#1a2332] text-white p-6">
                 <div className="text-xs font-semibold mb-2">GI-SMART CONNECT</div>
                 <div className="text-sm mb-4">Step Into a Day at GI-SMART</div>
                 <div className="space-y-2 text-xs">

@@ -5,7 +5,7 @@ import { FaPlay, FaBriefcase, FaGlobe } from 'react-icons/fa'
 
 const EducationTetrWay = () => {
   return (
-    <section className="py-24 bg-[#1a5d3a] relative">
+    <section className="py-24 bg-gradient-to-br from-[#0a1628] to-[#1a2332] relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 30 }}

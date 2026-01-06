@@ -59,10 +59,10 @@ const WhyChooseGI = () => {
               viewport={{ once: true }}
               transition={{ delay: index * 0.1 }}
               whileHover={{ y: -5 }}
-              className="bg-gradient-to-br from-[#f0f8f0] to-white rounded-xl p-8 border-2 border-[#1a5d3a]/20 hover:border-[#1a5d3a] transition-all duration-300"
+              className="bg-gradient-to-br from-[#f0f8f0] to-white rounded-xl p-8 border-2 border-[#8b1538]/20 hover:border-[#8b1538] transition-all duration-300"
             >
               <div className="mb-4">
-                {reason.icon && <reason.icon className="text-5xl text-[#1a5d3a]" />}
+                {reason.icon && <reason.icon className="text-5xl text-[#8b1538]" />}
               </div>
               <h3 className="text-xl font-bold text-gray-900 mb-3">{reason.title}</h3>
               <p className="text-gray-700 leading-relaxed">{reason.description}</p>
@@ -74,7 +74,7 @@ const WhyChooseGI = () => {
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="bg-gradient-to-r from-[#1a5d3a] to-[#0a1f0f] rounded-xl p-8 md:p-12 text-white text-center"
+          className="bg-gradient-to-r from-[#0a1628] to-[#8b1538] rounded-xl p-8 md:p-12 text-white text-center"
         >
           <div className="flex items-center justify-center gap-3 mb-6">
             <FaRocket className="text-4xl text-[#ffd700]" />

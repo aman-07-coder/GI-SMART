@@ -76,14 +76,14 @@ const ExplorePrograms = () => {
               viewport={{ once: true }}
               transition={{ delay: index * 0.1 }}
               whileHover={{ y: -10 }}
-              className="bg-[#1a5d3a] rounded-lg overflow-hidden group cursor-pointer"
+              className="bg-gradient-to-br from-[#0a1628] to-[#1a2332] rounded-lg overflow-hidden group cursor-pointer border border-[#d4af37]/20"
             >
               <div className="relative h-64 overflow-hidden">
                 <div
                   className="w-full h-full bg-cover bg-center transition-transform duration-500 group-hover:scale-110"
                   style={{ backgroundImage: `url(${program.image})` }}
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-[#1a5d3a] to-transparent" />
+                <div className="absolute inset-0 bg-gradient-to-t from-[#0a1628] to-transparent" />
               </div>
 
               <div className="p-6 text-white">

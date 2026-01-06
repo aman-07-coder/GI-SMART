@@ -15,7 +15,7 @@ const NasContentFellowship = () => {
           animate={{ scale: 1 }}
           transition={{ duration: 1 }}
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-[#1a5d3a]/90 via-[#1a5d3a]/70 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-t from-[#0a1628]/90 via-[#0a1628]/70 to-transparent" />
       </div>
 
       {/* Content Overlay */}

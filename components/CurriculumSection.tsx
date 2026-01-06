@@ -177,13 +177,13 @@ const CurriculumSection = () => {
                   >
                     <div className="flex items-center gap-4">
                       {term.type === 'term' && (
-                        <div className="w-10 h-10 bg-[#1a5d3a] rounded flex items-center justify-center text-white font-bold flex-shrink-0">
+                        <div className="w-10 h-10 bg-[#8b1538] rounded flex items-center justify-center text-white font-bold flex-shrink-0">
                           {term.id}
                         </div>
                       )}
                       {term.type === 'summer' && (
                         <div className="w-10 h-10 flex items-center justify-center flex-shrink-0">
-                          <span className="text-[#1a5d3a] font-bold">S</span>
+                          <span className="text-[#8b1538] font-bold">S</span>
                         </div>
                       )}
                       <div className="text-left">
@@ -198,7 +198,7 @@ const CurriculumSection = () => {
                             {term.badges.map((badge, idx) => (
                               <span
                                 key={idx}
-                                className="bg-[#1a5d3a] text-white px-3 py-1 rounded text-xs font-semibold"
+                                className="bg-[#8b1538] text-white px-3 py-1 rounded text-xs font-semibold"
                               >
                                 {badge}
                               </span>
@@ -224,7 +224,7 @@ const CurriculumSection = () => {
                         transition={{ duration: 0.3 }}
                         className="overflow-hidden"
                       >
-                        <div className="px-6 pb-6 bg-white border-t-2 border-[#1a5d3a]">
+                        <div className="px-6 pb-6 bg-white border-t-2 border-[#8b1538]">
                           {/* Term Project */}
                           <div className="mt-6">
                             <h4 className="text-sm font-bold text-gray-900 uppercase mb-2">
@@ -235,7 +235,7 @@ const CurriculumSection = () => {
                                 if (line.startsWith('•')) {
                                   return (
                                     <div key={idx} className="flex items-start gap-2 mt-2">
-                                      <span className="text-[#1a5d3a] mt-1">•</span>
+                                      <span className="text-[#8b1538] mt-1">•</span>
                                       <span>{line.substring(1).trim()}</span>
                                     </div>
                                   )
@@ -246,7 +246,7 @@ const CurriculumSection = () => {
                             {term.cohortLink && (
                               <a
                                 href="#"
-                                className="text-[#1a5d3a] font-semibold text-sm hover:underline flex items-center gap-1"
+                                className="text-[#8b1538] font-semibold text-sm hover:underline flex items-center gap-1"
                               >
                                 {term.cohortLink}
                                 <FaExternalLinkAlt />
@@ -262,7 +262,7 @@ const CurriculumSection = () => {
                                   onClick={() => setActiveTab('courses')}
                                   className={`pb-3 text-sm font-semibold uppercase transition-colors ${
                                     activeTab === 'courses'
-                                      ? 'text-[#1a5d3a] border-b-2 border-[#1a5d3a]'
+                                      ? 'text-[#8b1538] border-b-2 border-[#8b1538]'
                                       : 'text-gray-500'
                                   }`}
                                 >
@@ -272,7 +272,7 @@ const CurriculumSection = () => {
                                   onClick={() => setActiveTab('business')}
                                   className={`pb-3 text-sm font-semibold uppercase transition-colors ${
                                     activeTab === 'business'
-                                      ? 'text-[#1a5d3a] border-b-2 border-[#1a5d3a]'
+                                      ? 'text-[#8b1538] border-b-2 border-[#8b1538]'
                                       : 'text-gray-500'
                                   }`}
                                 >
@@ -282,7 +282,7 @@ const CurriculumSection = () => {
                                   onClick={() => setActiveTab('cultural')}
                                   className={`pb-3 text-sm font-semibold uppercase transition-colors ${
                                     activeTab === 'cultural'
-                                      ? 'text-[#1a5d3a] border-b-2 border-[#1a5d3a]'
+                                      ? 'text-[#8b1538] border-b-2 border-[#8b1538]'
                                       : 'text-gray-500'
                                   }`}
                                 >
@@ -296,12 +296,12 @@ const CurriculumSection = () => {
                                   <ul className="space-y-3">
                                     {term.courses.map((course, idx) => (
                                       <li key={idx} className="flex items-start gap-3">
-                                        <div className="w-2 h-2 bg-[#1a5d3a] rounded-full mt-2 flex-shrink-0"></div>
+                                        <div className="w-2 h-2 bg-[#8b1538] rounded-full mt-2 flex-shrink-0"></div>
                                         <span className="text-gray-700">{course}</span>
                                       </li>
                                     ))}
                                   </ul>
-                                  <button className="mt-6 text-[#1a5d3a] font-semibold text-sm hover:underline flex items-center gap-1">
+                                  <button className="mt-6 text-[#8b1538] font-semibold text-sm hover:underline flex items-center gap-1">
                                     + VIEW MORE
                                   </button>
                                 </div>

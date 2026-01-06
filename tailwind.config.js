@@ -9,14 +9,31 @@ module.exports = {
     extend: {
       colors: {
         primary: {
-          DEFAULT: '#00ff88',
-          dark: '#00cc6a',
-          light: '#00ffaa',
+          DEFAULT: '#d4af37', // Golden
+          dark: '#b8941f',
+          light: '#f5d76e',
+          metallic: '#c9a961',
+        },
+        accent: {
+          DEFAULT: '#8b1538', // Deep red
+          dark: '#6b0f2a',
+          light: '#a01d3d',
+        },
+        navy: {
+          DEFAULT: '#0a1628', // Deep blue
+          dark: '#050a14',
+          light: '#1a2332',
+          lighter: '#2a3441',
         },
         dark: {
           DEFAULT: '#0a0a0a',
           light: '#1a1a1a',
           lighter: '#2a2a2a',
+        },
+        metallic: {
+          gold: '#d4af37',
+          silver: '#c0c0c0',
+          bronze: '#cd7f32',
         },
       },
       fontFamily: {
@@ -57,8 +74,8 @@ module.exports = {
           '100%': { transform: 'translateY(0)', opacity: '1' },
         },
         glow: {
-          '0%, 100%': { boxShadow: '0 0 20px rgba(0, 255, 136, 0.3)' },
-          '50%': { boxShadow: '0 0 40px rgba(0, 255, 136, 0.6)' },
+          '0%, 100%': { boxShadow: '0 0 20px rgba(212, 175, 55, 0.3)' },
+          '50%': { boxShadow: '0 0 40px rgba(212, 175, 55, 0.6)' },
         },
         float: {
           '0%, 100%': { transform: 'translateY(0px)' },
@@ -70,8 +87,11 @@ module.exports = {
         },
       },
       backgroundImage: {
-        'gradient-primary': 'linear-gradient(135deg, #00ff88 0%, #00cc6a 100%)',
-        'gradient-radial': 'radial-gradient(circle at 50% 50%, rgba(0, 255, 136, 0.1) 0%, transparent 70%)',
+        'gradient-primary': 'linear-gradient(135deg, #d4af37 0%, #b8941f 100%)',
+        'gradient-metallic': 'linear-gradient(135deg, #d4af37 0%, #c9a961 50%, #b8941f 100%)',
+        'gradient-navy': 'linear-gradient(135deg, #0a1628 0%, #1a2332 100%)',
+        'gradient-radial': 'radial-gradient(circle at 50% 50%, rgba(212, 175, 55, 0.1) 0%, transparent 70%)',
+        'texture-pattern': 'repeating-linear-gradient(45deg, transparent, transparent 10px, rgba(212, 175, 55, 0.03) 10px, rgba(212, 175, 55, 0.03) 20px)',
       },
     },
   },

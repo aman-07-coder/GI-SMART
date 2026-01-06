@@ -76,7 +76,7 @@ const CareerLabs = () => {
             initial={{ opacity: 0, x: 50 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
-            className="bg-[#1a5d3a] text-white p-12 rounded-lg"
+            className="bg-gradient-to-br from-[#0a1628] to-[#1a2332] text-white p-12 rounded-lg"
           >
             <h3 className="text-3xl font-bold mb-8">In Term Internships</h3>
             <div className="grid grid-cols-2 gap-8 mb-12">

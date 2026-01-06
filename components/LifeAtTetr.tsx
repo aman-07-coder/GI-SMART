@@ -38,7 +38,7 @@ const LifeAtTetr = () => {
         <div className="absolute inset-0 opacity-5">
           <div className="grid grid-cols-20 gap-2 w-full h-full">
             {Array.from({ length: 200 }).map((_, i) => (
-              <div key={i} className="w-2 h-2 bg-[#1a5d3a] rounded-sm" />
+              <div key={i} className="w-2 h-2 bg-gradient-to-br from-[#0a1628] to-[#1a2332] rounded-sm" />
             ))}
           </div>
         </div>
@@ -58,7 +58,7 @@ const LifeAtTetr = () => {
       </section>
 
       {/* Academic Immersions Section */}
-      <section className="py-16 bg-[#1a5d3a] relative overflow-hidden">
+      <section className="py-16 bg-gradient-to-br from-[#0a1628] to-[#1a2332] relative overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -142,7 +142,7 @@ const LifeAtTetr = () => {
         <div className="absolute inset-0 opacity-5">
           <div className="grid grid-cols-20 gap-2 w-full h-full">
             {Array.from({ length: 200 }).map((_, i) => (
-              <div key={i} className="w-2 h-2 bg-[#1a5d3a] rounded-sm" />
+              <div key={i} className="w-2 h-2 bg-gradient-to-br from-[#0a1628] to-[#1a2332] rounded-sm" />
             ))}
           </div>
         </div>
@@ -161,7 +161,7 @@ const LifeAtTetr = () => {
                 <select
                   value={selectedLocation}
                   onChange={(e) => setSelectedLocation(e.target.value)}
-                  className="appearance-none bg-white border-2 border-gray-300 rounded-lg px-6 py-2 pr-10 font-semibold text-gray-900 cursor-pointer hover:border-[#1a5d3a] transition-colors focus:outline-none focus:border-[#1a5d3a]"
+                  className="appearance-none bg-white border-2 border-gray-300 rounded-lg px-6 py-2 pr-10 font-semibold text-gray-900 cursor-pointer hover:border-[#8b1538] transition-colors focus:outline-none focus:border-[#1a5d3a]"
                 >
                   <option value="Dubai">Dubai</option>
                   <option value="India">India</option>
@@ -191,7 +191,7 @@ const LifeAtTetr = () => {
             <motion.a
               href="#"
               whileHover={{ x: 5 }}
-              className="inline-flex items-center gap-2 text-[#1a5d3a] font-semibold hover:text-[#0a1f0f] transition-colors"
+              className="inline-flex items-center gap-2 text-[#8b1538] font-semibold hover:text-[#0a1f0f] transition-colors"
             >
               Watch the video
               <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -247,7 +247,7 @@ const LifeAtTetr = () => {
         <div className="absolute inset-0 opacity-5">
           <div className="grid grid-cols-20 gap-2 w-full h-full">
             {Array.from({ length: 200 }).map((_, i) => (
-              <div key={i} className="w-2 h-2 bg-[#1a5d3a] rounded-sm" />
+              <div key={i} className="w-2 h-2 bg-gradient-to-br from-[#0a1628] to-[#1a2332] rounded-sm" />
             ))}
           </div>
         </div>
@@ -266,7 +266,7 @@ const LifeAtTetr = () => {
                 <select
                   value={selectedLocation}
                   onChange={(e) => setSelectedLocation(e.target.value)}
-                  className="appearance-none bg-white border-2 border-gray-300 rounded-lg px-6 py-2 pr-10 font-semibold text-gray-900 cursor-pointer hover:border-[#1a5d3a] transition-colors focus:outline-none focus:border-[#1a5d3a]"
+                  className="appearance-none bg-white border-2 border-gray-300 rounded-lg px-6 py-2 pr-10 font-semibold text-gray-900 cursor-pointer hover:border-[#8b1538] transition-colors focus:outline-none focus:border-[#1a5d3a]"
                 >
                   <option value="Dubai">Dubai</option>
                   <option value="India">India</option>

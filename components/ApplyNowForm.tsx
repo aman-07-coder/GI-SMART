@@ -86,7 +86,7 @@ const ApplyNowForm = () => {
   ]
 
   return (
-    <div className="max-w-4xl mx-auto bg-[#1a5d3a] rounded-lg shadow-xl overflow-hidden">
+    <div className="max-w-4xl mx-auto bg-gradient-to-br from-[#0a1628] to-[#1a2332] rounded-lg shadow-xl overflow-hidden">
       {/* Progress Indicator */}
       <div className="bg-white px-8 py-6 border-b border-gray-200">
         <div className="flex items-center justify-between">
@@ -96,7 +96,7 @@ const ApplyNowForm = () => {
                 <div
                   className={`w-12 h-12 rounded-full flex items-center justify-center font-bold text-sm transition-all duration-300 ${
                     currentStep >= step.number
-                      ? 'bg-[#1a5d3a] text-white'
+                      ? 'bg-gradient-to-br from-[#0a1628] to-[#1a2332] text-white'
                       : 'bg-gray-200 text-gray-500'
                   }`}
                 >
@@ -104,7 +104,7 @@ const ApplyNowForm = () => {
                 </div>
                 <span
                   className={`text-xs font-semibold mt-2 ${
-                    currentStep >= step.number ? 'text-[#1a5d3a]' : 'text-gray-400'
+                    currentStep >= step.number ? 'text-[#8b1538]' : 'text-gray-400'
                   }`}
                 >
                   {step.label}
@@ -113,7 +113,7 @@ const ApplyNowForm = () => {
               {index < steps.length - 1 && (
                 <div
                   className={`flex-1 h-1 mx-2 transition-all duration-300 ${
-                    currentStep > step.number ? 'bg-[#1a5d3a]' : 'bg-gray-200'
+                    currentStep > step.number ? 'bg-gradient-to-br from-[#0a1628] to-[#1a2332]' : 'bg-gray-200'
                   }`}
                 />
               )}
@@ -539,7 +539,7 @@ const ApplyNowForm = () => {
                     value={formData.workExperience}
                     onChange={handleChange}
                     rows={4}
-                    className="w-full px-4 py-3 rounded-lg border border-gray-300 bg-gray-50 focus:outline-none focus:border-[#1a5d3a] focus:ring-2 focus:ring-[#1a5d3a]/20 transition-all resize-y"
+                    className="w-full px-4 py-3 rounded-lg border border-gray-300 bg-gray-50 focus:outline-none focus:border-[#8b1538] focus:ring-2 focus:ring-[#1a5d3a]/20 transition-all resize-y"
                     placeholder="Describe your work experience..."
                   />
                 </div>
@@ -651,7 +651,7 @@ const ApplyNowForm = () => {
                     value={formData.additionalInformation}
                     onChange={handleChange}
                     rows={4}
-                    className="w-full px-4 py-3 rounded-lg border border-gray-300 bg-gray-50 focus:outline-none focus:border-[#1a5d3a] focus:ring-2 focus:ring-[#1a5d3a]/20 transition-all resize-y"
+                    className="w-full px-4 py-3 rounded-lg border border-gray-300 bg-gray-50 focus:outline-none focus:border-[#8b1538] focus:ring-2 focus:ring-[#1a5d3a]/20 transition-all resize-y"
                     placeholder="Any additional information you would like to share..."
                   />
                 </div>
@@ -665,7 +665,7 @@ const ApplyNowForm = () => {
                   checked={formData.agreeToPrivacy}
                   onChange={handleCheckboxChange}
                   required
-                  className="mt-1 w-5 h-5 rounded border-gray-300 bg-white text-[#1a5d3a] focus:ring-[#1a5d3a]"
+                  className="mt-1 w-5 h-5 rounded border-gray-300 bg-white text-[#8b1538] focus:ring-[#1a5d3a]"
                 />
                 <label htmlFor="agreeToPrivacy" className="text-white/90 text-sm leading-relaxed">
                   I agree to my details being processed in accordance with GI-SMART's{' '}
@@ -688,7 +688,7 @@ const ApplyNowForm = () => {
             className={`px-8 py-3 rounded-full font-semibold transition-all duration-300 ${
               currentStep === 1
                 ? 'bg-white/20 text-white/50 cursor-not-allowed'
-                : 'bg-white border-2 border-white text-[#1a5d3a] hover:bg-white/90'
+                : 'bg-white border-2 border-white text-[#8b1538] hover:bg-white/90'
             }`}
           >
             Previous
@@ -698,7 +698,7 @@ const ApplyNowForm = () => {
             <button
               type="button"
               onClick={nextStep}
-              className="px-8 py-3 rounded-full font-semibold bg-gradient-to-b from-[#1a5d3a] to-[#0a1f0f] text-white hover:from-[#0a1f0f] hover:to-[#1a5d3a] transition-all duration-300 flex items-center gap-2"
+              className="px-8 py-3 rounded-full font-semibold bg-gradient-to-b from-[#0a1628] to-[#8b1538] text-white hover:from-[#0a1f0f] hover:to-[#1a5d3a] transition-all duration-300 flex items-center gap-2"
             >
               Next Step
               <FaExternalLinkAlt />
@@ -706,7 +706,7 @@ const ApplyNowForm = () => {
           ) : (
             <button
               type="submit"
-              className="px-8 py-3 rounded-full font-semibold bg-gradient-to-b from-[#1a5d3a] to-[#0a1f0f] text-white hover:from-[#0a1f0f] hover:to-[#1a5d3a] transition-all duration-300 flex items-center gap-2"
+              className="px-8 py-3 rounded-full font-semibold bg-gradient-to-b from-[#0a1628] to-[#8b1538] text-white hover:from-[#0a1f0f] hover:to-[#1a5d3a] transition-all duration-300 flex items-center gap-2"
             >
               Submit Application
               <FaExternalLinkAlt />

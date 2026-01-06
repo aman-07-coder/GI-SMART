@@ -50,7 +50,7 @@ const LeadingBeyondClassroom = () => {
             >
               {/* Animated background gradient */}
               <motion.div
-                className="absolute inset-0 bg-gradient-to-br from-[#1a5d3a]/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                className="absolute inset-0 bg-gradient-to-br from-[#8b1538]/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"
                 initial={{ scale: 0 }}
                 whileHover={{ scale: 1 }}
               />
@@ -61,7 +61,7 @@ const LeadingBeyondClassroom = () => {
                 transition={{ delay: index * 0.15 + 0.3, type: 'spring' }}
                 className="mb-4 relative z-10 flex justify-center"
               >
-                {item.icon && <item.icon className="text-6xl text-[#1a5d3a]" />}
+                {item.icon && <item.icon className="text-6xl text-[#8b1538]" />}
               </motion.div>
               <h3 className="text-xl font-bold text-gray-900 mb-3 relative z-10">{item.title}</h3>
               <p className="text-gray-700 relative z-10">{item.description}</p>

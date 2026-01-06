@@ -230,7 +230,7 @@ const MScAAIDSCurriculumSection = () => {
         </div>
 
         {/* Program Model Info */}
-        <div className="bg-gradient-to-r from-[#1a5d3a] to-[#0a1f0f] rounded-lg p-8 text-white">
+        <div className="bg-gradient-to-r from-[#0a1628] to-[#8b1538] rounded-lg p-8 text-white">
           <h4 className="text-2xl font-bold mb-4 text-center">Program Delivery</h4>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 text-center">
             <div>

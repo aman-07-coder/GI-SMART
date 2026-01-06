@@ -5,7 +5,7 @@ import { FaUsers } from 'react-icons/fa'
 
 const Mentorship = () => {
   return (
-    <section className="py-24 bg-[#1a5d3a] relative">
+    <section className="py-24 bg-gradient-to-br from-[#0a1628] to-[#1a2332] relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-[2fr_1px_1fr] gap-0 items-center">
           {/* Left - Content */}

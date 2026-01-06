@@ -147,31 +147,31 @@ const Curriculum = () => {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ delay: index * 0.05 }}
-                  className="bg-white border-l-4 border-[#1a5d3a] rounded-r-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow"
+                  className="bg-white border-l-4 border-[#8b1538] rounded-r-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow"
                 >
                   <button
                     onClick={() => toggleTerm(term.id)}
                     className="w-full p-5 text-left flex items-center justify-between hover:bg-[#f0f8f0] transition-colors group"
                   >
                     <div className="flex items-center gap-4 flex-1">
-                      <span className="text-[#1a5d3a] font-bold text-xl flex-shrink-0">■</span>
+                      <span className="text-[#8b1538] font-bold text-xl flex-shrink-0">■</span>
                       <div className="flex-1">
                         <div className="flex items-center gap-3 flex-wrap">
                           <h3 className="text-xl md:text-2xl font-bold text-gray-900">{term.location}</h3>
                           {term.tag && (
-                            <span className="bg-[#1a5d3a] text-white text-xs px-3 py-1 rounded font-semibold">
+                            <span className="bg-[#8b1538] text-white text-xs px-3 py-1 rounded font-semibold">
                               {term.tag}
                             </span>
                           )}
                           {term.tag2 && (
-                            <span className="bg-[#1a5d3a] text-white text-xs px-3 py-1 rounded font-semibold">
+                            <span className="bg-[#8b1538] text-white text-xs px-3 py-1 rounded font-semibold">
                               {term.tag2}
                             </span>
                           )}
                         </div>
                       </div>
                     </div>
-                    <span className="text-2xl text-gray-600 font-light ml-4 flex-shrink-0 group-hover:text-[#1a5d3a] transition-colors">
+                    <span className="text-2xl text-gray-600 font-light ml-4 flex-shrink-0 group-hover:text-[#8b1538] transition-colors">
                       {isExpanded ? '−' : '+'}
                     </span>
                   </button>
@@ -190,13 +190,13 @@ const Curriculum = () => {
                           {term.workshops && term.businessImmersions && term.culturalImmersions && (
                             <div className="grid grid-cols-3 gap-4">
                               <div className="text-center">
-                                <div className="text-xl md:text-2xl font-bold text-[#1a5d3a] mb-1">{term.workshops}</div>
+                                <div className="text-xl md:text-2xl font-bold text-[#8b1538] mb-1">{term.workshops}</div>
                               </div>
                               <div className="text-center">
-                                <div className="text-xl md:text-2xl font-bold text-[#1a5d3a] mb-1">{term.businessImmersions}</div>
+                                <div className="text-xl md:text-2xl font-bold text-[#8b1538] mb-1">{term.businessImmersions}</div>
                               </div>
                               <div className="text-center">
-                                <div className="text-xl md:text-2xl font-bold text-[#1a5d3a] mb-1">{term.culturalImmersions}</div>
+                                <div className="text-xl md:text-2xl font-bold text-[#8b1538] mb-1">{term.culturalImmersions}</div>
                               </div>
                             </div>
                           )}

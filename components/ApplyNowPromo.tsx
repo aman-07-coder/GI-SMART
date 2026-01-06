@@ -61,7 +61,7 @@ const ApplyNowPromo = () => {
                 transition={{ duration: 0.3 }}
               />
             </div>
-            <p className="text-sm font-semibold text-gray-700 group-hover:text-[#1a5d3a] transition-colors">
+            <p className="text-sm font-semibold text-gray-700 group-hover:text-[#8b1538] transition-colors">
               {item.caption}
             </p>
           </motion.div>

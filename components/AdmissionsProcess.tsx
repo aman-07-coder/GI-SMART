@@ -22,7 +22,7 @@ const AdmissionsProcess = () => {
   ]
 
   return (
-    <section id="admissions" className="py-24 bg-[#1a5d3a] relative overflow-hidden">
+    <section id="admissions" className="py-24 bg-gradient-to-br from-[#0a1628] to-[#1a2332] relative overflow-hidden">
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-10">
         <div className="absolute top-20 right-20 w-32 h-32 bg-[#ffd700] rounded"></div>

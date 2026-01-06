@@ -26,7 +26,7 @@ const ProgramCareers = () => {
           </div>
 
           {/* Right - Green Background with Subsections */}
-          <div className="bg-[#1a5d3a] rounded-lg p-8 space-y-8">
+          <div className="bg-gradient-to-br from-[#0a1628] to-[#1a2332] rounded-lg p-8 space-y-8">
             <div className="flex items-start gap-4">
               <div className="w-4 h-4 bg-pink-500 rounded-sm mt-1 flex-shrink-0"></div>
               <div>
@@ -66,7 +66,7 @@ const ProgramCareers = () => {
         </div>
 
         {/* In Term Internships Section */}
-        <div className="bg-[#1a5d3a] rounded-lg p-12 mb-12 relative overflow-hidden">
+        <div className="bg-gradient-to-br from-[#0a1628] to-[#1a2332] rounded-lg p-12 mb-12 relative overflow-hidden">
           {/* Decorative elements */}
           <div className="absolute top-4 right-4 w-24 h-24 bg-yellow-400 opacity-20 rounded-lg"></div>
           <div className="absolute bottom-4 left-4 w-16 h-16 bg-pink-400 opacity-20 rounded-lg"></div>

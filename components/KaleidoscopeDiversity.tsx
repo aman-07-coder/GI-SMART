@@ -54,7 +54,7 @@ const KaleidoscopeDiversity = () => {
             >
               {/* Animated background effect */}
               <motion.div
-                className="absolute inset-0 bg-gradient-to-br from-[#1a5d3a]/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                className="absolute inset-0 bg-gradient-to-br from-[#8b1538]/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"
                 initial={{ scale: 0 }}
                 whileHover={{ scale: 1 }}
               />

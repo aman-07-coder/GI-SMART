@@ -71,8 +71,8 @@ const WeekAtTetr = () => {
         {/* Weekly Schedule Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 xl:grid-cols-7 gap-4">
           {weekSchedule.map((day) => (
-            <div key={day.day} className="bg-[#1a5d3a] rounded-lg overflow-hidden">
-              <div className="bg-[#1a5d3a] text-white font-bold text-center py-3 px-2">
+            <div key={day.day} className="bg-gradient-to-br from-[#0a1628] to-[#1a2332] rounded-lg overflow-hidden">
+              <div className="bg-gradient-to-br from-[#0a1628] to-[#1a2332] text-white font-bold text-center py-3 px-2">
                 {day.day}
               </div>
               <div className="bg-white p-4 space-y-4">

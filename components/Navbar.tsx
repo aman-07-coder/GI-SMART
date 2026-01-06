@@ -15,13 +15,13 @@ const Navbar = () => {
       const scrollPosition = window.scrollY
       const navbarBottom = scrollPosition + navbarHeight
       
-      // Find all sections with green backgrounds
-      const greenSections = document.querySelectorAll('section[class*="bg-gradient-to-b"], section[class*="bg-[#1a5d3a]"], section[class*="bg-[#0a1f0f]"]')
+      // Find all sections with dark backgrounds
+      const darkSections = document.querySelectorAll('section[class*="bg-gradient-to-b"], section[class*="bg-[#0a1628]"], section[class*="bg-[#0a0a0a]"]')
       
       // Check if navbar is over any green section
       let isOverGreen = false
       
-      greenSections.forEach((section) => {
+      darkSections.forEach((section) => {
         const element = section as HTMLElement
         const sectionTop = element.offsetTop
         const sectionBottom = sectionTop + element.offsetHeight
@@ -137,7 +137,7 @@ const Navbar = () => {
                         onClick={() => setIsProgramsDropdownOpen(!isProgramsDropdownOpen)}
                         className={`transition-colors duration-300 font-medium text-sm uppercase tracking-wide flex items-center gap-1 ${
                           isOverHero 
-                            ? 'text-black hover:text-[#1a5d3a]' 
+                            ? 'text-black hover:text-[#8b1538]' 
                             : 'text-white hover:text-[#ffd700] drop-shadow-md'
                         }`}
                       >
@@ -160,7 +160,7 @@ const Navbar = () => {
                                     key={item.href}
                                     href={item.href}
                                     onClick={() => setIsProgramsDropdownOpen(false)}
-                                    className="block py-2 text-gray-900 font-bold hover:text-[#1a5d3a] transition-colors text-sm"
+                                    className="block py-2 text-gray-900 font-bold hover:text-[#8b1538] transition-colors text-sm"
                                   >
                                     {item.label}
                                   </Link>
@@ -305,7 +305,7 @@ const Navbar = () => {
                       <Link
                         href={link.href}
                         onClick={() => setIsMobileMenuOpen(false)}
-                        className="block text-gray-800 hover:text-[#1a5d3a] transition-colors font-medium uppercase tracking-wide"
+                        className="block text-gray-800 hover:text-[#8b1538] transition-colors font-medium uppercase tracking-wide"
                       >
                         {link.label}
                       </Link>
