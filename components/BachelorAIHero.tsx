@@ -6,7 +6,7 @@ import { FaExternalLinkAlt } from 'react-icons/fa'
 
 const BachelorAIHero = () => {
   return (
-    <section className="relative min-h-[70vh] flex items-center justify-center overflow-hidden pt-[177px] pb-16 bg-gradient-to-b from-[#0a1f0f] to-[#1a5d3a]">
+    <section className="relative min-h-[70vh] flex items-center justify-center overflow-hidden pt-[177px] pb-16 bg-gradient-to-b from-[#0a0a0a] to-[#0a1628]">
       {/* Background Image Effect */}
       <div className="absolute inset-0 opacity-20">
         <div className="w-full h-full bg-[url('https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80')] bg-cover bg-center" />
@@ -61,7 +61,7 @@ const BachelorAIHero = () => {
             </div>
             
             {/* Award Badge */}
-            <div className="absolute -right-4 bottom-4 bg-[#1a5d3a] border-2 border-[#ffd700] text-white p-3 rounded-lg shadow-lg max-w-[200px]">
+            <div className="absolute -right-4 bottom-4 bg-gradient-to-br from-[#0a1628] to-[#1a2332] border-2 border-[#ffd700] text-white p-3 rounded-lg shadow-lg max-w-[200px]">
               <div className="text-xs font-bold mb-1 text-[#ffd700]">QS GOLD WINNER</div>
               <div className="text-xs leading-tight">Most Innovative Business School of 2025</div>
             </div>

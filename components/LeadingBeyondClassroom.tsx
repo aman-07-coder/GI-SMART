@@ -46,7 +46,7 @@ const LeadingBeyondClassroom = () => {
                 rotate: [0, -2, 2, 0],
                 transition: { duration: 0.3 }
               }}
-              className="bg-[#a5d6a7] rounded-lg p-8 text-center shadow-lg hover:shadow-2xl transition-all duration-300 relative overflow-hidden group cursor-pointer"
+              className="bg-gradient-to-br from-[#d4af37]/20 to-white rounded-lg p-8 text-center shadow-lg hover:shadow-2xl transition-all duration-300 relative overflow-hidden group cursor-pointer"
             >
               {/* Animated background gradient */}
               <motion.div

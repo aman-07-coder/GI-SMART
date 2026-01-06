@@ -41,7 +41,7 @@ const ProgramOverview = ({
               <div className="text-sm font-semibold text-gray-600 mb-2 uppercase tracking-wide">
                 {item.label}
               </div>
-              <div className="text-xl md:text-2xl font-bold text-[#1a5d3a]">
+              <div className="text-xl md:text-2xl font-bold text-[#8b1538]">
                 {item.value}
               </div>
             </motion.div>

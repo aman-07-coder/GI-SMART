@@ -107,7 +107,7 @@ const FacultySection = () => {
             onClick={() => setActiveTab('all')}
             className={`pb-4 text-lg font-semibold transition-colors ${
               activeTab === 'all'
-                ? 'text-[#1a5d3a] border-b-2 border-[#1a5d3a]'
+                ? 'text-[#8b1538] border-b-2 border-[#8b1538]'
                 : 'text-gray-500 hover:text-gray-700'
             }`}
           >
@@ -117,7 +117,7 @@ const FacultySection = () => {
             onClick={() => setActiveTab('academician')}
             className={`pb-4 text-lg font-semibold transition-colors ${
               activeTab === 'academician'
-                ? 'text-[#1a5d3a] border-b-2 border-[#1a5d3a]'
+                ? 'text-[#8b1538] border-b-2 border-[#8b1538]'
                 : 'text-gray-500 hover:text-gray-700'
             }`}
           >
@@ -127,7 +127,7 @@ const FacultySection = () => {
             onClick={() => setActiveTab('industry')}
             className={`pb-4 text-lg font-semibold transition-colors ${
               activeTab === 'industry'
-                ? 'text-[#1a5d3a] border-b-2 border-[#1a5d3a]'
+                ? 'text-[#8b1538] border-b-2 border-[#8b1538]'
                 : 'text-gray-500 hover:text-gray-700'
             }`}
           >
@@ -145,11 +145,11 @@ const FacultySection = () => {
               transition={{ duration: 0.5, delay: index * 0.1 }}
               className="group cursor-pointer"
             >
-              <div className="bg-[#a5d6a7] rounded-lg overflow-hidden relative">
+              <div className="bg-gradient-to-br from-[#d4af37]/20 to-white rounded-lg overflow-hidden relative">
                 {/* Subtle geometric pattern */}
                 <div className="absolute inset-0 opacity-5">
-                  <div className="absolute top-4 left-4 w-16 h-16 bg-[#1a5d3a] rounded rotate-12"></div>
-                  <div className="absolute bottom-4 right-4 w-12 h-12 bg-[#1a5d3a] rounded rotate-45"></div>
+                  <div className="absolute top-4 left-4 w-16 h-16 bg-[#8b1538] rounded rotate-12"></div>
+                  <div className="absolute bottom-4 right-4 w-12 h-12 bg-[#8b1538] rounded rotate-45"></div>
                 </div>
                 
                 <div className="relative aspect-square overflow-hidden">

@@ -6,7 +6,7 @@ import { useState } from 'react'
 const layers = [
   { id: 1, title: 'Skills', subtitle: 'Build Employability', color: 'bg-[#e8f5e9]' },
   { id: 2, title: 'Experiences', subtitle: 'Helps Internalization', color: 'bg-[#c8e6c9]' },
-  { id: 3, title: 'Exposure', subtitle: 'Cultivates Perspective', color: 'bg-[#a5d6a7]' },
+  { id: 3, title: 'Exposure', subtitle: 'Cultivates Perspective', color: 'bg-gradient-to-br from-[#d4af37]/20 to-white' },
   { id: 4, title: 'Values', subtitle: 'Nurtures Mindsets', color: 'bg-[#81c784]' },
 ]
 
@@ -14,7 +14,7 @@ const TransformationLayers = () => {
   const [activeLayer, setActiveLayer] = useState(1)
 
   return (
-    <section className="py-24 bg-[#1a5d3a]">
+    <section className="py-24 bg-gradient-to-br from-[#0a1628] to-[#1a2332]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -56,10 +56,10 @@ const TransformationLayers = () => {
               >
                 <div className="flex items-center justify-between">
                   <div>
-                    <h3 className="text-2xl md:text-3xl font-bold text-[#1a5d3a] mb-2">{layer.title}</h3>
-                    <p className="text-[#1a5d3a] text-lg font-medium">{layer.subtitle}</p>
+                    <h3 className="text-2xl md:text-3xl font-bold text-[#8b1538] mb-2">{layer.title}</h3>
+                    <p className="text-[#8b1538] text-lg font-medium">{layer.subtitle}</p>
                   </div>
-                  <div className="text-9xl font-bold text-[#1a5d3a]/15">{layer.id}</div>
+                  <div className="text-9xl font-bold text-[#8b1538]/15">{layer.id}</div>
                 </div>
               </motion.div>
             ))}
@@ -74,7 +74,7 @@ const TransformationLayers = () => {
           >
             {activeLayer === 1 && (
               <div>
-                <div className="bg-[#00ff88] text-[#1a5d3a] px-3 py-1 rounded inline-block text-sm font-semibold mb-6">
+                <div className="bg-[#d4af37] text-[#0a1628] px-3 py-1 rounded inline-block text-sm font-semibold mb-6">
                   SKILLS
                 </div>
                 <h3 className="text-4xl font-bold mb-6">
@@ -109,7 +109,7 @@ const TransformationLayers = () => {
 
             {activeLayer === 2 && (
               <div>
-                <div className="bg-[#00ff88] text-[#1a5d3a] px-3 py-1 rounded inline-block text-sm font-semibold mb-6">
+                <div className="bg-[#d4af37] text-[#0a1628] px-3 py-1 rounded inline-block text-sm font-semibold mb-6">
                   EXPERIENCES
                 </div>
                 <h3 className="text-4xl font-bold mb-6">
@@ -131,7 +131,7 @@ const TransformationLayers = () => {
 
             {activeLayer === 3 && (
               <div>
-                <div className="bg-[#00ff88] text-[#1a5d3a] px-3 py-1 rounded inline-block text-sm font-semibold mb-6">
+                <div className="bg-[#d4af37] text-[#0a1628] px-3 py-1 rounded inline-block text-sm font-semibold mb-6">
                   EXPOSURE
                 </div>
                 <h3 className="text-4xl font-bold mb-6">
@@ -179,7 +179,7 @@ const TransformationLayers = () => {
 
             {activeLayer === 4 && (
               <div>
-                <div className="bg-[#00ff88] text-[#1a5d3a] px-3 py-1 rounded inline-block text-sm font-semibold mb-6">
+                <div className="bg-[#d4af37] text-[#0a1628] px-3 py-1 rounded inline-block text-sm font-semibold mb-6">
                   VALUES
                 </div>
                 <h3 className="text-4xl font-bold mb-6">

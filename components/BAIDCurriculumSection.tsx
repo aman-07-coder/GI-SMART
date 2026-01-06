@@ -184,7 +184,7 @@ const BAIDCurriculumSection = () => {
               }}
               className={`px-6 py-3 rounded-lg font-semibold text-base transition-all ${
                 activeYear === year
-                  ? 'bg-[#1a5d3a] text-white shadow-lg'
+                  ? 'bg-gradient-to-br from-[#0a1628] to-[#1a2332] text-white shadow-lg'
                   : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
               }`}
             >
@@ -217,7 +217,7 @@ const BAIDCurriculumSection = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: term.id * 0.1 }}
               onClick={() => setActiveTerm(activeTerm === term.id ? null : term.id)}
-              className={`bg-[#1a5d3a] rounded-lg p-6 cursor-pointer transition-all hover:shadow-xl ${
+              className={`bg-gradient-to-br from-[#0a1628] to-[#1a2332] rounded-lg p-6 cursor-pointer transition-all hover:shadow-xl ${
                 activeTerm === term.id ? 'ring-4 ring-[#ffd700]' : ''
               }`}
             >

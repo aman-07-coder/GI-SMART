@@ -2,7 +2,7 @@
 
 const FacultyMentorship = () => {
   return (
-    <section className="py-24 bg-[#1a5d3a]">
+    <section className="py-24 bg-gradient-to-br from-[#0a1628] to-[#1a2332]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           {/* Left Content */}
@@ -31,9 +31,9 @@ const FacultyMentorship = () => {
 
           {/* Right Content - Phone Mockup */}
           <div className="flex justify-center lg:justify-end">
-            <div className="bg-white p-4 rounded-lg border-4 border-[#1a5d3a] shadow-2xl">
+            <div className="bg-white p-4 rounded-lg border-4 border-[#8b1538] shadow-2xl">
               <div className="w-64 h-[500px] bg-gray-100 rounded-lg overflow-hidden">
-                <div className="bg-[#1a5d3a] p-4 text-white text-center">
+                <div className="bg-gradient-to-br from-[#0a1628] to-[#1a2332] p-4 text-white text-center">
                   <div className="text-2xl font-bold">GI-SMART</div>
                 </div>
                 <div className="p-4 space-y-4">

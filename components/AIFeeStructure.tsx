@@ -8,7 +8,7 @@ const AIFeeStructure = () => {
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900">
             Fee <span className="font-extrabold italic">Structure</span>
           </h2>
-          <div className="bg-[#1a5d3a] text-white px-4 py-2 rounded text-sm font-semibold">
+          <div className="bg-gradient-to-r from-[#0a1628] to-[#8b1538] text-white px-4 py-2 rounded text-sm font-semibold">
             CURRENCY IN USD
           </div>
         </div>
@@ -17,7 +17,7 @@ const AIFeeStructure = () => {
         <div className="overflow-x-auto mb-8">
           <table className="w-full">
             <thead>
-              <tr className="bg-[#1a5d3a] text-white">
+              <tr className="bg-gradient-to-r from-[#0a1628] to-[#8b1538] text-white">
                 <th className="px-6 py-4 text-left">Academic Fees (Incl. Taxes)</th>
                 <th className="px-6 py-4 text-center">Year 1</th>
                 <th className="px-6 py-4 text-center">Year 2</th>
@@ -51,7 +51,7 @@ const AIFeeStructure = () => {
                 <td className="px-6 py-4 text-center text-gray-900">$3,000</td>
                 <td className="px-6 py-4 text-center font-bold text-gray-900">$15,000</td>
               </tr>
-              <tr className="bg-[#a5d6a7]">
+              <tr className="bg-gradient-to-br from-[#d4af37]/20 to-white">
                 <td className="px-6 py-4 font-bold text-gray-900">Total Academic Fees (Incl. Taxes)</td>
                 <td className="px-6 py-4 text-center font-bold text-gray-900">$62,694</td>
                 <td className="px-6 py-4 text-center font-bold text-gray-900">$61,294</td>
@@ -67,7 +67,7 @@ const AIFeeStructure = () => {
         <div className="overflow-x-auto mb-8">
           <table className="w-full">
             <thead>
-              <tr className="bg-[#1a5d3a] text-white">
+              <tr className="bg-gradient-to-r from-[#0a1628] to-[#8b1538] text-white">
                 <th className="px-6 py-4 text-left">Administration Fees (Incl. Taxes)</th>
                 <th className="px-6 py-4 text-center">Year 1</th>
                 <th className="px-6 py-4 text-center">Year 2</th>
@@ -93,7 +93,7 @@ const AIFeeStructure = () => {
                 <td className="px-6 py-4 text-center text-gray-900">$1,640</td>
                 <td className="px-6 py-4 text-center font-bold text-gray-900">$4,100</td>
               </tr>
-              <tr className="bg-[#a5d6a7]">
+              <tr className="bg-gradient-to-br from-[#d4af37]/20 to-white">
                 <td className="px-6 py-4 font-bold text-gray-900">Total Admin Fees</td>
                 <td className="px-6 py-4 text-center font-bold text-gray-900">$8,598</td>
                 <td className="px-6 py-4 text-center font-bold text-gray-900">$7,398</td>
@@ -109,7 +109,7 @@ const AIFeeStructure = () => {
         <div className="overflow-x-auto">
           <table className="w-full">
             <thead>
-              <tr className="bg-[#1a5d3a] text-white">
+              <tr className="bg-gradient-to-r from-[#0a1628] to-[#8b1538] text-white">
                 <th className="px-6 py-4 text-left font-bold text-lg">Total Fees</th>
                 <th className="px-6 py-4 text-center font-bold text-lg">Year 1</th>
                 <th className="px-6 py-4 text-center font-bold text-lg">Year 2</th>
@@ -119,7 +119,7 @@ const AIFeeStructure = () => {
               </tr>
             </thead>
             <tbody>
-              <tr className="bg-[#1a5d3a] text-white">
+              <tr className="bg-gradient-to-r from-[#0a1628] to-[#8b1538] text-white">
                 <td className="px-6 py-4 font-bold text-lg">Total Fees</td>
                 <td className="px-6 py-4 text-center font-bold text-lg">$71,292</td>
                 <td className="px-6 py-4 text-center font-bold text-lg">$68,692</td>

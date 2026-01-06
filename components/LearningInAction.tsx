@@ -36,7 +36,7 @@ const LearningInAction = () => {
   ]
 
   return (
-    <section className="py-24 bg-[#1a5d3a]">
+    <section className="py-24 bg-gradient-to-br from-[#0a1628] to-[#1a2332]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <h2 className="text-4xl md:text-5xl font-bold text-white mb-8">
           Learning by Doing. <span className="font-extrabold italic">In Action.</span>
@@ -59,10 +59,10 @@ const LearningInAction = () => {
         {/* Project Cards */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
           {/* Batch Card */}
-          <div className="bg-[#a5d6a7] rounded-lg p-6 flex flex-col justify-between min-h-[300px]">
+          <div className="bg-gradient-to-br from-[#d4af37]/20 to-white rounded-lg p-6 flex flex-col justify-between min-h-[300px]">
             <div>
-              <div className="text-[#1a5d3a] font-bold text-sm mb-2">BATCH 2028</div>
-              <div className="text-[#1a5d3a] font-semibold">Review Cohort 1 Progress</div>
+              <div className="text-[#8b1538] font-bold text-sm mb-2">BATCH 2028</div>
+              <div className="text-[#8b1538] font-semibold">Review Cohort 1 Progress</div>
             </div>
             <div className="w-8 h-8 bg-purple-600 rounded flex items-center justify-center text-white font-bold">
               <FaExternalLinkAlt />
@@ -99,7 +99,7 @@ const LearningInAction = () => {
 
         {/* Philosophy Section */}
         <div className="bg-white rounded-lg p-12 text-center">
-          <h3 className="text-4xl md:text-5xl font-bold text-[#1a5d3a] mb-4">
+          <h3 className="text-4xl md:text-5xl font-bold text-[#8b1538] mb-4">
             Learn. Apply. Reflect. <span className="font-extrabold italic">Repeat.</span>
           </h3>
           <p className="text-lg text-gray-600 max-w-3xl mx-auto">

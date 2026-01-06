@@ -72,7 +72,7 @@ const FourCampuses = () => {
                   className="w-full h-full bg-cover bg-center transition-transform duration-500 group-hover:scale-110"
                   style={{ backgroundImage: `url(${campus.image})` }}
                 />
-                <div className={`absolute inset-0 bg-gradient-to-t from-[#1a5d3a] via-[#1a5d3a]/80 to-transparent`} />
+                <div className={`absolute inset-0 bg-gradient-to-t from-[#0a1628] via-[#0a1628]/80 to-transparent`} />
                 <div className="absolute bottom-4 left-4 right-4">
                   <h3 className="text-2xl font-bold text-white mb-1">{campus.name}</h3>
                 </div>
@@ -99,7 +99,7 @@ const FourCampuses = () => {
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="bg-[#1a5d3a] rounded-xl p-8 md:p-12 text-white text-center"
+          className="bg-gradient-to-br from-[#0a1628] to-[#1a2332] rounded-xl p-8 md:p-12 text-white text-center"
         >
           <h3 className="text-2xl md:text-3xl font-bold mb-4">
             Global Agility Through Multi-Campus Learning

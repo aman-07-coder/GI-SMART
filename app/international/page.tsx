@@ -9,7 +9,7 @@ export default function InternationalPage() {
       <Navbar />
       
       {/* Hero Section */}
-      <section className="relative min-h-[60vh] flex items-center justify-center overflow-hidden pt-[177px] pb-16 bg-gradient-to-b from-[#0a1f0f] to-[#1a5d3a]">
+      <section className="relative min-h-[60vh] flex items-center justify-center overflow-hidden pt-[177px] pb-16 bg-gradient-to-b from-[#0a0a0a] to-[#0a1628]">
         <div className="absolute inset-0 opacity-20">
           <div className="w-full h-full bg-[url('https://images.unsplash.com/photo-1488646953014-85cb44e25828?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80')] bg-cover bg-center" />
         </div>
@@ -41,7 +41,7 @@ export default function InternationalPage() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className="bg-[#f0f8f0] rounded-lg p-8 text-center">
               <div className="flex justify-center mb-4">
-                <FaGlobe className="text-5xl text-[#1a5d3a]" />
+                <FaGlobe className="text-5xl text-[#8b1538]" />
               </div>
               <h3 className="text-xl font-bold text-gray-900 mb-3">Multi-Campus Experience</h3>
               <p className="text-gray-700">
@@ -51,7 +51,7 @@ export default function InternationalPage() {
             
             <div className="bg-[#f0f8f0] rounded-lg p-8 text-center">
               <div className="flex justify-center mb-4">
-                <FaHandshake className="text-5xl text-[#1a5d3a]" />
+                <FaHandshake className="text-5xl text-[#8b1538]" />
               </div>
               <h3 className="text-xl font-bold text-gray-900 mb-3">Global Network</h3>
               <p className="text-gray-700">
@@ -61,7 +61,7 @@ export default function InternationalPage() {
             
             <div className="bg-[#f0f8f0] rounded-lg p-8 text-center">
               <div className="flex justify-center mb-4">
-                <FaGraduationCap className="text-5xl text-[#1a5d3a]" />
+                <FaGraduationCap className="text-5xl text-[#8b1538]" />
               </div>
               <h3 className="text-xl font-bold text-gray-900 mb-3">Cultural Immersion</h3>
               <p className="text-gray-700">

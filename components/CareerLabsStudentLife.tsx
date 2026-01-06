@@ -10,7 +10,7 @@ const CareerLabsStudentLife = () => {
       <div className="absolute inset-0 opacity-5">
         <div className="grid grid-cols-20 gap-2 w-full h-full">
           {Array.from({ length: 200 }).map((_, i) => (
-            <div key={i} className="w-2 h-2 bg-[#1a5d3a] rounded-sm" />
+            <div key={i} className="w-2 h-2 bg-[#8b1538] rounded-sm" />
           ))}
         </div>
       </div>
@@ -55,12 +55,12 @@ const CareerLabsStudentLife = () => {
                     viewport={{ once: true }}
                     transition={{ delay: index * 0.1 + 0.2, type: 'spring' }}
                     whileHover={{ scale: 1.2, rotate: 360 }}
-                    className="w-6 h-6 bg-[#1a5d3a] rounded-full flex items-center justify-center flex-shrink-0 mt-1"
+                    className="w-6 h-6 bg-[#8b1538] rounded-full flex items-center justify-center flex-shrink-0 mt-1"
                   >
                     <FaCheck className="text-white text-sm font-bold" />
                   </motion.div>
                   <motion.span
-                    className="text-gray-700 text-lg group-hover:text-[#1a5d3a] transition-colors"
+                    className="text-gray-700 text-lg group-hover:text-[#8b1538] transition-colors"
                     whileHover={{ scale: 1.02 }}
                   >
                     {item}
@@ -84,7 +84,7 @@ const CareerLabsStudentLife = () => {
               whileHover={{ scale: 1.02 }}
               className="bg-white rounded-lg shadow-xl p-8 hover:shadow-2xl transition-shadow duration-300"
             >
-              <div className="aspect-video bg-gradient-to-br from-[#1a5d3a] to-[#0a1f0f] rounded-lg flex items-center justify-center overflow-hidden relative group">
+              <div className="aspect-video bg-gradient-to-br from-[#0a1628] to-[#8b1538] rounded-lg flex items-center justify-center overflow-hidden relative group">
                 <motion.div
                   initial={{ scale: 0 }}
                   whileInView={{ scale: 1 }}

@@ -6,7 +6,7 @@ import { FaExternalLinkAlt } from 'react-icons/fa'
 
 const MScStrategicHero = () => {
   return (
-    <section className="relative min-h-[70vh] flex items-center justify-center overflow-hidden pt-[177px] pb-16 bg-gradient-to-b from-[#0a1f0f] to-[#1a5d3a]">
+    <section className="relative min-h-[70vh] flex items-center justify-center overflow-hidden pt-[177px] pb-16 bg-gradient-to-b from-[#0a0a0a] to-[#0a1628]">
       {/* Background Image Effect */}
       <div className="absolute inset-0 opacity-20">
         <div className="w-full h-full bg-[url('https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80')] bg-cover bg-center" />
@@ -67,7 +67,7 @@ const MScStrategicHero = () => {
             </div>
             
             {/* Program Details Badge */}
-            <div className="absolute -right-4 bottom-4 bg-[#1a5d3a] border-2 border-[#ffd700] text-white p-4 rounded-lg shadow-lg max-w-[220px]">
+            <div className="absolute -right-4 bottom-4 bg-gradient-to-br from-[#0a1628] to-[#1a2332] border-2 border-[#ffd700] text-white p-4 rounded-lg shadow-lg max-w-[220px]">
               <div className="text-xs font-bold mb-2 text-[#ffd700]">PROGRAM STRUCTURE</div>
               <div className="text-xs leading-tight space-y-1">
                 <div>6 Academic Terms</div>

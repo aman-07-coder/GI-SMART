@@ -14,7 +14,7 @@ const ContactHero = () => {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: i * 0.01, duration: 0.3 }}
-              className="w-2 h-2 bg-[#1a5d3a] rounded-sm"
+              className="w-2 h-2 bg-[#8b1538] rounded-sm"
             />
           ))}
         </div>

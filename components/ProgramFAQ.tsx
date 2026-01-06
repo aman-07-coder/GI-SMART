@@ -48,10 +48,10 @@ const ProgramFAQ = () => {
     <section className="py-24 bg-white relative">
       {/* Decorative squares */}
       <div className="absolute top-8 right-8 w-8 h-8 grid grid-cols-2 gap-1 opacity-20">
-        <div className="w-3 h-3 bg-[#1a5d3a]"></div>
-        <div className="w-3 h-3 bg-[#1a5d3a]"></div>
-        <div className="w-3 h-3 bg-[#1a5d3a]"></div>
-        <div className="w-3 h-3 bg-[#1a5d3a]"></div>
+        <div className="w-3 h-3 bg-[#8b1538]"></div>
+        <div className="w-3 h-3 bg-[#8b1538]"></div>
+        <div className="w-3 h-3 bg-[#8b1538]"></div>
+        <div className="w-3 h-3 bg-[#8b1538]"></div>
       </div>
 
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -73,7 +73,7 @@ const ProgramFAQ = () => {
               >
                 <button
                   onClick={() => setExpandedId(isExpanded ? '' : faq.id)}
-                  className="w-full flex items-center justify-between text-left py-4 hover:text-[#1a5d3a] transition-colors"
+                  className="w-full flex items-center justify-between text-left py-4 hover:text-[#8b1538] transition-colors"
                 >
                   <h3 className="text-lg font-semibold text-gray-900 pr-8">
                     {faq.question}

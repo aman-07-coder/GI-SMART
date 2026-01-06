@@ -150,12 +150,12 @@ const CurriculumSection = () => {
   ]
 
   return (
-    <section id="curriculum" className="py-24 bg-white">
+    <section id="curriculum" className="py-12 sm:py-16 md:py-24 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12">
           {/* Left Column - Terms */}
           <div>
-            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-12">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-6 sm:mb-8 md:mb-12">
               Dive into the <span className="font-extrabold italic">Hands-on Curriculum</span>
             </h2>
 
@@ -163,7 +163,7 @@ const CurriculumSection = () => {
               {terms.map((term) => (
                 <div
                   key={term.id}
-                  className="bg-[#a5d6a7] rounded-lg overflow-hidden"
+                  className="bg-gradient-to-br from-[#d4af37]/20 to-white rounded-lg overflow-hidden"
                 >
                   {/* Term Header */}
                   <button
@@ -173,32 +173,32 @@ const CurriculumSection = () => {
                         setActiveTab('courses') // Reset tab when switching terms
                       }
                     }}
-                    className="w-full flex items-center justify-between p-5 hover:bg-[#81c784] transition-colors"
+                    className="w-full flex items-center justify-between p-3 sm:p-4 md:p-5 hover:bg-[#d4af37]/10 transition-colors"
                   >
-                    <div className="flex items-center gap-4">
+                    <div className="flex items-center gap-2 sm:gap-3 md:gap-4 flex-1 min-w-0">
                       {term.type === 'term' && (
-                        <div className="w-10 h-10 bg-[#8b1538] rounded flex items-center justify-center text-white font-bold flex-shrink-0">
+                        <div className="w-8 h-8 sm:w-10 sm:h-10 bg-[#8b1538] rounded flex items-center justify-center text-white font-bold flex-shrink-0 text-sm sm:text-base">
                           {term.id}
                         </div>
                       )}
                       {term.type === 'summer' && (
-                        <div className="w-10 h-10 flex items-center justify-center flex-shrink-0">
-                          <span className="text-[#8b1538] font-bold">S</span>
+                        <div className="w-8 h-8 sm:w-10 sm:h-10 flex items-center justify-center flex-shrink-0">
+                          <span className="text-[#8b1538] font-bold text-sm sm:text-base">S</span>
                         </div>
                       )}
-                      <div className="text-left">
+                      <div className="text-left flex-1 min-w-0">
                         {term.type === 'summer' && (
-                          <span className="text-sm font-semibold text-gray-600 uppercase">Summer: </span>
+                          <span className="text-xs sm:text-sm font-semibold text-gray-600 uppercase">Summer: </span>
                         )}
-                        <h3 className="text-xl md:text-2xl font-bold text-gray-900 inline">
+                        <h3 className="text-base sm:text-lg md:text-xl lg:text-2xl font-bold text-gray-900 inline break-words">
                           {term.location}
                         </h3>
                         {term.badges && term.badges.length > 0 && (
-                          <div className="flex flex-wrap gap-2 mt-2">
+                          <div className="flex flex-wrap gap-1.5 sm:gap-2 mt-1.5 sm:mt-2">
                             {term.badges.map((badge, idx) => (
                               <span
                                 key={idx}
-                                className="bg-[#8b1538] text-white px-3 py-1 rounded text-xs font-semibold"
+                                className="bg-[#8b1538] text-white px-2 sm:px-3 py-0.5 sm:py-1 rounded text-[10px] sm:text-xs font-semibold whitespace-nowrap"
                               >
                                 {badge}
                               </span>
@@ -208,7 +208,7 @@ const CurriculumSection = () => {
                       </div>
                     </div>
                     {term.type === 'term' && (
-                      <span className="text-2xl text-gray-600 font-light">
+                      <span className="text-xl sm:text-2xl text-gray-600 font-light flex-shrink-0 ml-2">
                         {activeTerm === term.id ? '−' : '+'}
                       </span>
                     )}
@@ -224,13 +224,13 @@ const CurriculumSection = () => {
                         transition={{ duration: 0.3 }}
                         className="overflow-hidden"
                       >
-                        <div className="px-6 pb-6 bg-white border-t-2 border-[#8b1538]">
+                        <div className="px-4 sm:px-5 md:px-6 pb-4 sm:pb-5 md:pb-6 bg-white border-t-2 border-[#8b1538]">
                           {/* Term Project */}
-                          <div className="mt-6">
-                            <h4 className="text-sm font-bold text-gray-900 uppercase mb-2">
+                          <div className="mt-4 sm:mt-5 md:mt-6">
+                            <h4 className="text-xs sm:text-sm font-bold text-gray-900 uppercase mb-2">
                               TERM PROJECT
                             </h4>
-                            <div className="text-gray-700 mb-4 whitespace-pre-line">
+                            <div className="text-sm sm:text-base text-gray-700 mb-4 whitespace-pre-line">
                               {term.termProject.split('\n').map((line, idx) => {
                                 if (line.startsWith('•')) {
                                   return (
@@ -257,10 +257,10 @@ const CurriculumSection = () => {
                           {/* Tabs - Only show if term has courses */}
                           {term.courses && term.courses.length > 0 && (
                             <>
-                              <div className="flex gap-6 mt-6 border-b border-gray-200">
+                              <div className="flex gap-2 sm:gap-4 md:gap-6 mt-4 sm:mt-5 md:mt-6 border-b border-gray-200 overflow-x-auto">
                                 <button
                                   onClick={() => setActiveTab('courses')}
-                                  className={`pb-3 text-sm font-semibold uppercase transition-colors ${
+                                  className={`pb-2 sm:pb-3 text-[10px] sm:text-xs md:text-sm font-semibold uppercase transition-colors whitespace-nowrap ${
                                     activeTab === 'courses'
                                       ? 'text-[#8b1538] border-b-2 border-[#8b1538]'
                                       : 'text-gray-500'
@@ -270,7 +270,7 @@ const CurriculumSection = () => {
                                 </button>
                                 <button
                                   onClick={() => setActiveTab('business')}
-                                  className={`pb-3 text-sm font-semibold uppercase transition-colors ${
+                                  className={`pb-2 sm:pb-3 text-[10px] sm:text-xs md:text-sm font-semibold uppercase transition-colors whitespace-nowrap ${
                                     activeTab === 'business'
                                       ? 'text-[#8b1538] border-b-2 border-[#8b1538]'
                                       : 'text-gray-500'
@@ -280,7 +280,7 @@ const CurriculumSection = () => {
                                 </button>
                                 <button
                                   onClick={() => setActiveTab('cultural')}
-                                  className={`pb-3 text-sm font-semibold uppercase transition-colors ${
+                                  className={`pb-2 sm:pb-3 text-[10px] sm:text-xs md:text-sm font-semibold uppercase transition-colors whitespace-nowrap ${
                                     activeTab === 'cultural'
                                       ? 'text-[#8b1538] border-b-2 border-[#8b1538]'
                                       : 'text-gray-500'
@@ -292,16 +292,16 @@ const CurriculumSection = () => {
 
                               {/* Tab Content */}
                               {activeTab === 'courses' && term.courses && (
-                                <div className="mt-6">
-                                  <ul className="space-y-3">
+                                <div className="mt-4 sm:mt-5 md:mt-6">
+                                  <ul className="space-y-2 sm:space-y-3">
                                     {term.courses.map((course, idx) => (
-                                      <li key={idx} className="flex items-start gap-3">
-                                        <div className="w-2 h-2 bg-[#8b1538] rounded-full mt-2 flex-shrink-0"></div>
-                                        <span className="text-gray-700">{course}</span>
+                                      <li key={idx} className="flex items-start gap-2 sm:gap-3">
+                                        <div className="w-1.5 h-1.5 sm:w-2 sm:h-2 bg-[#8b1538] rounded-full mt-1.5 sm:mt-2 flex-shrink-0"></div>
+                                        <span className="text-xs sm:text-sm md:text-base text-gray-700">{course}</span>
                                       </li>
                                     ))}
                                   </ul>
-                                  <button className="mt-6 text-[#8b1538] font-semibold text-sm hover:underline flex items-center gap-1">
+                                  <button className="mt-4 sm:mt-5 md:mt-6 text-[#8b1538] font-semibold text-xs sm:text-sm hover:underline flex items-center gap-1">
                                     + VIEW MORE
                                   </button>
                                 </div>
@@ -318,7 +318,7 @@ const CurriculumSection = () => {
           </div>
 
           {/* Right Column - Image */}
-          <div className="sticky top-[177px] h-fit">
+          <div className="hidden lg:block sticky top-[177px] h-fit">
             <div className="rounded-lg overflow-hidden shadow-lg">
               <div className="aspect-[4/5] bg-gray-200">
                 <AnimatePresence mode="wait">

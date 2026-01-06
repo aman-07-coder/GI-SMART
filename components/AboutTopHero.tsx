@@ -6,7 +6,7 @@ import Link from 'next/link'
 
 const AboutTopHero = () => {
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-[125px] bg-gradient-to-b from-[#0a1f0f] to-[#1a5d3a]">
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-[125px] bg-gradient-to-b from-[#0a0a0a] to-[#0a1628]">
       {/* Background Image Effect */}
       <div className="absolute inset-0 opacity-20">
         <div className="w-full h-full bg-[url('https://images.unsplash.com/photo-1524178232363-1fb2b075b655')] bg-cover bg-center" />
@@ -92,7 +92,7 @@ const AboutTopHero = () => {
               <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1522202176988-66273c2fd55f')] bg-cover bg-center" />
               
               {/* Overlay gradient */}
-              <div className="absolute inset-0 bg-gradient-to-t from-[#0a1f0f] via-transparent to-transparent" />
+              <div className="absolute inset-0 bg-gradient-to-t from-[#0a0a0a] via-transparent to-transparent" />
               
               {/* Decorative border */}
               <div className="absolute inset-0 border-4 border-white/20 rounded-lg" />
@@ -103,7 +103,7 @@ const AboutTopHero = () => {
               initial={{ opacity: 0, scale: 0.8 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.6, delay: 0.8 }}
-              className="absolute -bottom-6 -right-6 bg-[#1a5d3a] text-white p-6 rounded-lg shadow-2xl border border-white/20"
+              className="absolute -bottom-6 -right-6 bg-gradient-to-br from-[#0a1628] to-[#1a2332] text-white p-6 rounded-lg shadow-2xl border border-white/20"
             >
               <div className="text-xs font-bold mb-1 text-[#ffd700]">AWARD WINNER</div>
               <div className="text-sm font-semibold">QS Gold Winner: Most Innovative<br />Business School of 2025</div>

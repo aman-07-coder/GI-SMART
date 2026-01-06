@@ -102,14 +102,14 @@ const BAIDSpecializations = () => {
               onClick={() => setActiveTrack(track.id)}
               className={`relative p-6 rounded-lg text-left transition-all ${
                 activeTrack === track.id
-                  ? 'ring-4 ring-[#1a5d3a] shadow-xl scale-105'
+                  ? 'ring-4 ring-[#8b1538] shadow-xl scale-105'
                   : 'bg-white hover:shadow-md'
               }`}
             >
               <div className={`absolute top-0 left-0 right-0 h-1 bg-gradient-to-r ${track.color} rounded-t-lg`}></div>
               <div className="mt-2">
                 <h3 className={`font-bold text-lg mb-2 ${
-                  activeTrack === track.id ? 'text-[#1a5d3a]' : 'text-gray-900'
+                  activeTrack === track.id ? 'text-[#8b1538]' : 'text-gray-900'
                 }`}>
                   Track {track.id}
                 </h3>
@@ -151,7 +151,7 @@ const BAIDSpecializations = () => {
                 initial={{ opacity: 0, x: -20 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ delay: idx * 0.1 }}
-                className="bg-[#f0f8f0] rounded-lg p-5 border-l-4 border-[#1a5d3a]"
+                className="bg-[#f0f8f0] rounded-lg p-5 border-l-4 border-[#8b1538]"
               >
                 <div className="flex items-start gap-3">
                   <div className={`w-8 h-8 rounded-full bg-gradient-to-r ${activeTrackData.color} flex items-center justify-center text-white font-bold text-sm flex-shrink-0`}>
@@ -164,7 +164,7 @@ const BAIDSpecializations = () => {
           </div>
 
           <div className="mt-8 pt-6 border-t border-gray-200">
-            <div className="bg-[#1a5d3a] text-white rounded-lg p-4 text-center">
+            <div className="bg-[#8b1538] text-white rounded-lg p-4 text-center">
               <p className="font-semibold">
                 Total Credits: <span className="text-[#ffd700]">12 Credits</span> (4 Electives)
               </p>

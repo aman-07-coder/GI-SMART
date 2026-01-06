@@ -42,7 +42,7 @@ const AcademicCouncil = () => {
       <div className="absolute inset-0 opacity-5">
         <div className="grid grid-cols-20 gap-2 w-full h-full">
           {Array.from({ length: 400 }).map((_, i) => (
-            <div key={i} className="w-2 h-2 bg-[#1a5d3a] rounded-sm" />
+            <div key={i} className="w-2 h-2 bg-[#8b1538] rounded-sm" />
           ))}
         </div>
       </div>
@@ -78,7 +78,7 @@ const AcademicCouncil = () => {
                 </div>
               </div>
               <h3 className="text-lg font-bold text-gray-900 mb-1">{member.name}</h3>
-              <p className="text-sm text-[#1a5d3a] font-semibold mb-1">{member.role}</p>
+              <p className="text-sm text-[#8b1538] font-semibold mb-1">{member.role}</p>
               <p className="text-xs text-gray-600 leading-relaxed">{member.details}</p>
             </motion.div>
           ))}

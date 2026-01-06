@@ -13,7 +13,7 @@ const DegreeAccreditation = () => {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
           {/* Left Column */}
           <div>
-            <div className="bg-[#a5d6a7] text-[#1a5d3a] px-3 py-1 rounded inline-block text-xs font-semibold mb-6">
+            <div className="bg-[#d4af37] text-[#0a1628] px-3 py-1 rounded inline-block text-xs font-semibold mb-6">
               DEGREE & ACCREDITATION
             </div>
             

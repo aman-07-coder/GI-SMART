@@ -26,7 +26,7 @@ const NasContentFellowship = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="bg-[#1a5d3a]/95 backdrop-blur-sm rounded-lg p-8 md:p-12 shadow-2xl"
+            className="bg-gradient-to-br from-[#0a1628]/95 to-[#1a2332]/95 backdrop-blur-sm rounded-lg p-8 md:p-12 shadow-2xl"
           >
             <motion.h2
               initial={{ opacity: 0, x: -20 }}

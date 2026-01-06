@@ -69,7 +69,7 @@ const ProgramFaculty = () => {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {faculty.map((member, idx) => (
-            <div key={idx} className="bg-[#a5d6a7] rounded-lg overflow-hidden">
+            <div key={idx} className="bg-gradient-to-br from-[#d4af37]/20 to-white rounded-lg overflow-hidden">
               <div className="aspect-[3/4] relative">
                 <div 
                   className="w-full h-full bg-cover bg-center"

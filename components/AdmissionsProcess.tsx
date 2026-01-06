@@ -51,7 +51,7 @@ const AdmissionsProcess = () => {
               {steps.map((step, idx) => (
                 <div key={step.number} className="flex flex-col items-center flex-1">
                   <div className="relative">
-                    <div className="w-16 h-16 bg-[#a5d6a7] border-4 border-white rounded-lg flex items-center justify-center text-[#1a5d3a] font-bold text-2xl mb-4">
+                    <div className="w-16 h-16 bg-[#d4af37] border-4 border-white rounded-lg flex items-center justify-center text-[#0a1628] font-bold text-2xl mb-4">
                       {step.number}
                     </div>
                     {idx < steps.length - 1 && (

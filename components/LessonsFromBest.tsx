@@ -100,14 +100,14 @@ const LessonsFromBest = () => {
     <section className="py-24 bg-white relative">
       {/* Decorative geometric patterns on sides */}
       <div className="absolute left-0 top-0 bottom-0 w-32 opacity-10">
-        <div className="absolute top-20 left-4 w-16 h-16 bg-[#a5d6a7] rounded rotate-12"></div>
-        <div className="absolute top-40 left-8 w-12 h-12 bg-[#a5d6a7] rounded rotate-45"></div>
-        <div className="absolute bottom-40 left-4 w-20 h-20 bg-[#a5d6a7] rounded rotate-12"></div>
+        <div className="absolute top-20 left-4 w-16 h-16 bg-[#d4af37]/30 rounded rotate-12"></div>
+        <div className="absolute top-40 left-8 w-12 h-12 bg-[#d4af37]/30 rounded rotate-45"></div>
+        <div className="absolute bottom-40 left-4 w-20 h-20 bg-[#d4af37]/30 rounded rotate-12"></div>
       </div>
       <div className="absolute right-0 top-0 bottom-0 w-32 opacity-10">
-        <div className="absolute top-32 right-4 w-16 h-16 bg-[#a5d6a7] rounded rotate-12"></div>
-        <div className="absolute top-60 right-8 w-12 h-12 bg-[#a5d6a7] rounded rotate-45"></div>
-        <div className="absolute bottom-32 right-4 w-20 h-20 bg-[#a5d6a7] rounded rotate-12"></div>
+        <div className="absolute top-32 right-4 w-16 h-16 bg-[#d4af37]/30 rounded rotate-12"></div>
+        <div className="absolute top-60 right-8 w-12 h-12 bg-[#d4af37]/30 rounded rotate-45"></div>
+        <div className="absolute bottom-32 right-4 w-20 h-20 bg-[#d4af37]/30 rounded rotate-12"></div>
       </div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
@@ -125,11 +125,11 @@ const LessonsFromBest = () => {
               transition={{ duration: 0.5, delay: index * 0.05 }}
               className="group cursor-pointer"
             >
-              <div className="bg-[#a5d6a7] rounded-lg overflow-hidden relative">
+              <div className="bg-[#d4af37]/30 rounded-lg overflow-hidden relative">
                 {/* Subtle geometric pattern */}
                 <div className="absolute inset-0 opacity-5">
-                  <div className="absolute top-2 left-2 w-8 h-8 bg-[#1a5d3a] rounded rotate-12"></div>
-                  <div className="absolute bottom-2 right-2 w-6 h-6 bg-[#1a5d3a] rounded rotate-45"></div>
+                  <div className="absolute top-2 left-2 w-8 h-8 bg-[#8b1538] rounded rotate-12"></div>
+                  <div className="absolute bottom-2 right-2 w-6 h-6 bg-[#8b1538] rounded rotate-45"></div>
                 </div>
                 
                 <div className="relative aspect-square overflow-hidden">

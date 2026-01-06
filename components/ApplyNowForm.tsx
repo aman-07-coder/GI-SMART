@@ -539,7 +539,7 @@ const ApplyNowForm = () => {
                     value={formData.workExperience}
                     onChange={handleChange}
                     rows={4}
-                    className="w-full px-4 py-3 rounded-lg border border-gray-300 bg-gray-50 focus:outline-none focus:border-[#8b1538] focus:ring-2 focus:ring-[#1a5d3a]/20 transition-all resize-y"
+                    className="w-full px-4 py-3 rounded-lg border border-gray-300 bg-gray-50 focus:outline-none focus:border-[#8b1538] focus:ring-2 focus:ring-[#8b1538]/20 transition-all resize-y"
                     placeholder="Describe your work experience..."
                   />
                 </div>
@@ -651,7 +651,7 @@ const ApplyNowForm = () => {
                     value={formData.additionalInformation}
                     onChange={handleChange}
                     rows={4}
-                    className="w-full px-4 py-3 rounded-lg border border-gray-300 bg-gray-50 focus:outline-none focus:border-[#8b1538] focus:ring-2 focus:ring-[#1a5d3a]/20 transition-all resize-y"
+                    className="w-full px-4 py-3 rounded-lg border border-gray-300 bg-gray-50 focus:outline-none focus:border-[#8b1538] focus:ring-2 focus:ring-[#8b1538]/20 transition-all resize-y"
                     placeholder="Any additional information you would like to share..."
                   />
                 </div>
@@ -665,7 +665,7 @@ const ApplyNowForm = () => {
                   checked={formData.agreeToPrivacy}
                   onChange={handleCheckboxChange}
                   required
-                  className="mt-1 w-5 h-5 rounded border-gray-300 bg-white text-[#8b1538] focus:ring-[#1a5d3a]"
+                  className="mt-1 w-5 h-5 rounded border-gray-300 bg-white text-[#8b1538] focus:ring-[#8b1538]"
                 />
                 <label htmlFor="agreeToPrivacy" className="text-white/90 text-sm leading-relaxed">
                   I agree to my details being processed in accordance with GI-SMART's{' '}
@@ -698,7 +698,7 @@ const ApplyNowForm = () => {
             <button
               type="button"
               onClick={nextStep}
-              className="px-8 py-3 rounded-full font-semibold bg-gradient-to-b from-[#0a1628] to-[#8b1538] text-white hover:from-[#0a1f0f] hover:to-[#1a5d3a] transition-all duration-300 flex items-center gap-2"
+              className="px-8 py-3 rounded-full font-semibold bg-gradient-to-b from-[#0a1628] to-[#8b1538] text-white hover:from-[#8b1538] hover:to-[#0a1628] transition-all duration-300 flex items-center gap-2"
             >
               Next Step
               <FaExternalLinkAlt />
@@ -706,7 +706,7 @@ const ApplyNowForm = () => {
           ) : (
             <button
               type="submit"
-              className="px-8 py-3 rounded-full font-semibold bg-gradient-to-b from-[#0a1628] to-[#8b1538] text-white hover:from-[#0a1f0f] hover:to-[#1a5d3a] transition-all duration-300 flex items-center gap-2"
+              className="px-8 py-3 rounded-full font-semibold bg-gradient-to-b from-[#0a1628] to-[#8b1538] text-white hover:from-[#8b1538] hover:to-[#0a1628] transition-all duration-300 flex items-center gap-2"
             >
               Submit Application
               <FaExternalLinkAlt />

@@ -80,7 +80,7 @@ const AllInOneJourney = () => {
             <div
               key={index}
               className={`h-2 rounded-full transition-all ${
-                index === 0 ? 'bg-[#1a5d3a] w-8' : 'bg-gray-300 w-2'
+                index === 0 ? 'bg-[#8b1538] w-8' : 'bg-gray-300 w-2'
               }`}
             />
           ))}

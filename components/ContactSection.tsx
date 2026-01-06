@@ -11,7 +11,7 @@ const ContactSection = () => {
       <div className="absolute inset-0 opacity-5">
         <div className="grid grid-cols-20 gap-2 w-full h-full">
           {Array.from({ length: 400 }).map((_, i) => (
-            <div key={i} className="w-2 h-2 bg-[#1a5d3a] rounded-sm" />
+            <div key={i} className="w-2 h-2 bg-gradient-to-br from-[#0a1628] to-[#1a2332] rounded-sm" />
           ))}
         </div>
       </div>
@@ -102,7 +102,7 @@ const ContactSection = () => {
             className="space-y-6"
           >
             {/* Email Contacts */}
-            <div className="bg-[#1a5d3a] text-white p-8 rounded-lg">
+            <div className="bg-gradient-to-br from-[#0a1628] to-[#1a2332] text-white p-8 rounded-lg">
               <div className="space-y-6">
                 <div>
                   <p className="text-white/90 mb-2">For UG admission-related inquiries, please contact us at:</p>
@@ -126,7 +126,7 @@ const ContactSection = () => {
             </div>
 
             {/* Consultation Booking */}
-            <div className="bg-[#1a5d3a] text-white p-8 rounded-lg">
+            <div className="bg-gradient-to-br from-[#0a1628] to-[#1a2332] text-white p-8 rounded-lg">
               <p className="text-white/90 mb-6">Book a Video Consultation with our:</p>
               <div className="space-y-4">
                 <Link href="/consultation/bachelors">

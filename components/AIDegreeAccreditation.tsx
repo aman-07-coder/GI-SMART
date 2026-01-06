@@ -8,10 +8,10 @@ const AIDegreeAccreditation = () => {
   const [expandedSection, setExpandedSection] = useState<string>('experiences')
 
   return (
-    <section id="accreditation" className="py-24 bg-[#1a5d3a]">
+    <section id="accreditation" className="py-24 bg-gradient-to-br from-[#0a1628] to-[#1a2332]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="mb-4">
-          <span className="bg-[#a5d6a7] text-[#1a5d3a] text-xs font-bold px-3 py-1 rounded uppercase">
+          <span className="bg-[#d4af37] text-[#0a1628] text-xs font-bold px-3 py-1 rounded uppercase">
             DEGREE & ACCREDITATION
           </span>
         </div>

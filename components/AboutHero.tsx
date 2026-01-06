@@ -8,7 +8,7 @@ const principles = [
     id: 4, 
     title: 'Values', 
     subtitle: 'Nurtures Mindsets',
-    color: 'bg-[#a5d6a7]',
+    color: 'bg-[#d4af37]/30',
     content: {
       label: 'VALUES',
       headline: 'Go beyond skills - but *mindsets & value systems* too',
@@ -24,7 +24,7 @@ const principles = [
     id: 3, 
     title: 'Exposure', 
     subtitle: 'Cultivates Perspective',
-    color: 'bg-[#a5d6a7]',
+    color: 'bg-[#d4af37]/30',
     content: {
       label: 'EXPOSURE',
       headline: 'Cultivate a global perspective through exposure to 7 unique countries',
@@ -40,7 +40,7 @@ const principles = [
     id: 2, 
     title: 'Experiences', 
     subtitle: 'Helps Internalization',
-    color: 'bg-[#a5d6a7]',
+    color: 'bg-[#d4af37]/30',
     content: {
       label: 'EXPERIENCES',
       headline: 'Learn through *real-world projects* across multiple terms',
@@ -114,7 +114,7 @@ const AboutHero = () => {
   }
 
   return (
-    <section className="relative min-h-screen bg-[#1a5d3a] pt-[125px] pb-24">
+    <section className="relative min-h-screen bg-gradient-to-br from-[#0a1628] to-[#1a2332] pt-[125px] pb-24">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Main Headline */}
         <motion.div
@@ -153,10 +153,10 @@ const AboutHero = () => {
               >
                 <div className="flex items-center justify-between relative">
                   <div className="flex-1 pr-4 z-10 relative">
-                    <h3 className="text-xl md:text-2xl lg:text-3xl font-bold text-[#1a5d3a] mb-1 md:mb-2">
+                    <h3 className="text-xl md:text-2xl lg:text-3xl font-bold text-[#8b1538] mb-1 md:mb-2">
                       {principle.title}
                     </h3>
-                    <p className="text-[#1a5d3a]/80 text-sm md:text-base lg:text-lg font-medium">
+                    <p className="text-[#8b1538]/80 text-sm md:text-base lg:text-lg font-medium">
                       {principle.subtitle}
                     </p>
                   </div>
@@ -188,7 +188,7 @@ const AboutHero = () => {
                     className="text-white"
                   >
                     {/* Label */}
-                    <div className="bg-[#1a5d3a] text-white px-4 py-1.5 rounded-md inline-block text-xs md:text-sm font-semibold mb-6">
+                    <div className="bg-gradient-to-br from-[#0a1628] to-[#1a2332] text-white px-4 py-1.5 rounded-md inline-block text-xs md:text-sm font-semibold mb-6">
                       {principle.content.label}
                     </div>
 

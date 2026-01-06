@@ -166,15 +166,15 @@ const BScStrategicCurriculumSection = () => {
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto mb-8">
             <div className="bg-[#f0f8f0] rounded-lg p-6">
-              <div className="text-3xl font-bold text-[#1a5d3a] mb-2">4 Years</div>
+              <div className="text-3xl font-bold text-[#8b1538] mb-2">4 Years</div>
               <div className="text-gray-700">Program Duration</div>
             </div>
             <div className="bg-[#f0f8f0] rounded-lg p-6">
-              <div className="text-3xl font-bold text-[#1a5d3a] mb-2">12 Terms</div>
+              <div className="text-3xl font-bold text-[#8b1538] mb-2">12 Terms</div>
               <div className="text-gray-700">3 Terms per Year</div>
             </div>
             <div className="bg-[#f0f8f0] rounded-lg p-6">
-              <div className="text-3xl font-bold text-[#1a5d3a] mb-2">13 Weeks</div>
+              <div className="text-3xl font-bold text-[#8b1538] mb-2">13 Weeks</div>
               <div className="text-gray-700">Per Term</div>
             </div>
           </div>
@@ -191,7 +191,7 @@ const BScStrategicCurriculumSection = () => {
               }}
               className={`px-6 py-3 rounded-lg font-semibold text-base transition-all ${
                 activeYear === year
-                  ? 'bg-[#1a5d3a] text-white shadow-lg'
+                  ? 'bg-[#8b1538] text-white shadow-lg'
                   : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
               }`}
             >
@@ -224,7 +224,7 @@ const BScStrategicCurriculumSection = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: term.id * 0.1 }}
               onClick={() => setActiveTerm(activeTerm === term.id ? null : term.id)}
-              className={`bg-[#1a5d3a] rounded-lg p-6 cursor-pointer transition-all hover:shadow-xl ${
+              className={`bg-[#8b1538] rounded-lg p-6 cursor-pointer transition-all hover:shadow-xl ${
                 activeTerm === term.id ? 'ring-4 ring-[#ffd700]' : ''
               }`}
             >
@@ -266,7 +266,7 @@ const BScStrategicCurriculumSection = () => {
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="bg-gradient-to-r from-[#1a5d3a] to-[#0a1f0f] rounded-lg p-8 md:p-12 text-white"
+          className="bg-gradient-to-r from-[#8b1538] to-[#8b1538] rounded-lg p-8 md:p-12 text-white"
         >
           <h4 className="text-2xl font-bold mb-6 text-center">Graduate Outcomes</h4>
           <p className="text-lg text-white/90 mb-6 text-center max-w-3xl mx-auto">

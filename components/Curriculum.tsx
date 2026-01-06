@@ -151,27 +151,27 @@ const Curriculum = () => {
                 >
                   <button
                     onClick={() => toggleTerm(term.id)}
-                    className="w-full p-5 text-left flex items-center justify-between hover:bg-[#f0f8f0] transition-colors group"
+                    className="w-full p-3 sm:p-4 md:p-5 text-left flex items-center justify-between hover:bg-[#f0f8f0] transition-colors group"
                   >
-                    <div className="flex items-center gap-4 flex-1">
-                      <span className="text-[#8b1538] font-bold text-xl flex-shrink-0">■</span>
-                      <div className="flex-1">
-                        <div className="flex items-center gap-3 flex-wrap">
-                          <h3 className="text-xl md:text-2xl font-bold text-gray-900">{term.location}</h3>
+                    <div className="flex items-center gap-2 sm:gap-3 md:gap-4 flex-1 min-w-0">
+                      <span className="text-[#8b1538] font-bold text-base sm:text-lg md:text-xl flex-shrink-0">■</span>
+                      <div className="flex-1 min-w-0">
+                        <div className="flex items-center gap-2 sm:gap-3 flex-wrap">
+                          <h3 className="text-base sm:text-lg md:text-xl lg:text-2xl font-bold text-gray-900 break-words">{term.location}</h3>
                           {term.tag && (
-                            <span className="bg-[#8b1538] text-white text-xs px-3 py-1 rounded font-semibold">
+                            <span className="bg-[#8b1538] text-white text-[10px] sm:text-xs px-2 sm:px-3 py-0.5 sm:py-1 rounded font-semibold whitespace-nowrap">
                               {term.tag}
                             </span>
                           )}
                           {term.tag2 && (
-                            <span className="bg-[#8b1538] text-white text-xs px-3 py-1 rounded font-semibold">
+                            <span className="bg-[#8b1538] text-white text-[10px] sm:text-xs px-2 sm:px-3 py-0.5 sm:py-1 rounded font-semibold whitespace-nowrap">
                               {term.tag2}
                             </span>
                           )}
                         </div>
                       </div>
                     </div>
-                    <span className="text-2xl text-gray-600 font-light ml-4 flex-shrink-0 group-hover:text-[#8b1538] transition-colors">
+                    <span className="text-xl sm:text-2xl text-gray-600 font-light ml-2 sm:ml-4 flex-shrink-0 group-hover:text-[#8b1538] transition-colors">
                       {isExpanded ? '−' : '+'}
                     </span>
                   </button>
@@ -185,18 +185,18 @@ const Curriculum = () => {
                         transition={{ duration: 0.3 }}
                         className="overflow-hidden"
                       >
-                        <div className="px-5 pb-6 pt-2">
-                          <p className="text-gray-700 mb-6 leading-relaxed">{term.description}</p>
+                        <div className="px-4 sm:px-5 pb-4 sm:pb-5 md:pb-6 pt-2">
+                          <p className="text-sm sm:text-base text-gray-700 mb-4 sm:mb-6 leading-relaxed">{term.description}</p>
                           {term.workshops && term.businessImmersions && term.culturalImmersions && (
-                            <div className="grid grid-cols-3 gap-4">
+                            <div className="grid grid-cols-3 gap-2 sm:gap-3 md:gap-4">
                               <div className="text-center">
-                                <div className="text-xl md:text-2xl font-bold text-[#8b1538] mb-1">{term.workshops}</div>
+                                <div className="text-base sm:text-lg md:text-xl lg:text-2xl font-bold text-[#8b1538] mb-1">{term.workshops}</div>
                               </div>
                               <div className="text-center">
-                                <div className="text-xl md:text-2xl font-bold text-[#8b1538] mb-1">{term.businessImmersions}</div>
+                                <div className="text-base sm:text-lg md:text-xl lg:text-2xl font-bold text-[#8b1538] mb-1">{term.businessImmersions}</div>
                               </div>
                               <div className="text-center">
-                                <div className="text-xl md:text-2xl font-bold text-[#8b1538] mb-1">{term.culturalImmersions}</div>
+                                <div className="text-base sm:text-lg md:text-xl lg:text-2xl font-bold text-[#8b1538] mb-1">{term.culturalImmersions}</div>
                               </div>
                             </div>
                           )}

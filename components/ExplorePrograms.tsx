@@ -54,20 +54,20 @@ const programs = [
 
 const ExplorePrograms = () => {
   return (
-    <section className="py-24 bg-white">
+    <section id="explore-programs" className="py-12 sm:py-16 md:py-24 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="text-center mb-16"
+          className="text-center mb-8 sm:mb-12 md:mb-16"
         >
-          <h2 className="text-5xl md:text-6xl font-bold text-gray-900 mb-4">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-4">
             Explore Programs
           </h2>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 md:gap-8">
           {programs.map((program, index) => (
             <motion.div
               key={program.id}
@@ -78,7 +78,7 @@ const ExplorePrograms = () => {
               whileHover={{ y: -10 }}
               className="bg-gradient-to-br from-[#0a1628] to-[#1a2332] rounded-lg overflow-hidden group cursor-pointer border border-[#d4af37]/20"
             >
-              <div className="relative h-64 overflow-hidden">
+              <div className="relative h-48 sm:h-56 md:h-64 overflow-hidden">
                 <div
                   className="w-full h-full bg-cover bg-center transition-transform duration-500 group-hover:scale-110"
                   style={{ backgroundImage: `url(${program.image})` }}
@@ -86,27 +86,27 @@ const ExplorePrograms = () => {
                 <div className="absolute inset-0 bg-gradient-to-t from-[#0a1628] to-transparent" />
               </div>
 
-              <div className="p-6 text-white">
-                <h3 className="text-xl font-bold mb-4">{program.title}</h3>
+              <div className="p-4 sm:p-5 md:p-6 text-white flex flex-col h-full">
+                <h3 className="text-base sm:text-lg md:text-xl font-bold mb-3 sm:mb-4 line-clamp-2">{program.title}</h3>
                 
-                <div className="flex flex-wrap gap-2 mb-4">
+                <div className="flex flex-wrap gap-1.5 sm:gap-2 mb-3 sm:mb-4">
                   {program.tags.map((tag, idx) => (
                     <span
                       key={idx}
-                      className="bg-white/20 text-white text-xs px-3 py-1 rounded"
+                      className="bg-white/20 text-white text-[10px] sm:text-xs px-2 sm:px-3 py-0.5 sm:py-1 rounded whitespace-nowrap"
                     >
                       {tag}
                     </span>
                   ))}
                 </div>
 
-                <div className="bg-white/10 rounded-lg p-4 mb-4">
-                  <div className="text-xs font-semibold mb-1">{program.partner}</div>
-                  <div className="text-xs text-white/80">{program.partnerText}</div>
+                <div className="bg-white/10 rounded-lg p-3 sm:p-4 mb-3 sm:mb-4">
+                  <div className="text-[10px] sm:text-xs font-semibold mb-1">{program.partner}</div>
+                  <div className="text-[10px] sm:text-xs text-white/80 line-clamp-2">{program.partnerText}</div>
                 </div>
 
-                <div className="mb-4">
-                  <p className="text-sm text-white/80">Round 1 Deadline: 16th Feb 2026</p>
+                <div className="mb-3 sm:mb-4">
+                  <p className="text-xs sm:text-sm text-white/80">Round 1 Deadline: 16th Feb 2026</p>
                 </div>
 
                 <Link href={program.link || `/programs/${program.id}`}>

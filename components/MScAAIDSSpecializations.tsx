@@ -84,7 +84,7 @@ const MScAAIDSSpecializations = () => {
               onClick={() => setActiveStream(stream.id)}
               className={`relative p-6 rounded-lg text-left transition-all ${
                 activeStream === stream.id
-                  ? 'ring-4 ring-[#1a5d3a] shadow-xl scale-105 bg-white'
+                  ? 'ring-4 ring-[#8b1538] shadow-xl scale-105 bg-white'
                   : 'bg-white hover:shadow-md'
               }`}
             >
@@ -94,7 +94,7 @@ const MScAAIDSSpecializations = () => {
                   {stream.id}
                 </div>
                 <h3 className={`font-bold text-base mb-2 leading-tight ${
-                  activeStream === stream.id ? 'text-[#1a5d3a]' : 'text-gray-900'
+                  activeStream === stream.id ? 'text-[#8b1538]' : 'text-gray-900'
                 }`}>
                   {stream.name}
                 </h3>
@@ -136,7 +136,7 @@ const MScAAIDSSpecializations = () => {
                 initial={{ opacity: 0, x: -20 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ delay: idx * 0.1 }}
-                className="bg-[#f0f8f0] rounded-lg p-5 border-l-4 border-[#1a5d3a]"
+                className="bg-[#f0f8f0] rounded-lg p-5 border-l-4 border-[#8b1538]"
               >
                 <div className="flex items-start gap-3">
                   <div className={`w-8 h-8 rounded-full bg-gradient-to-r ${activeStreamData.color} flex items-center justify-center text-white font-bold text-sm flex-shrink-0`}>
@@ -148,7 +148,7 @@ const MScAAIDSSpecializations = () => {
             ))}
           </div>
 
-          <div className="bg-[#1a5d3a] text-white rounded-lg p-6">
+          <div className="bg-[#8b1538] text-white rounded-lg p-6">
             <p className="font-semibold text-lg mb-2">Career Opportunities</p>
             <p className="text-white/90 text-sm">
               This specialization prepares you for roles in {activeStreamData.name.toLowerCase()} across industries including technology, manufacturing, healthcare, and smart city development.

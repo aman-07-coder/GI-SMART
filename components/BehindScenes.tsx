@@ -9,12 +9,12 @@ const BehindScenes = () => {
       {/* Decorative squares */}
       <div className="absolute top-10 left-10 grid grid-cols-4 gap-1 opacity-20">
         {Array.from({ length: 16 }).map((_, i) => (
-          <div key={i} className="w-3 h-3 bg-[#1a5d3a]" />
+          <div key={i} className="w-3 h-3 bg-[#8b1538]" />
         ))}
       </div>
       <div className="absolute top-10 right-10 grid grid-cols-4 gap-1 opacity-20">
         {Array.from({ length: 16 }).map((_, i) => (
-          <div key={i} className="w-3 h-3 bg-[#1a5d3a]" />
+          <div key={i} className="w-3 h-3 bg-[#8b1538]" />
         ))}
       </div>
 

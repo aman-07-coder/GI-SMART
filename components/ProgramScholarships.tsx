@@ -55,16 +55,16 @@ const ProgramScholarships = () => {
     <section className="py-24 bg-white relative">
       {/* Decorative squares */}
       <div className="absolute top-8 left-8 w-8 h-8 grid grid-cols-2 gap-1 opacity-20">
-        <div className="w-3 h-3 bg-[#1a5d3a]"></div>
-        <div className="w-3 h-3 bg-[#1a5d3a]"></div>
-        <div className="w-3 h-3 bg-[#1a5d3a]"></div>
-        <div className="w-3 h-3 bg-[#1a5d3a]"></div>
+        <div className="w-3 h-3 bg-[#8b1538]"></div>
+        <div className="w-3 h-3 bg-[#8b1538]"></div>
+        <div className="w-3 h-3 bg-[#8b1538]"></div>
+        <div className="w-3 h-3 bg-[#8b1538]"></div>
       </div>
       <div className="absolute top-8 right-8 w-8 h-8 grid grid-cols-2 gap-1 opacity-20">
-        <div className="w-3 h-3 bg-[#1a5d3a]"></div>
-        <div className="w-3 h-3 bg-[#1a5d3a]"></div>
-        <div className="w-3 h-3 bg-[#1a5d3a]"></div>
-        <div className="w-3 h-3 bg-[#1a5d3a]"></div>
+        <div className="w-3 h-3 bg-[#8b1538]"></div>
+        <div className="w-3 h-3 bg-[#8b1538]"></div>
+        <div className="w-3 h-3 bg-[#8b1538]"></div>
+        <div className="w-3 h-3 bg-[#8b1538]"></div>
       </div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -84,16 +84,16 @@ const ProgramScholarships = () => {
                 return (
                   <div
                     key={scholarship.id}
-                    className="bg-[#a5d6a7] rounded-lg overflow-hidden"
+                    className="bg-gradient-to-br from-[#d4af37]/20 to-white rounded-lg overflow-hidden"
                   >
                     <button
                       onClick={() => setExpandedId(isExpanded ? '' : scholarship.id)}
                       className="w-full px-6 py-4 flex items-center justify-between text-left hover:bg-[#81c784] transition-colors"
                     >
-                      <h3 className="text-lg font-bold text-[#1a5d3a]">
+                      <h3 className="text-lg font-bold text-[#8b1538]">
                         {scholarship.title}
                       </h3>
-                      <span className="text-[#1a5d3a] text-xl font-bold">
+                      <span className="text-[#8b1538] text-xl font-bold">
                         {isExpanded ? '−' : '+'}
                       </span>
                     </button>
@@ -106,15 +106,15 @@ const ProgramScholarships = () => {
                           className="overflow-hidden"
                         >
                           <div className="px-6 pb-6 space-y-3">
-                            <p className="text-[#1a5d3a] text-sm">
+                            <p className="text-[#8b1538] text-sm">
                               {scholarship.description}
                             </p>
                             {scholarship.eligibility && (
                               <div>
-                                <p className="text-[#1a5d3a] font-semibold text-sm mb-1">
+                                <p className="text-[#8b1538] font-semibold text-sm mb-1">
                                   Eligibility Criteria:
                                 </p>
-                                <p className="text-[#1a5d3a] text-sm">
+                                <p className="text-[#8b1538] text-sm">
                                   {scholarship.eligibility}
                                 </p>
                               </div>

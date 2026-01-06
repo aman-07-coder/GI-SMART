@@ -85,12 +85,12 @@ const ProgramSpecializations = () => {
         {/* Term Courses Cards */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
           {termCourses.map((term) => (
-            <div key={term.term} className="bg-[#1a5d3a] rounded-lg p-6 text-white">
+            <div key={term.term} className="bg-gradient-to-br from-[#0a1628] to-[#1a2332] rounded-lg p-6 text-white">
               <h3 className="text-2xl font-bold mb-4">TERM {term.term} {term.location}</h3>
               <ul className="space-y-3">
                 {term.courses.map((course, idx) => (
                   <li key={idx} className="flex items-start gap-2">
-                    <div className="w-2 h-2 bg-[#a5d6a7] rounded-full mt-2 flex-shrink-0"></div>
+                    <div className="w-2 h-2 bg-[#d4af37]/20 rounded-full mt-2 flex-shrink-0"></div>
                     <span className="text-sm">{course}</span>
                   </li>
                 ))}

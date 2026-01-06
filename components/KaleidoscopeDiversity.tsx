@@ -8,7 +8,7 @@ const KaleidoscopeDiversity = () => {
       {/* Decorative pattern */}
       <div className="absolute top-10 right-10 grid grid-cols-4 gap-1 opacity-5">
         {Array.from({ length: 16 }).map((_, i) => (
-          <div key={i} className="w-3 h-3 bg-[#1a5d3a]" />
+          <div key={i} className="w-3 h-3 bg-[#8b1538]" />
         ))}
       </div>
 
@@ -50,7 +50,7 @@ const KaleidoscopeDiversity = () => {
                 rotate: [0, -2, 2, 0],
                 transition: { duration: 0.3 }
               }}
-              className="text-center p-8 bg-[#a5d6a7] rounded-lg shadow-lg hover:shadow-2xl transition-all duration-300 relative overflow-hidden group"
+              className="text-center p-8 bg-gradient-to-br from-[#d4af37]/20 to-white rounded-lg shadow-lg hover:shadow-2xl transition-all duration-300 relative overflow-hidden group"
             >
               {/* Animated background effect */}
               <motion.div
@@ -63,7 +63,7 @@ const KaleidoscopeDiversity = () => {
                 whileInView={{ scale: 1 }}
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.15 + 0.3, type: 'spring' }}
-                className="text-6xl font-bold text-[#1a5d3a] mb-3 relative z-10"
+                className="text-6xl font-bold text-[#8b1538] mb-3 relative z-10"
               >
                 {stat.number}
               </motion.div>

@@ -34,7 +34,7 @@ const ContactInfo = () => {
             transition={{ duration: 0.8, ease: 'easeOut' }}
             className="relative rounded-xl overflow-hidden shadow-2xl hover:shadow-3xl transition-shadow duration-500"
           >
-            <div className="absolute inset-0 bg-[#1a5d3a]">
+            <div className="absolute inset-0 bg-gradient-to-br from-[#0a1628] to-[#1a2332]">
               <motion.div
                 className="absolute inset-0 bg-cover bg-center"
                 style={{
@@ -44,7 +44,7 @@ const ContactInfo = () => {
                 whileHover={{ scale: 1.1 }}
                 transition={{ duration: 0.5 }}
               />
-              <div className="absolute inset-0 bg-[#1a5d3a]/80" />
+              <div className="absolute inset-0 bg-gradient-to-br from-[#0a1628] to-[#1a2332]/80" />
             </div>
             <div className="relative z-10 p-8 md:p-10 text-white">
               <motion.h3
@@ -130,7 +130,7 @@ const ContactInfo = () => {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true, margin: '-100px' }}
               transition={{ duration: 0.8, ease: 'easeOut' }}
-              className="bg-[#1a5d3a] rounded-xl p-8 md:p-10 text-white shadow-2xl hover:shadow-3xl transition-all duration-500"
+              className="bg-gradient-to-br from-[#0a1628] to-[#1a2332] rounded-xl p-8 md:p-10 text-white shadow-2xl hover:shadow-3xl transition-all duration-500"
             >
               <h3 className="text-xl md:text-2xl font-bold mb-8">For admission-related inquiries, please contact us at:</h3>
               <div className="space-y-6">
@@ -191,7 +191,7 @@ const ContactInfo = () => {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true, margin: '-100px' }}
               transition={{ duration: 0.8, delay: 0.2, ease: 'easeOut' }}
-              className="bg-[#1a5d3a] rounded-xl p-8 md:p-10 text-white shadow-2xl hover:shadow-3xl transition-all duration-500 -mt-4"
+              className="bg-gradient-to-br from-[#0a1628] to-[#1a2332] rounded-xl p-8 md:p-10 text-white shadow-2xl hover:shadow-3xl transition-all duration-500 -mt-4"
             >
               <h3 className="text-xl md:text-2xl font-bold mb-8">Book a Video Consultation with our:</h3>
               <div className="space-y-5">

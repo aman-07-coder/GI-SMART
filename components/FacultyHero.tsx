@@ -4,17 +4,17 @@ import { motion } from 'framer-motion'
 
 const FacultyHero = () => {
   return (
-    <section className="relative min-h-[80vh] flex items-center overflow-hidden pt-[125px] bg-[#1a5d3a]">
+    <section className="relative min-h-[80vh] flex items-center overflow-hidden pt-[125px] bg-gradient-to-br from-[#0a1628] to-[#1a2332]">
       {/* Geometric Pattern Background */}
       <div className="absolute inset-0 opacity-20">
-        <div className="absolute top-20 left-10 w-32 h-32 bg-[#a5d6a7] rounded-lg rotate-12"></div>
-        <div className="absolute top-40 right-20 w-24 h-24 bg-[#a5d6a7] rounded-lg rotate-45"></div>
-        <div className="absolute bottom-32 left-32 w-40 h-40 bg-[#a5d6a7] rounded-lg rotate-12"></div>
-        <div className="absolute bottom-20 right-40 w-28 h-28 bg-[#a5d6a7] rounded-lg rotate-45"></div>
-        <div className="absolute top-60 left-1/2 w-36 h-36 bg-[#a5d6a7] rounded-lg rotate-12"></div>
-        <div className="absolute bottom-60 right-1/4 w-32 h-32 bg-[#a5d6a7] rounded-lg rotate-45"></div>
-        <div className="absolute top-1/3 left-1/4 w-20 h-20 bg-[#a5d6a7] rounded-lg rotate-12"></div>
-        <div className="absolute bottom-1/3 right-1/3 w-24 h-24 bg-[#a5d6a7] rounded-lg rotate-45"></div>
+        <div className="absolute top-20 left-10 w-32 h-32 bg-[#d4af37]/30 rounded-lg rotate-12"></div>
+        <div className="absolute top-40 right-20 w-24 h-24 bg-[#d4af37]/30 rounded-lg rotate-45"></div>
+        <div className="absolute bottom-32 left-32 w-40 h-40 bg-[#d4af37]/30 rounded-lg rotate-12"></div>
+        <div className="absolute bottom-20 right-40 w-28 h-28 bg-[#d4af37]/30 rounded-lg rotate-45"></div>
+        <div className="absolute top-60 left-1/2 w-36 h-36 bg-[#d4af37]/30 rounded-lg rotate-12"></div>
+        <div className="absolute bottom-60 right-1/4 w-32 h-32 bg-[#d4af37]/30 rounded-lg rotate-45"></div>
+        <div className="absolute top-1/3 left-1/4 w-20 h-20 bg-[#d4af37]/30 rounded-lg rotate-12"></div>
+        <div className="absolute bottom-1/3 right-1/3 w-24 h-24 bg-[#d4af37]/30 rounded-lg rotate-45"></div>
       </div>
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">

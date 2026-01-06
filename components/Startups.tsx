@@ -24,10 +24,10 @@ const Startups = () => {
                 </div>
               </div>
             </div>
-            <div className="absolute -left-4 top-1/2 transform -translate-y-1/2 w-8 h-32 bg-[#1a5d3a] rounded" />
+            <div className="absolute -left-4 top-1/2 transform -translate-y-1/2 w-8 h-32 bg-gradient-to-br from-[#0a1628] to-[#1a2332] rounded" />
             <div className="flex gap-2 mt-4 justify-center">
               {[1, 2, 3, 4, 5].map((i) => (
-                <div key={i} className="w-3 h-3 bg-[#1a5d3a] rounded-full" />
+                <div key={i} className="w-3 h-3 bg-gradient-to-br from-[#0a1628] to-[#1a2332] rounded-full" />
               ))}
             </div>
           </motion.div>
@@ -37,7 +37,7 @@ const Startups = () => {
             initial={{ opacity: 0, x: 50 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
-            className="bg-[#1a5d3a] text-white p-12 rounded-lg"
+            className="bg-gradient-to-br from-[#0a1628] to-[#1a2332] text-white p-12 rounded-lg"
           >
             <h2 className="text-4xl md:text-5xl font-bold mb-6">
               Projects <span className="italic font-bold">StartUps</span> at <span className="italic font-bold">GI-SMART</span>

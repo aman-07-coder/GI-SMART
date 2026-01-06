@@ -136,7 +136,7 @@ const ScholarshipsDetailed = () => {
                       className="w-full p-5 text-left flex items-center justify-between hover:bg-[#e8f5e8] transition-colors group"
                     >
                       <h3 className="text-lg font-bold text-gray-900">{scholarship.title}</h3>
-                      <span className="text-2xl text-gray-600 group-hover:text-[#1a5d3a] transition-colors">
+                      <span className="text-2xl text-gray-600 group-hover:text-[#8b1538] transition-colors">
                         {isExpanded ? '−' : '+'}
                       </span>
                     </button>
@@ -156,7 +156,7 @@ const ScholarshipsDetailed = () => {
                             </p>
                             {scholarship.eligibility && (
                               <div className="flex items-start gap-2">
-                                <span className="text-[#1a5d3a] font-bold mt-1">■</span>
+                                <span className="text-[#8b1538] font-bold mt-1">■</span>
                                 <p className="text-gray-700">
                                   <span className="font-semibold">Eligibility Criteria:</span>{' '}
                                   {scholarship.eligibility}
@@ -187,7 +187,7 @@ const ScholarshipsDetailed = () => {
                 return (
                   <div
                     key={i}
-                    className="aspect-square bg-[#1a5d3a] rounded"
+                    className="aspect-square bg-gradient-to-br from-[#0a1628] to-[#1a2332] rounded"
                   />
                 )
               })}

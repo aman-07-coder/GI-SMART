@@ -85,10 +85,10 @@ const MScAAIDSInfoSection = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: idx * 0.1 }}
-                className="bg-[#f0f8f0] rounded-lg p-6 border-l-4 border-[#1a5d3a]"
+                className="bg-[#f0f8f0] rounded-lg p-6 border-l-4 border-[#8b1538]"
               >
                 <div className="flex items-start gap-3">
-                  <div className="w-8 h-8 rounded-full bg-[#1a5d3a] text-white flex items-center justify-center font-bold flex-shrink-0">
+                  <div className="w-8 h-8 rounded-full bg-gradient-to-br from-[#0a1628] to-[#1a2332] text-white flex items-center justify-center font-bold flex-shrink-0">
                     {idx + 1}
                   </div>
                   <p className="text-gray-800 font-medium">{outcome}</p>
@@ -116,7 +116,7 @@ const MScAAIDSInfoSection = () => {
                 whileInView={{ opacity: 1, scale: 1 }}
                 viewport={{ once: true }}
                 transition={{ delay: idx * 0.05 }}
-                className="bg-[#1a5d3a] text-white rounded-lg p-6 text-center hover:shadow-xl transition-shadow"
+                className="bg-gradient-to-br from-[#0a1628] to-[#1a2332] text-white rounded-lg p-6 text-center hover:shadow-xl transition-shadow"
               >
                 <p className="font-semibold">{career}</p>
               </motion.div>
@@ -174,9 +174,9 @@ const MScAAIDSInfoSection = () => {
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: idx * 0.1 }}
-                className="bg-white border-2 border-[#1a5d3a] rounded-lg p-6"
+                className="bg-white border-2 border-[#8b1538] rounded-lg p-6"
               >
-                <h3 className="text-xl font-bold text-[#1a5d3a] mb-2">{partner.name}</h3>
+                <h3 className="text-xl font-bold text-[#8b1538] mb-2">{partner.name}</h3>
                 <p className="text-gray-700">{partner.type}</p>
               </motion.div>
             ))}

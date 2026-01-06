@@ -8,7 +8,7 @@ const FeeStructure = () => {
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900">
             Fee <span className="font-extrabold italic">Structure</span>
           </h2>
-          <div className="bg-[#1a5d3a] text-white px-4 py-2 rounded text-sm font-semibold">
+          <div className="bg-gradient-to-r from-[#0a1628] to-[#8b1538] text-white px-4 py-2 rounded text-sm font-semibold">
             CURRENCY IN USD
           </div>
         </div>
@@ -17,7 +17,7 @@ const FeeStructure = () => {
         <div className="overflow-x-auto">
           <table className="w-full">
             <thead>
-              <tr className="bg-[#1a5d3a] text-white">
+              <tr className="bg-gradient-to-r from-[#0a1628] to-[#8b1538] text-white">
                 <th className="px-6 py-4 text-left">Academic Fees (Incl. Taxes)</th>
                 <th className="px-6 py-4 text-center">Year 1</th>
                 <th className="px-6 py-4 text-center">Year 2</th>
@@ -51,7 +51,7 @@ const FeeStructure = () => {
                 <td className="px-6 py-4 text-center text-gray-900">$3,000</td>
                 <td className="px-6 py-4 text-center font-bold text-gray-900">$15,000</td>
               </tr>
-              <tr className="bg-[#a5d6a7]">
+              <tr className="bg-gradient-to-br from-[#d4af37]/20 to-white">
                 <td className="px-6 py-4 font-bold text-gray-900">Total Academic Fees (Incl. Taxes)</td>
                 <td className="px-6 py-4 text-center font-bold text-gray-900">$51,425</td>
                 <td className="px-6 py-4 text-center font-bold text-gray-900">$50,025</td>
@@ -64,7 +64,7 @@ const FeeStructure = () => {
 
           <table className="w-full mt-4">
             <thead>
-              <tr className="bg-[#1a5d3a] text-white">
+              <tr className="bg-gradient-to-r from-[#0a1628] to-[#8b1538] text-white">
                 <th className="px-6 py-4 text-left">Administration Fees (Incl. Taxes)</th>
                 <th className="px-6 py-4 text-center">Year 1</th>
                 <th className="px-6 py-4 text-center">Year 2</th>
@@ -90,7 +90,7 @@ const FeeStructure = () => {
                 <td className="px-6 py-4 text-center text-gray-900">$2,864</td>
                 <td className="px-6 py-4 text-center font-bold text-gray-900">$9,000</td>
               </tr>
-              <tr className="bg-[#a5d6a7]">
+              <tr className="bg-gradient-to-br from-[#d4af37]/20 to-white">
                 <td className="px-6 py-4 font-bold text-gray-900">Total Admin Fees</td>
                 <td className="px-6 py-4 text-center font-bold text-gray-900">$7,747</td>
                 <td className="px-6 py-4 text-center font-bold text-gray-900">$6,543</td>
@@ -103,7 +103,7 @@ const FeeStructure = () => {
 
           <table className="w-full mt-4">
             <tbody>
-              <tr className="bg-[#1a5d3a] text-white">
+              <tr className="bg-gradient-to-r from-[#0a1628] to-[#8b1538] text-white">
                 <td className="px-6 py-4 font-bold text-lg">Total Fees</td>
                 <td className="px-6 py-4 text-center font-bold text-lg">$59,172</td>
                 <td className="px-6 py-4 text-center font-bold text-lg">$56,568</td>

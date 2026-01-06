@@ -102,7 +102,7 @@ const MScAAIDSCurriculumSection = () => {
                 To produce globally competent innovators and leaders in AI, data systems, and robotics who shape a sustainable and human-centered digital future.
               </p>
             </div>
-            <div className="bg-[#1a5d3a] rounded-lg p-8 text-white">
+            <div className="bg-gradient-to-br from-[#0a1628] to-[#1a2332] rounded-lg p-8 text-white">
               <h3 className="text-2xl font-bold mb-4">Mission</h3>
               <p className="text-white/90 leading-relaxed">
                 To provide interdisciplinary education integrating AI, data science, and design to address industrial, social, and environmental challenges worldwide.
@@ -128,7 +128,7 @@ const MScAAIDSCurriculumSection = () => {
               'Integration of applied research, robotics, and sustainability',
               'Paris mobility option'
             ].map((feature, idx) => (
-              <div key={idx} className="bg-white border-2 border-[#1a5d3a] rounded-lg p-4">
+              <div key={idx} className="bg-white border-2 border-[#8b1538] rounded-lg p-4">
                 <div className="flex items-start gap-3">
                   <div className="w-2 h-2 bg-[#ffd700] rounded-full mt-2 flex-shrink-0"></div>
                   <p className="text-gray-800 font-medium">{feature}</p>
@@ -149,7 +149,7 @@ const MScAAIDSCurriculumSection = () => {
               }}
               className={`px-6 py-3 rounded-lg font-semibold text-base transition-all ${
                 activeYear === year
-                  ? 'bg-[#1a5d3a] text-white shadow-lg'
+                  ? 'bg-gradient-to-br from-[#0a1628] to-[#1a2332] text-white shadow-lg'
                   : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
               }`}
             >
@@ -182,7 +182,7 @@ const MScAAIDSCurriculumSection = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: term.id * 0.1 }}
               onClick={() => setActiveTerm(activeTerm === term.id ? null : term.id)}
-              className={`bg-[#1a5d3a] rounded-lg p-6 cursor-pointer transition-all hover:shadow-xl ${
+              className={`bg-gradient-to-br from-[#0a1628] to-[#1a2332] rounded-lg p-6 cursor-pointer transition-all hover:shadow-xl ${
                 activeTerm === term.id ? 'ring-4 ring-[#ffd700]' : ''
               }`}
             >

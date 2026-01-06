@@ -48,7 +48,7 @@ const DemoDays = () => {
       {/* Decorative squares */}
       <div className="absolute top-10 right-10 grid grid-cols-2 gap-1 opacity-20">
         {Array.from({ length: 4 }).map((_, i) => (
-          <div key={i} className="w-3 h-3 bg-[#1a5d3a]" />
+          <div key={i} className="w-3 h-3 bg-gradient-to-br from-[#0a1628] to-[#1a2332]" />
         ))}
       </div>
 
@@ -103,7 +103,7 @@ const DemoDays = () => {
                   className="w-full h-full bg-cover bg-center transition-transform duration-500 group-hover:scale-110"
                   style={{ backgroundImage: `url(${video.image})` }}
                 />
-                <div className="absolute top-4 left-4 bg-[#1a5d3a] text-white px-3 py-1 rounded text-xs font-semibold">
+                <div className="absolute top-4 left-4 bg-gradient-to-br from-[#0a1628] to-[#1a2332] text-white px-3 py-1 rounded text-xs font-semibold">
                   {video.badge}
                 </div>
                 <div className="absolute inset-0 flex items-center justify-center">

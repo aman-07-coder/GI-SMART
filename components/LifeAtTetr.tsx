@@ -161,7 +161,7 @@ const LifeAtTetr = () => {
                 <select
                   value={selectedLocation}
                   onChange={(e) => setSelectedLocation(e.target.value)}
-                  className="appearance-none bg-white border-2 border-gray-300 rounded-lg px-6 py-2 pr-10 font-semibold text-gray-900 cursor-pointer hover:border-[#8b1538] transition-colors focus:outline-none focus:border-[#1a5d3a]"
+                  className="appearance-none bg-white border-2 border-gray-300 rounded-lg px-6 py-2 pr-10 font-semibold text-gray-900 cursor-pointer hover:border-[#8b1538] transition-colors focus:outline-none focus:border-[#8b1538]"
                 >
                   <option value="Dubai">Dubai</option>
                   <option value="India">India</option>
@@ -191,7 +191,7 @@ const LifeAtTetr = () => {
             <motion.a
               href="#"
               whileHover={{ x: 5 }}
-              className="inline-flex items-center gap-2 text-[#8b1538] font-semibold hover:text-[#0a1f0f] transition-colors"
+              className="inline-flex items-center gap-2 text-[#8b1538] font-semibold hover:text-[#0a1628] transition-colors"
             >
               Watch the video
               <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -266,7 +266,7 @@ const LifeAtTetr = () => {
                 <select
                   value={selectedLocation}
                   onChange={(e) => setSelectedLocation(e.target.value)}
-                  className="appearance-none bg-white border-2 border-gray-300 rounded-lg px-6 py-2 pr-10 font-semibold text-gray-900 cursor-pointer hover:border-[#8b1538] transition-colors focus:outline-none focus:border-[#1a5d3a]"
+                  className="appearance-none bg-white border-2 border-gray-300 rounded-lg px-6 py-2 pr-10 font-semibold text-gray-900 cursor-pointer hover:border-[#8b1538] transition-colors focus:outline-none focus:border-[#8b1538]"
                 >
                   <option value="Dubai">Dubai</option>
                   <option value="India">India</option>

@@ -26,9 +26,9 @@ const BAIDCampusMobility = () => {
             initial={{ opacity: 0, x: -30 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
-            className="bg-white rounded-xl p-8 shadow-lg border-2 border-[#1a5d3a]"
+            className="bg-white rounded-xl p-8 shadow-lg border-2 border-[#8b1538]"
           >
-            <h3 className="text-2xl font-bold text-[#1a5d3a] mb-4">Anchor Campus Experience</h3>
+            <h3 className="text-2xl font-bold text-[#8b1538] mb-4">Anchor Campus Experience</h3>
             <p className="text-gray-700 mb-4 leading-relaxed">
               Choose an anchor campus (Paris, Dubai, Germany, or Bucharest) as your academic base and spend six terms there.
             </p>
@@ -52,7 +52,7 @@ const BAIDCampusMobility = () => {
             initial={{ opacity: 0, x: 30 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
-            className="bg-[#1a5d3a] rounded-xl p-8 text-white shadow-lg"
+            className="bg-[#8b1538] rounded-xl p-8 text-white shadow-lg"
           >
             <h3 className="text-2xl font-bold mb-4">Global Rotation Experience</h3>
             <p className="text-white/90 mb-4 leading-relaxed">
@@ -84,12 +84,12 @@ const BAIDCampusMobility = () => {
           <h3 className="text-2xl font-bold text-gray-900 mb-6 text-center">Intimate Learning Environments</h3>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div className="bg-[#f0f8f0] rounded-lg p-6">
-              <h4 className="text-xl font-bold text-[#1a5d3a] mb-2">Years 1–2</h4>
+              <h4 className="text-xl font-bold text-[#8b1538] mb-2">Years 1–2</h4>
               <p className="text-3xl font-bold text-gray-900 mb-2">40–50</p>
               <p className="text-gray-700">students per cohort</p>
               <p className="text-sm text-gray-600 mt-3">Fostering community, diversity, and collaboration</p>
             </div>
-            <div className="bg-[#1a5d3a] rounded-lg p-6 text-white">
+            <div className="bg-[#8b1538] rounded-lg p-6 text-white">
               <h4 className="text-xl font-bold mb-2">Years 3–4</h4>
               <p className="text-3xl font-bold mb-2">30–35</p>
               <p className="text-white/90">students per class</p>
