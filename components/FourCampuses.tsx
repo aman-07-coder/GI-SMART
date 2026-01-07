@@ -65,7 +65,7 @@ const FourCampuses = () => {
               viewport={{ once: true }}
               transition={{ delay: index * 0.1 }}
               whileHover={{ y: -10 }}
-              className="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 group"
+              className="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 group flex flex-col h-full"
             >
               <div className="relative h-48 overflow-hidden">
                 <div
@@ -78,14 +78,14 @@ const FourCampuses = () => {
                 </div>
               </div>
               
-              <div className="p-6">
-                <div className={`inline-block px-3 py-1 rounded-full text-xs font-semibold mb-3 bg-gradient-to-r ${campus.color} text-white`}>
+              <div className="p-6 flex flex-col flex-1">
+                <div className={`w-full px-3 py-1.5 rounded-full text-xs font-semibold mb-3 bg-gradient-to-r ${campus.color} text-white text-center whitespace-nowrap`}>
                   {campus.specialization}
                 </div>
-                <p className="text-gray-700 text-sm leading-relaxed mb-4">
+                <p className="text-gray-700 text-sm leading-relaxed mb-4 flex-1">
                   {campus.description}
                 </p>
-                <div className="pt-4 border-t border-gray-200">
+                <div className="pt-4 border-t border-gray-200 mt-auto">
                   <p className="text-xs text-gray-500">
                     Choose as your anchor campus or rotate during your program
                   </p>

@@ -77,12 +77,6 @@ const Hero = () => {
                 </div>
               </div>
             </div>
-            
-            {/* Award Badge - Hidden on mobile, visible on tablet+ */}
-            <div className="hidden md:block absolute -right-4 top-1/2 transform -translate-y-1/2 bg-gradient-to-br from-[#8b1538] to-[#0a1628] text-white p-3 md:p-4 rounded rotate-90 origin-center border border-[#d4af37]/30">
-              <div className="text-[10px] md:text-xs font-bold mb-1">GOLD WINNER</div>
-              <div className="text-[10px] md:text-xs">QS Gold Winner: Most Innovative Business School of 2025</div>
-            </div>
           </motion.div>
         </div>
       </div>

@@ -11,7 +11,7 @@ const Navbar = () => {
 
   useEffect(() => {
     const checkIfOverGreenBackground = () => {
-      const navbarHeight = 80 // navbar height in pixels
+      const navbarHeight = 64 // navbar height in pixels
       const scrollPosition = window.scrollY
       const navbarBottom = scrollPosition + navbarHeight
       
@@ -109,14 +109,14 @@ const Navbar = () => {
         initial={{ y: -100 }}
         animate={{ y: 0 }}
         transition={{ duration: 0.5 }}
-        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
+        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 backdrop-blur-sm ${
           isOverHero 
-            ? 'bg-white shadow-md' 
+            ? 'bg-white/50 shadow-md' 
             : 'bg-transparent'
         }`}
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex items-center justify-between h-20">
+          <div className="flex items-center justify-between h-16">
             {/* Logo */}
             <Link href="/" className="flex items-center gap-3">
               <img 

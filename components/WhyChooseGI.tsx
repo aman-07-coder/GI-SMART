@@ -1,7 +1,7 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import { FaBullseye, FaGlobe, FaBriefcase, FaHandshake, FaRocket, FaMapMarkerAlt, FaCompass } from 'react-icons/fa'
+import { FaBullseye, FaGlobe, FaBriefcase, FaHandshake, FaRocket, FaMapMarkerAlt, FaCompass, FaUsers } from 'react-icons/fa'
 import { FaStar } from 'react-icons/fa'
 
 const WhyChooseGI = () => {
@@ -30,6 +30,11 @@ const WhyChooseGI = () => {
       icon: FaRocket,
       title: 'Professional & Life Opportunities',
       description: 'Build international networks that extend far beyond graduation'
+    },
+    {
+      icon: FaUsers,
+      title: 'Expert Mentorship',
+      description: 'Learn from industry leaders and academic experts who guide your journey to success'
     }
   ]
 

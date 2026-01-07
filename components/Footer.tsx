@@ -12,11 +12,11 @@ const Footer = () => {
           <div>
             <div className="flex items-center gap-2 sm:gap-3 mb-4 sm:mb-6">
               <img 
-                src="/gi-removebg-preview.png" 
-                alt="GI-SMART Logo" 
-                className="h-8 sm:h-10 md:h-12 w-auto object-contain"
+                src="/logo-footer.png" 
+               
+                className="h-16 sm:h-18 md:h-18 w-auto object-contain"
               />
-              <span className="text-white font-bold text-base sm:text-lg md:text-xl">GI-SMART</span>
+              {/* <span className="text-white font-bold text-base sm:text-lg md:text-xl">GI-SMART</span> */}
             </div>
             <Link href="/admissions">
               <button className="bg-[#ffd700] text-black px-4 sm:px-6 py-2 sm:py-3 rounded-lg font-semibold text-xs sm:text-sm flex items-center gap-2 hover:bg-[#ffed4e] transition-colors mb-6 sm:mb-8">

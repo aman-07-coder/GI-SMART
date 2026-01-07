@@ -8,7 +8,7 @@ const principles = [
     id: 4, 
     title: 'Values', 
     subtitle: 'Nurtures Mindsets',
-    color: 'bg-[#d4af37]/30',
+    color: 'bg-[#e5e7eb]',
     content: {
       label: 'VALUES',
       headline: 'Go beyond skills - but *mindsets & value systems* too',
@@ -24,7 +24,7 @@ const principles = [
     id: 3, 
     title: 'Exposure', 
     subtitle: 'Cultivates Perspective',
-    color: 'bg-[#d4af37]/30',
+    color: 'bg-[#e5e7eb]',
     content: {
       label: 'EXPOSURE',
       headline: 'Cultivate a global perspective through exposure to 7 unique countries',
@@ -40,7 +40,7 @@ const principles = [
     id: 2, 
     title: 'Experiences', 
     subtitle: 'Helps Internalization',
-    color: 'bg-[#d4af37]/30',
+    color: 'bg-[#e5e7eb]',
     content: {
       label: 'EXPERIENCES',
       headline: 'Learn through *real-world projects* across multiple terms',
@@ -56,7 +56,7 @@ const principles = [
     id: 1, 
     title: 'Skills', 
     subtitle: 'Build Employability',
-    color: 'bg-[#81c784]',
+    color: 'bg-[#e5e7eb]',
     content: {
       label: 'SKILLS',
       headline: 'Focus on *applicable skills* instead of rote memorization',
