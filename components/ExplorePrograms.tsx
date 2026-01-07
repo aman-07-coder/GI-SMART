@@ -1,5 +1,6 @@
 'use client'
 
+import { useState, useEffect, useRef } from 'react'
 import { motion } from 'framer-motion'
 import Link from 'next/link'
 import { FaExternalLinkAlt } from 'react-icons/fa'
@@ -16,15 +17,6 @@ const programs = [
   },
   {
     id: 2,
-    title: 'Bachelor of Science in Artificial Intelligence',
-    tags: ['4 Years', '7 Countries', 'US Degree (STEM)'],
-    partner: 'ILLINOIS TECH',
-    partnerText: 'Bachelor\'s Degree Awarded by Illinois Tech, Chicago',
-    image: 'https://images.unsplash.com/photo-1524178232363-1fb2b075b655',
-    link: '/programs/bachelor-science-ai',
-  },
-  {
-    id: 3,
     title: 'MSc in Applied AI & Data Systems',
     tags: ['2 Years', '6 Terms', 'Hybrid Model'],
     partner: 'RNCP LEVEL 7 / UAE NQF 9',
@@ -33,7 +25,7 @@ const programs = [
     link: '/programs/master-applied-ai-data-systems',
   },
   {
-    id: 4,
+    id: 3,
     title: 'BBA in Tourism & Hospitality Innovation',
     tags: ['4 Years', '12 Terms', 'Global Service'],
     partner: 'GI-SMART',
@@ -42,7 +34,7 @@ const programs = [
     link: '/programs/bachelor-tourism-hospitality',
   },
   {
-    id: 5,
+    id: 4,
     title: 'BSc in Strategic Management',
     tags: ['4 Years', '12 Terms', 'Global Leadership'],
     partner: 'GI-SMART',
@@ -53,6 +45,60 @@ const programs = [
 ]
 
 const ExplorePrograms = () => {
+  const [currentIndex, setCurrentIndex] = useState(0)
+  const scrollContainerRef = useRef<HTMLDivElement>(null)
+  const autoScrollRef = useRef<NodeJS.Timeout | null>(null)
+
+  // Create infinite loop by duplicating programs
+  const infinitePrograms = [...programs, ...programs, ...programs]
+
+  const scrollToIndex = (index: number) => {
+    if (scrollContainerRef.current) {
+      const container = scrollContainerRef.current
+      const containerWidth = container.offsetWidth
+      const cardWidth = (containerWidth - 48) / 3 // 3 cards visible, 2 gaps (24px each)
+      const gap = 24
+      const scrollPosition = index * (cardWidth + gap)
+      
+      container.scrollTo({
+        left: scrollPosition,
+        behavior: 'smooth'
+      })
+    }
+    setCurrentIndex(index % programs.length)
+  }
+
+  // Auto-scroll functionality - infinite loop (A,B,C -> B,C,D -> C,D,A -> D,A,B)
+  useEffect(() => {
+    const startAutoScroll = () => {
+      autoScrollRef.current = setInterval(() => {
+        setCurrentIndex((prev) => {
+          const next = (prev + 1) % programs.length
+          if (scrollContainerRef.current) {
+            const container = scrollContainerRef.current
+            const containerWidth = container.offsetWidth
+            const cardWidth = (containerWidth - 48) / 3
+            const gap = 24
+            const scrollPosition = next * (cardWidth + gap)
+            container.scrollTo({
+              left: scrollPosition,
+              behavior: 'smooth'
+            })
+          }
+          return next
+        })
+      }, 3000) // Auto-scroll every 2 seconds
+    }
+
+    startAutoScroll()
+
+    return () => {
+      if (autoScrollRef.current) {
+        clearInterval(autoScrollRef.current)
+      }
+    }
+  }, [])
+
   return (
     <section id="explore-programs" className="py-12 sm:py-16 md:py-24 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -67,7 +113,8 @@ const ExplorePrograms = () => {
           </h2>
         </motion.div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 md:gap-8">
+        {/* Mobile View - Grid Layout */}
+        <div className="grid grid-cols-1 gap-6 md:hidden">
           {programs.map((program, index) => (
             <motion.div
               key={program.id}
@@ -76,9 +123,9 @@ const ExplorePrograms = () => {
               viewport={{ once: true }}
               transition={{ delay: index * 0.1 }}
               whileHover={{ y: -10 }}
-              className="bg-gradient-to-br from-[#0a1628] to-[#1a2332] rounded-lg overflow-hidden group cursor-pointer border border-[#d4af37]/20 flex flex-col h-full"
+              className="bg-gradient-to-br from-[#0a1628] to-[#1a2332] rounded-lg overflow-hidden group cursor-pointer border border-[#d4af37]/20 flex flex-col"
             >
-              <div className="relative h-48 sm:h-56 md:h-64 overflow-hidden">
+              <div className="relative h-56 overflow-hidden flex-shrink-0">
                 <div
                   className="w-full h-full bg-cover bg-center transition-transform duration-500 group-hover:scale-110"
                   style={{ backgroundImage: `url(${program.image})` }}
@@ -86,44 +133,129 @@ const ExplorePrograms = () => {
                 <div className="absolute inset-0 bg-gradient-to-t from-[#0a1628] to-transparent" />
               </div>
 
-              <div className="p-4 sm:p-5 md:p-6 text-white flex flex-col flex-1">
-                <h3 className="text-base sm:text-lg md:text-xl font-bold mb-3 sm:mb-4 line-clamp-2">{program.title}</h3>
+              <div className="p-5 md:p-6 text-white flex flex-col flex-1 h-full">
+                <h3 className="text-lg md:text-xl font-bold mb-4 line-clamp-2 min-h-[3rem]">{program.title}</h3>
                 
-                <div className="flex flex-wrap gap-1.5 sm:gap-2 mb-3 sm:mb-4">
+                <div className="flex flex-wrap gap-2 mb-4">
                   {program.tags.map((tag, idx) => (
                     <span
                       key={idx}
-                      className="bg-white/20 text-white text-[10px] sm:text-xs px-2 sm:px-3 py-0.5 sm:py-1 rounded whitespace-nowrap"
+                      className="bg-white/20 text-white text-xs px-3 py-1 rounded whitespace-nowrap"
                     >
                       {tag}
                     </span>
                   ))}
                 </div>
 
-                <div className="bg-white/10 rounded-lg p-3 sm:p-4 mb-3 sm:mb-4">
-                  <div className="text-[10px] sm:text-xs font-semibold mb-1">{program.partner}</div>
-                  <div className="text-[10px] sm:text-xs text-white/80 line-clamp-2">{program.partnerText}</div>
+                <div className="bg-white/10 rounded-lg p-4 mb-4 flex-shrink-0 min-h-[4rem]">
+                  <div className="text-xs font-semibold mb-1">{program.partner}</div>
+                  <div className="text-xs text-white/80 line-clamp-2">{program.partnerText}</div>
                 </div>
 
-                <div className="mb-3 sm:mb-4">
-                  <p className="text-xs sm:text-sm text-white/80">Round 1 Deadline: 16th Feb 2026</p>
+                <div className="mb-4 flex-shrink-0">
+                  <p className="text-sm text-white/80">Round 1 Deadline: 16th Feb 2026</p>
                 </div>
 
-                <div className="mt-auto">
+                <div className="mt-auto pt-4 flex-shrink-0">
                   <Link href={program.link || `/programs/${program.id}`}>
                     <motion.button
                       whileHover={{ scale: 1.05 }}
                       whileTap={{ scale: 0.95 }}
-                      className="w-full bg-[#ffd700] text-black py-3 rounded font-semibold flex items-center justify-center gap-2 hover:bg-[#ffed4e] transition-colors"
+                      className="w-full bg-[#ffd700] text-black py-3 rounded font-semibold flex items-center justify-center gap-2 hover:bg-[#ffed4e] transition-colors text-sm"
                     >
                       LEARN MORE
-                      <FaExternalLinkAlt />
+                      <FaExternalLinkAlt className="text-xs" />
                     </motion.button>
                   </Link>
                 </div>
               </div>
             </motion.div>
           ))}
+        </div>
+
+        {/* Desktop Carousel Container */}
+        <div className="relative hidden md:block">
+          <div
+            ref={scrollContainerRef}
+            className="flex overflow-x-hidden scroll-smooth gap-6 [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]"
+          >
+            {infinitePrograms.map((program, index) => (
+              <motion.div
+                key={program.id}
+                initial={{ opacity: 0, y: 50 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: index * 0.1 }}
+                whileHover={{ y: -10 }}
+                className="bg-gradient-to-br from-[#0a1628] to-[#1a2332] rounded-lg overflow-hidden group cursor-pointer border border-[#d4af37]/20 flex flex-col flex-shrink-0"
+                style={{ 
+                  width: 'calc((100% - 3rem) / 3)',
+                  height: '650px'
+                }}
+              >
+              <div className="relative h-56 overflow-hidden flex-shrink-0">
+                <div
+                  className="w-full h-full bg-cover bg-center transition-transform duration-500 group-hover:scale-110"
+                  style={{ backgroundImage: `url(${program.image})` }}
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-[#0a1628] to-transparent" />
+              </div>
+
+              <div className="p-5 md:p-6 text-white flex flex-col flex-1 h-full">
+                <h3 className="text-lg md:text-xl font-bold mb-4 line-clamp-2 min-h-[3rem]">{program.title}</h3>
+                
+                <div className="flex flex-wrap gap-2 mb-4">
+                  {program.tags.map((tag, idx) => (
+                    <span
+                      key={idx}
+                      className="bg-white/20 text-white text-xs px-3 py-1 rounded whitespace-nowrap"
+                    >
+                      {tag}
+                    </span>
+                  ))}
+                </div>
+
+                <div className="bg-white/10 rounded-lg p-4 mb-4 flex-shrink-0 min-h-[4rem]">
+                  <div className="text-xs font-semibold mb-1">{program.partner}</div>
+                  <div className="text-xs text-white/80 line-clamp-2">{program.partnerText}</div>
+                </div>
+
+                <div className="mb-4 flex-shrink-0">
+                  <p className="text-sm text-white/80">Round 1 Deadline: 16th Feb 2026</p>
+                </div>
+
+                <div className="mt-auto pt-4 flex-shrink-0">
+                  <Link href={program.link || `/programs/${program.id}`}>
+                    <motion.button
+                      whileHover={{ scale: 1.05 }}
+                      whileTap={{ scale: 0.95 }}
+                      className="w-full bg-[#ffd700] text-black py-3 rounded font-semibold flex items-center justify-center gap-2 hover:bg-[#ffed4e] transition-colors text-sm"
+                    >
+                      LEARN MORE
+                      <FaExternalLinkAlt className="text-xs" />
+                    </motion.button>
+                  </Link>
+                </div>
+              </div>
+              </motion.div>
+            ))}
+          </div>
+
+          {/* Dots Indicator - Desktop Only */}
+          <div className="hidden md:flex items-center justify-center gap-2 mt-8">
+            {programs.map((_, index) => (
+              <button
+                key={index}
+                onClick={() => scrollToIndex(index)}
+                className={`h-2 rounded-full transition-all ${
+                  index === currentIndex
+                    ? 'w-8 bg-[#ffd700]'
+                    : 'w-2 bg-gray-300 hover:bg-gray-400'
+                }`}
+                aria-label={`Go to slide ${index + 1}`}
+              />
+            ))}
+          </div>
         </div>
       </div>
     </section>

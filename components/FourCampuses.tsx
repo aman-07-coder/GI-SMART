@@ -49,7 +49,7 @@ const FourCampuses = () => {
           className="text-center mb-16"
         >
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-            Four Campuses, One Global Identity
+            Four Campuses - One Global Identity
           </h2>
           <p className="text-lg text-gray-600 max-w-3xl mx-auto leading-relaxed">
             At GI-SMART, your education transcends borders. Each campus offers a unique cultural and professional context — yet all share a unified academic vision.

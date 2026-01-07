@@ -27,7 +27,7 @@ const Hero = () => {
                 Where Intelligence Meets Imagination
               </h1>
             </div>
-            <p className="text-sm sm:text-base md:text-lg lg:text-xl text-white/90 mb-3 sm:mb-4">
+            <p className="text-xs sm:text-sm md:text-base lg:text-lg text-white/90 mb-3 sm:mb-4">
               GI-SMART – The Global Institute for Strategic Management & Advanced Research Technologies
             </p>
             <p className="text-xs sm:text-sm md:text-base lg:text-lg text-white/80 mb-6 sm:mb-8 leading-relaxed">

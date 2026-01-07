@@ -154,7 +154,7 @@ const LifeAtTetr = () => {
             viewport={{ once: true }}
             className="mb-8"
           >
-            <p className="text-sm text-gray-600 mb-2">Explore GI-SMART's Immersions</p>
+            <p className="text-xs sm:text-sm text-gray-600 mb-2">Explore GI-SMART's Immersions</p>
             <div className="flex items-center justify-between mb-8">
               <h3 className="text-3xl md:text-4xl font-bold text-gray-900">Business Immersions</h3>
               <div className="relative">
@@ -259,7 +259,7 @@ const LifeAtTetr = () => {
             viewport={{ once: true }}
             className="mb-8"
           >
-            <p className="text-sm text-gray-600 mb-2">Explore GI-SMART's Immersions</p>
+            <p className="text-xs sm:text-sm text-gray-600 mb-2">Explore GI-SMART's Immersions</p>
             <div className="flex items-center justify-between mb-8">
               <h3 className="text-3xl md:text-4xl font-bold text-gray-900">Cultural Immersions</h3>
               <div className="relative">

@@ -3,10 +3,10 @@
 import { motion } from 'framer-motion'
 
 const universities = [
-  { name: 'Cornell University', color: 'text-red-600' },
-  { name: 'UBI Business School', color: 'text-blue-600' },
-  { name: 'Illinois Tech', color: 'text-red-600' },
-  { name: 'IIT Delhi / FITT', color: 'text-orange-600' },
+  { name: 'Cornell University' },
+  { name: 'UBI Business School' },
+  { name: 'Illinois Tech' },
+  { name: 'IIT Delhi / FITT' },
 ]
 
 const UniversityCollaborations = () => {
@@ -36,7 +36,7 @@ const UniversityCollaborations = () => {
               viewport={{ once: true }}
               transition={{ delay: index * 0.1 }}
               whileHover={{ scale: 1.1 }}
-              className={`text-2xl font-bold ${university.color} border-r border-gray-300 pr-8 last:border-r-0 last:pr-0`}
+              className="text-2xl font-bold text-gray-900 border-r border-gray-300 pr-8 last:border-r-0 last:pr-0"
             >
               {university.name}
             </motion.div>

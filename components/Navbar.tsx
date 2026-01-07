@@ -72,16 +72,25 @@ const Navbar = () => {
     }
   }, [isProgramsDropdownOpen])
 
-  // Reset mobile programs dropdown when mobile menu closes
+  // Reset mobile programs dropdown when mobile menu closes and lock body scroll
   useEffect(() => {
-    if (!isMobileMenuOpen) {
+    if (isMobileMenuOpen) {
+      // Lock body scroll when menu is open
+      document.body.style.overflow = 'hidden'
+    } else {
+      // Unlock body scroll when menu is closed
+      document.body.style.overflow = ''
       setMobileProgramsOpen(false)
+    }
+    
+    // Cleanup on unmount
+    return () => {
+      document.body.style.overflow = ''
     }
   }, [isMobileMenuOpen])
 
   const programsMenuItems = [
     { href: '/programs/bachelor-ai-design', label: 'Bachelor of Artificial Intelligence Design (BAID)' },
-    { href: '/programs/bachelor-science-ai', label: 'Bachelor of Science in Artificial Intelligence' },
     { href: '/programs/master-applied-ai-data-systems', label: 'MSc in Applied AI & Data Systems' },
     { href: '/programs/bachelor-tourism-hospitality', label: 'BBA in Tourism & Hospitality Innovation' },
     { href: '/programs/bachelor-strategic-management', label: 'BSc in Strategic Management' },
@@ -110,10 +119,10 @@ const Navbar = () => {
         initial={{ y: -100 }}
         animate={{ y: 0 }}
         transition={{ duration: 0.5 }}
-        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+        className={`fixed top-0 left-0 right-0 z-40 transition-all duration-300 ${
           isOverHero 
-            ? 'bg-white/50 shadow-md backdrop-blur-sm' 
-            : 'bg-transparent'
+            ? 'bg-white/60 backdrop-blur-md shadow-md' 
+            : 'bg-white/60 backdrop-blur-md'
         }`}
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -135,11 +144,7 @@ const Navbar = () => {
                     <>
                       <button
                         onClick={() => setIsProgramsDropdownOpen(!isProgramsDropdownOpen)}
-                        className={`transition-colors duration-300 font-medium text-sm uppercase tracking-wide flex items-center gap-1 ${
-                          isOverHero 
-                            ? 'text-black hover:text-[#8b1538]' 
-                            : 'text-white hover:text-[#ffd700] drop-shadow-md'
-                        }`}
+                        className="transition-colors duration-300 font-medium text-sm uppercase tracking-wide flex items-center gap-1 text-black hover:text-[#8b1538]"
                       >
                         {link.label}
                       </button>
@@ -194,11 +199,7 @@ const Navbar = () => {
                   ) : (
                     <Link
                       href={link.href}
-                      className={`transition-colors duration-300 font-medium text-sm uppercase tracking-wide ${
-                        isOverHero 
-                          ? 'text-black hover:text-[#8b1538]' 
-                          : 'text-white hover:text-[#ffd700] drop-shadow-md'
-                      }`}
+                      className="transition-colors duration-300 font-medium text-sm uppercase tracking-wide text-black hover:text-[#8b1538]"
                     >
                       {link.label}
                     </Link>
@@ -231,54 +232,58 @@ const Navbar = () => {
 
             {/* Mobile Menu Button */}
             <button
-              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-              className={`md:hidden p-2 transition-colors duration-300 ${
-                isOverHero ? 'text-black' : 'text-white'
-              }`}
+              onClick={(e) => {
+                e.stopPropagation()
+                setIsMobileMenuOpen(!isMobileMenuOpen)
+              }}
+              className="md:hidden p-2 transition-colors duration-300 relative z-50 text-black"
               aria-label="Toggle menu"
             >
               <div className="w-6 h-6 flex flex-col justify-center space-y-1.5">
                 <span
-                  className={`block h-0.5 transition-all duration-300 ${
-                    isOverHero ? 'bg-black' : 'bg-white'
-                  } ${isMobileMenuOpen ? 'rotate-45 translate-y-2' : ''}`}
+                  className={`block h-0.5 transition-all duration-300 bg-black ${
+                    isMobileMenuOpen ? 'rotate-45 translate-y-2' : ''
+                  }`}
                 />
                 <span
-                  className={`block h-0.5 transition-all duration-300 ${
-                    isOverHero ? 'bg-black' : 'bg-white'
-                  } ${isMobileMenuOpen ? 'opacity-0' : ''}`}
+                  className={`block h-0.5 transition-all duration-300 bg-black ${
+                    isMobileMenuOpen ? 'opacity-0' : ''
+                  }`}
                 />
                 <span
-                  className={`block h-0.5 transition-all duration-300 ${
-                    isOverHero ? 'bg-black' : 'bg-white'
-                  } ${isMobileMenuOpen ? '-rotate-45 -translate-y-2' : ''}`}
+                  className={`block h-0.5 transition-all duration-300 bg-black ${
+                    isMobileMenuOpen ? '-rotate-45 -translate-y-2' : ''
+                  }`}
                 />
               </div>
             </button>
           </div>
         </div>
+      </motion.nav>
 
-        {/* Mobile Menu Overlay */}
-        <AnimatePresence>
-          {isMobileMenuOpen && (
-            <>
-              {/* Backdrop */}
-              <motion.div
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                exit={{ opacity: 0 }}
-                onClick={() => setIsMobileMenuOpen(false)}
-                className="fixed inset-0 bg-black bg-opacity-50 z-40 md:hidden"
-              />
-              
-              {/* Mobile Menu Panel */}
-              <motion.div
-                initial={{ x: '100%' }}
-                animate={{ x: 0 }}
-                exit={{ x: '100%' }}
-                transition={{ type: 'tween', duration: 0.3 }}
-                className="fixed top-0 right-0 bottom-0 w-full bg-white z-50 shadow-2xl md:hidden flex flex-col"
-              >
+      {/* Mobile Menu Overlay - Outside nav element */}
+      <AnimatePresence>
+        {isMobileMenuOpen && (
+          <>
+            {/* Backdrop */}
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              onClick={() => setIsMobileMenuOpen(false)}
+              className="fixed inset-0 bg-black bg-opacity-50 z-[9998] md:hidden"
+              style={{ position: 'fixed' }}
+            />
+            
+            {/* Mobile Menu Panel */}
+            <motion.div
+              initial={{ x: '100%' }}
+              animate={{ x: 0 }}
+              exit={{ x: '100%' }}
+              transition={{ type: 'tween', duration: 0.3 }}
+              className="fixed top-0 right-0 bottom-0 w-full bg-white z-[9999] shadow-2xl md:hidden flex flex-col"
+              style={{ position: 'fixed' }}
+            >
                 {/* Mobile Menu Header */}
                 <div className="flex items-center justify-between px-4 py-4 border-b border-gray-200 bg-white flex-shrink-0">
                   <Link href="/" className="flex items-center gap-2" onClick={() => setIsMobileMenuOpen(false)}>
@@ -417,7 +422,6 @@ const Navbar = () => {
             </>
           )}
         </AnimatePresence>
-      </motion.nav>
     </>
   )
 }

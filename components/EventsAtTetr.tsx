@@ -73,7 +73,7 @@ const EventsAtTetr = () => {
               {/* Top Green Box */}
               <div className="bg-gradient-to-br from-[#0a1628] to-[#1a2332] text-white p-6">
                 <div className="text-xs font-semibold mb-2">GI-SMART CONNECT</div>
-                <div className="text-sm mb-4">Step Into a Day at GI-SMART</div>
+                <div className="text-xs sm:text-sm mb-4">Step Into a Day at GI-SMART</div>
                 <div className="space-y-2 text-xs">
                   <div className="flex items-center gap-2">
                     <FaMapMarkerAlt className="text-sm" />

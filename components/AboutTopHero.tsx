@@ -45,7 +45,7 @@ const AboutTopHero = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.4 }}
-              className="text-xl md:text-2xl text-white/90 mb-8 leading-relaxed"
+              className="text-base sm:text-lg md:text-xl lg:text-2xl text-white/90 mb-8 leading-relaxed"
             >
               At GI-SMART, students learn business by building businesses while traveling across the world and getting mentored by top professors & practitioners.
             </motion.p>
