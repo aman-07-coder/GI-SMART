@@ -8,42 +8,38 @@ const Navbar = () => {
   const [isOverHero, setIsOverHero] = useState(true)
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
   const [isProgramsDropdownOpen, setIsProgramsDropdownOpen] = useState(false)
+  const [mobileProgramsOpen, setMobileProgramsOpen] = useState(false)
 
   useEffect(() => {
-    const checkIfOverGreenBackground = () => {
-      const navbarHeight = 64 // navbar height in pixels
+    const checkIfOverDarkBackground = () => {
+      const navbarHeight = 64
       const scrollPosition = window.scrollY
       const navbarBottom = scrollPosition + navbarHeight
       
-      // Find all sections with dark backgrounds
       const darkSections = document.querySelectorAll('section[class*="bg-gradient-to-b"], section[class*="bg-[#0a1628]"], section[class*="bg-[#0a0a0a]"]')
       
-      // Check if navbar is over any green section
-      let isOverGreen = false
+      let isOverDark = false
       
       darkSections.forEach((section) => {
         const element = section as HTMLElement
         const sectionTop = element.offsetTop
         const sectionBottom = sectionTop + element.offsetHeight
         
-        // Check if navbar bottom is within the green section
         if (navbarBottom >= sectionTop && scrollPosition < sectionBottom) {
-          isOverGreen = true
+          isOverDark = true
         }
       })
       
-      setIsOverHero(isOverGreen)
+      setIsOverHero(isOverDark)
     }
 
-    // Check initial state
-    checkIfOverGreenBackground()
+    checkIfOverDarkBackground()
     
-    // Throttle scroll events for better performance
     let ticking = false
     const throttledHandleScroll = () => {
       if (!ticking) {
         window.requestAnimationFrame(() => {
-          checkIfOverGreenBackground()
+          checkIfOverDarkBackground()
           ticking = false
         })
         ticking = true
@@ -51,8 +47,6 @@ const Navbar = () => {
     }
 
     window.addEventListener('scroll', throttledHandleScroll, { passive: true })
-    
-    // Also check on resize in case layout changes
     window.addEventListener('resize', throttledHandleScroll, { passive: true })
 
     return () => {
@@ -77,6 +71,13 @@ const Navbar = () => {
       document.removeEventListener('mousedown', handleClickOutside)
     }
   }, [isProgramsDropdownOpen])
+
+  // Reset mobile programs dropdown when mobile menu closes
+  useEffect(() => {
+    if (!isMobileMenuOpen) {
+      setMobileProgramsOpen(false)
+    }
+  }, [isMobileMenuOpen])
 
   const programsMenuItems = [
     { href: '/programs/bachelor-ai-design', label: 'Bachelor of Artificial Intelligence Design (BAID)' },
@@ -109,9 +110,9 @@ const Navbar = () => {
         initial={{ y: -100 }}
         animate={{ y: 0 }}
         transition={{ duration: 0.5 }}
-        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 backdrop-blur-sm ${
+        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
           isOverHero 
-            ? 'bg-white/50 shadow-md' 
+            ? 'bg-white/50 shadow-md backdrop-blur-sm' 
             : 'bg-transparent'
         }`}
       >
@@ -124,12 +125,11 @@ const Navbar = () => {
                 alt="GI-SMART Logo" 
                 className="h-12 w-auto object-contain"
               />
-              {/* <span className={`font-bold text-xl transition-colors duration-300 ${isScrolled ? 'text-gray-800' : 'text-white'}`}>GI-SMART</span> */}
             </Link>
 
             {/* Desktop Navigation */}
             <div className="hidden md:flex items-center space-x-8">
-              {navLinks.map((link, index) => (
+              {navLinks.map((link) => (
                 <div key={link.href} className="relative programs-dropdown">
                   {link.hasDropdown ? (
                     <>
@@ -176,12 +176,14 @@ const Navbar = () => {
                                   </h3>
                                 </div>
                                 {overviewMenuItems.map((item) => (
-                                  <div
+                                  <Link
                                     key={item.href}
-                                    className="block py-2 text-gray-900 font-bold text-sm cursor-default"
+                                    href={item.href}
+                                    onClick={() => setIsProgramsDropdownOpen(false)}
+                                    className="block py-2 text-gray-900 font-bold hover:text-[#8b1538] transition-colors text-sm"
                                   >
                                     {item.label}
-                                  </div>
+                                  </Link>
                                 ))}
                               </div>
                             </div>
@@ -233,6 +235,7 @@ const Navbar = () => {
               className={`md:hidden p-2 transition-colors duration-300 ${
                 isOverHero ? 'text-black' : 'text-white'
               }`}
+              aria-label="Toggle menu"
             >
               <div className="w-6 h-6 flex flex-col justify-center space-y-1.5">
                 <span
@@ -267,16 +270,17 @@ const Navbar = () => {
                 onClick={() => setIsMobileMenuOpen(false)}
                 className="fixed inset-0 bg-black bg-opacity-50 z-40 md:hidden"
               />
+              
               {/* Mobile Menu Panel */}
               <motion.div
                 initial={{ x: '100%' }}
                 animate={{ x: 0 }}
                 exit={{ x: '100%' }}
                 transition={{ type: 'tween', duration: 0.3 }}
-                className="fixed top-0 right-0 bottom-0 w-full max-w-sm bg-white z-50 shadow-2xl md:hidden overflow-y-auto"
+                className="fixed top-0 right-0 bottom-0 w-full bg-white z-50 shadow-2xl md:hidden flex flex-col"
               >
                 {/* Mobile Menu Header */}
-                <div className="flex items-center justify-between px-4 py-4 border-b border-gray-200 sticky top-0 bg-white z-10">
+                <div className="flex items-center justify-between px-4 py-4 border-b border-gray-200 bg-white flex-shrink-0">
                   <Link href="/" className="flex items-center gap-2" onClick={() => setIsMobileMenuOpen(false)}>
                     <img 
                       src="/gi-removebg-preview.png" 
@@ -296,50 +300,92 @@ const Navbar = () => {
                 </div>
 
                 {/* Mobile Menu Content */}
-                <div className="px-4 py-6 space-y-1">
+                <div className="px-0 py-2 flex-1 overflow-y-auto">
                   {navLinks.map((link) => (
-                    <div key={link.href} className="border-b border-gray-100 last:border-b-0 pb-4 last:pb-0">
+                    <div key={link.href} className="border-b border-gray-100 last:border-b-0">
                       {link.hasDropdown ? (
-                        <div>
-                          <div className="text-gray-800 font-semibold uppercase tracking-wide mb-3 text-sm">
-                            {link.label}
-                          </div>
-                          <div className="space-y-2 mb-4">
-                            {programsMenuItems.map((item) => (
-                              <Link
-                                key={item.href}
-                                href={item.href}
-                                onClick={() => setIsMobileMenuOpen(false)}
-                                className="block py-2 text-gray-700 hover:text-[#8b1538] transition-colors text-xs sm:text-sm pl-2"
-                              >
-                                {item.label}
-                              </Link>
-                            ))}
-                          </div>
-                          <div className="space-y-2">
-                            <div className="flex items-center gap-2 mb-3 pl-2">
-                              <div className="w-2 h-2 bg-purple-600 rounded-full"></div>
-                              <h3 className="text-gray-800 font-semibold text-[10px] sm:text-xs uppercase tracking-wide">
-                                UNDERGRADUATE OVERVIEW
-                              </h3>
+                        <div className="w-full">
+                          {/* Programs Accordion Header */}
+                          <button
+                            type="button"
+                            onClick={() => setMobileProgramsOpen(!mobileProgramsOpen)}
+                            className="w-full flex items-center justify-between px-4 py-4 text-left hover:bg-gray-50 transition-colors bg-white"
+                          >
+                            <span className="text-gray-900 font-bold text-base uppercase tracking-wide">
+                              {link.label}
+                            </span>
+                            <motion.svg
+                              animate={{ rotate: mobileProgramsOpen ? 180 : 0 }}
+                              transition={{ duration: 0.3 }}
+                              className="w-5 h-5 text-gray-600 flex-shrink-0"
+                              fill="none"
+                              stroke="currentColor"
+                              viewBox="0 0 24 24"
+                            >
+                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                            </motion.svg>
+                          </button>
+                          
+                          {/* Programs Accordion Content */}
+                          {mobileProgramsOpen && (
+                            <div className="w-full px-4 pb-4 space-y-2 bg-gray-50 border-t border-gray-100">
+                              {/* Programs Section */}
+                              <div className="pt-4 pb-3">
+                                <h4 className="text-sm font-bold text-gray-600 uppercase tracking-wider mb-4 px-2">
+                                  Programs
+                                </h4>
+                                <div className="space-y-2">
+                                  {programsMenuItems.map((item) => (
+                                    <Link
+                                      key={item.href}
+                                      href={item.href}
+                                      onClick={() => {
+                                        setIsMobileMenuOpen(false)
+                                        setMobileProgramsOpen(false)
+                                      }}
+                                      className="block px-4 py-3 rounded-lg text-gray-800 hover:bg-[#8b1538] hover:text-white transition-all duration-200 text-sm font-semibold bg-white shadow-sm"
+                                    >
+                                      {item.label}
+                                    </Link>
+                                  ))}
+                                </div>
+                              </div>
+                              
+                              {/* Divider */}
+                              <div className="border-t border-gray-300 my-4"></div>
+                              
+                              {/* Overview Section */}
+                              <div className="pt-2 pb-2">
+                                <div className="flex items-center gap-2 mb-4 px-2">
+                                  <div className="w-2 h-2 bg-[#d4af37] rounded-full"></div>
+                                  <h4 className="text-sm font-bold text-gray-600 uppercase tracking-wider">
+                                    Overview
+                                  </h4>
+                                </div>
+                                <div className="space-y-2">
+                                  {overviewMenuItems.map((item) => (
+                                    <Link
+                                      key={item.href}
+                                      href={item.href}
+                                      onClick={() => {
+                                        setIsMobileMenuOpen(false)
+                                        setMobileProgramsOpen(false)
+                                      }}
+                                      className="block px-4 py-3 rounded-lg text-gray-800 hover:bg-[#0a1628] hover:text-white transition-all duration-200 text-sm font-semibold bg-white shadow-sm"
+                                    >
+                                      {item.label}
+                                    </Link>
+                                  ))}
+                                </div>
+                              </div>
                             </div>
-                            {overviewMenuItems.map((item) => (
-                              <Link
-                                key={item.href}
-                                href={item.href}
-                                onClick={() => setIsMobileMenuOpen(false)}
-                                className="block py-2 text-gray-700 hover:text-[#8b1538] transition-colors text-xs sm:text-sm pl-4"
-                              >
-                                {item.label}
-                              </Link>
-                            ))}
-                          </div>
+                          )}
                         </div>
                       ) : (
                         <Link
                           href={link.href}
                           onClick={() => setIsMobileMenuOpen(false)}
-                          className="block py-3 text-gray-800 hover:text-[#8b1538] transition-colors font-semibold uppercase tracking-wide text-sm"
+                          className="block px-4 py-4 text-gray-900 hover:bg-gray-50 transition-colors font-bold text-base uppercase tracking-wide"
                         >
                           {link.label}
                         </Link>
@@ -348,16 +394,22 @@ const Navbar = () => {
                   ))}
                   
                   {/* CTA Buttons */}
-                  <div className="pt-6 space-y-3 border-t border-gray-200 mt-4">
+                  <div className="px-4 pt-6 pb-6 space-y-3 bg-white flex-shrink-0 border-t border-gray-200 mt-auto">
                     <Link href="/admissions" onClick={() => setIsMobileMenuOpen(false)}>
-                      <button className="w-full py-3 bg-[#ffd700] text-black rounded font-semibold text-sm hover:bg-[#ffed4e] transition-colors">
+                      <motion.button
+                        whileTap={{ scale: 0.98 }}
+                        className="w-full py-3.5 bg-[#ffd700] text-black rounded-lg font-bold text-sm shadow-md hover:bg-[#ffed4e] transition-all duration-200"
+                      >
                         APPLY NOW
-                      </button>
+                      </motion.button>
                     </Link>
                     <Link href="/contact" onClick={() => setIsMobileMenuOpen(false)}>
-                      <button className="w-full py-3 bg-white text-black rounded font-semibold text-sm border-2 border-[#ffd700] hover:bg-gray-50 transition-colors">
+                      <motion.button
+                        whileTap={{ scale: 0.98 }}
+                        className="w-full py-3.5 bg-white text-black rounded-lg font-bold text-sm border-2 border-[#ffd700] hover:bg-[#ffd700]/10 transition-all duration-200"
+                      >
                         CONTACT US
-                      </button>
+                      </motion.button>
                     </Link>
                   </div>
                 </div>
@@ -371,3 +423,4 @@ const Navbar = () => {
 }
 
 export default Navbar
+
