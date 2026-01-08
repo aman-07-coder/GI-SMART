@@ -2,11 +2,12 @@
 
 import { motion } from 'framer-motion'
 
+// Sorted by length: longest to shortest for better visual flow
 const universities = [
-  { name: 'Cornell University' },
-  { name: 'UBI Business School' },
-  { name: 'Illinois Tech' },
-  { name: 'IIT Delhi / FITT' },
+  { name: 'UBI Business School' },      // 19 characters
+  { name: 'Cornell University' },        // 18 characters
+  { name: 'IIT Delhi / FITT' },          // 16 characters
+  { name: 'Illinois Tech' },              // 13 characters
 ]
 
 const UniversityCollaborations = () => {
@@ -27,7 +28,7 @@ const UniversityCollaborations = () => {
           </p>
         </motion.div>
 
-        <div className="flex flex-wrap items-center justify-center gap-8 md:gap-12 border-t border-b border-gray-300 py-12">
+        <div className="flex flex-col md:flex-row items-center justify-center gap-4 md:gap-8 lg:gap-12 border-t border-b border-gray-300 py-8 md:py-12">
           {universities.map((university, index) => (
             <motion.div
               key={index}
@@ -36,7 +37,7 @@ const UniversityCollaborations = () => {
               viewport={{ once: true }}
               transition={{ delay: index * 0.1 }}
               whileHover={{ scale: 1.1 }}
-              className="text-2xl font-bold text-gray-900 border-r border-gray-300 pr-8 last:border-r-0 last:pr-0"
+              className="text-xl md:text-2xl font-bold text-gray-900 text-center border-r-0 md:border-r border-gray-300 pr-0 md:pr-8 last:border-r-0 last:pr-0"
             >
               {university.name}
             </motion.div>
