@@ -4,8 +4,22 @@ import { motion, AnimatePresence } from 'framer-motion'
 import { FaCalendar, FaExternalLinkAlt } from 'react-icons/fa'
 import { useState } from 'react'
 
+const CAMPUSES = [
+  { value: 'paris', label: 'Paris, France' },
+  { value: 'karlsruhe', label: 'Karlsruhe, Germany' },
+  { value: 'bucharest', label: 'Bucharest, Romania' },
+  { value: 'dubai', label: 'Dubai' },
+] as const
+
+const PROGRAMS = [
+  { value: 'bba', label: 'BBA – Bachelor of Business Administration' },
+  { value: 'bcis', label: 'BCIS – Bachelor of Computer Information Systems' },
+  { value: 'baid', label: 'BAID – Bachelor of Artificial Intelligence Design' },
+] as const
+
 const ApplyNowForm = () => {
   const [currentStep, setCurrentStep] = useState(1)
+  const [preferenceError, setPreferenceError] = useState('')
   const [formData, setFormData] = useState({
     // Personal Information
     firstName: '',
@@ -35,6 +49,17 @@ const ApplyNowForm = () => {
     testScore: '',
     workExperience: '',
     
+    // Campus & Program Preferences (Step 4)
+    campusRankFirst: '',
+    campusRankSecond: '',
+    campusRankThird: '',
+    campusRankFourth: '',
+    programRankFirst: '',
+    programRankSecond: '',
+    programRankThird: '',
+    interestTwoPlusTwo: false,
+    acknowledgedFeesAndRefund: false,
+    
     // Documents
     cvResume: null as File | null,
     passport: null as File | null,
@@ -60,14 +85,27 @@ const ApplyNowForm = () => {
     setFormData(prev => ({ ...prev, [e.target.name]: e.target.checked }))
   }
 
+  const campusRanks = [formData.campusRankFirst, formData.campusRankSecond, formData.campusRankThird, formData.campusRankFourth].filter(Boolean)
+  const programRanks = [formData.programRankFirst, formData.programRankSecond, formData.programRankThird].filter(Boolean)
+  const campusRanksUnique = new Set(campusRanks).size === campusRanks.length && campusRanks.length === 4
+  const programRanksUnique = new Set(programRanks).size === programRanks.length && programRanks.length === 3
+
   const nextStep = () => {
-    if (currentStep < 4) {
+    if (currentStep === 4) {
+      if (!campusRanksUnique || !programRanksUnique) {
+        setPreferenceError('Please rank each campus and each program exactly once (no duplicates).')
+        return
+      }
+      setPreferenceError('')
+    }
+    if (currentStep < 5) {
       setCurrentStep(currentStep + 1)
     }
   }
 
   const previousStep = () => {
     if (currentStep > 1) {
+      setPreferenceError('')
       setCurrentStep(currentStep - 1)
     }
   }
@@ -82,7 +120,8 @@ const ApplyNowForm = () => {
     { number: 1, label: 'PERSONAL' },
     { number: 2, label: 'CONTACT' },
     { number: 3, label: 'ACADEMIC' },
-    { number: 4, label: 'DOCUMENTS' },
+    { number: 4, label: 'PREFERENCES' },
+    { number: 5, label: 'DOCUMENTS' },
   ]
 
   return (
@@ -400,11 +439,9 @@ const ApplyNowForm = () => {
                     className="w-full px-4 py-3 rounded-lg border border-gray-300 bg-white text-gray-900 focus:outline-none focus:border-[#ffd700] focus:ring-2 focus:ring-[#ffd700]/20 transition-all"
                   >
                     <option value="">Select Program</option>
-                    <option value="baid">Bachelor of Artificial Intelligence Design (BAID)</option>
-                    <option value="bachelor-ai">Bachelor of Science in Artificial Intelligence</option>
-                    <option value="msc-aaids">MSc in Applied AI & Data Systems</option>
-                    <option value="bba-tourism">BBA in Tourism & Hospitality Innovation</option>
-                    <option value="bsc-strategic">BSc in Strategic Management</option>
+                    <option value="bba">BBA – Bachelor of Business Administration</option>
+                    <option value="bcis">BCIS – Bachelor of Computer Information Systems</option>
+                    <option value="baid">BAID – Bachelor of Artificial Intelligence Design</option>
                   </select>
                 </div>
 
@@ -547,10 +584,150 @@ const ApplyNowForm = () => {
             </motion.div>
           )}
 
-          {/* Step 4: Required Documents */}
+          {/* Step 4: Campus & Program Preferences */}
           {currentStep === 4 && (
             <motion.div
               key="step4"
+              initial={{ opacity: 0, x: 20 }}
+              animate={{ opacity: 1, x: 0 }}
+              exit={{ opacity: 0, x: -20 }}
+              transition={{ duration: 0.3 }}
+            >
+              <h2 className="text-3xl font-bold text-white mb-2 pb-3 border-b-2 border-[#ffd700]">
+                Campus & Program Preferences
+              </h2>
+
+              {/* Our campuses list */}
+              <div className="mt-6 mb-4">
+                <p className="text-white/90 font-semibold mb-2">Our campuses</p>
+                <ul className="text-white/80 text-sm space-y-1 list-disc list-inside">
+                  <li>Paris, France</li>
+                  <li>Karlsruhe, Germany</li>
+                  <li>Bucharest, Romania</li>
+                  <li>Dubai</li>
+                </ul>
+              </div>
+
+              {/* Campus ranking explanation */}
+              <div className="bg-[#ffd700]/15 border-l-4 border-[#ffd700] p-4 mb-6 rounded">
+                <p className="text-sm text-white/95 leading-relaxed">
+                  <strong>How campus preference works:</strong> Rank the four destinations above from your highest to lowest preference. If we cannot obtain a visa for your first-choice country (e.g. Germany), we will proceed with your next preference and try to secure a visa in another of our campus countries. This way we aim to place you at one of our campuses even if one country declines your application.
+                </p>
+              </div>
+
+              {preferenceError && (
+                <div className="mb-4 p-3 rounded-lg bg-red-500/20 border border-red-400/50 text-red-200 text-sm">
+                  {preferenceError}
+                </div>
+              )}
+              <p className="text-white/90 font-semibold mb-2">Rank campuses (1 = highest preference)</p>
+              <p className="text-white/60 text-xs mb-2">Select each campus exactly once.</p>
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-6">
+                {(['First', 'Second', 'Third', 'Fourth'] as const).map((order, i) => {
+                  const key = `campusRank${['First', 'Second', 'Third', 'Fourth'][i]}` as 'campusRankFirst' | 'campusRankSecond' | 'campusRankThird' | 'campusRankFourth'
+                  return (
+                    <div key={key}>
+                      <label htmlFor={key} className="block text-white/80 text-sm mb-1">{order} preference</label>
+                      <select
+                        id={key}
+                        name={key}
+                        value={formData[key]}
+                        onChange={handleChange}
+                        required
+                        className="w-full px-4 py-3 rounded-lg border border-gray-300 bg-white text-gray-900 focus:outline-none focus:border-[#ffd700] focus:ring-2 focus:ring-[#ffd700]/20 transition-all"
+                      >
+                        <option value="">Select</option>
+                        {CAMPUSES.map((c) => (
+                          <option key={c.value} value={c.value}>{c.label}</option>
+                        ))}
+                      </select>
+                    </div>
+                  )
+                })}
+              </div>
+
+              {/* 2+2 option */}
+              <div className="mb-6">
+                <p className="text-white/90 font-semibold mb-2">Study path option</p>
+                <label className="flex items-start gap-3 cursor-pointer group">
+                  <input
+                    type="checkbox"
+                    name="interestTwoPlusTwo"
+                    checked={formData.interestTwoPlusTwo}
+                    onChange={handleCheckboxChange}
+                    className="mt-1 w-5 h-5 rounded border-gray-300 bg-white text-[#8b1538] focus:ring-[#8b1538]"
+                  />
+                  <span className="text-white/90 text-sm leading-relaxed">
+                    I am interested in the <strong>2+2 option</strong>: 2 years at one of our four campuses above, then 2 years in Canada at the University of the Fraser Valley.
+                  </span>
+                </label>
+                <p className="text-white/80 text-sm mt-2 ml-8">
+                  After 2 years in Canada, students can apply for a 3-year work visa, with the possibility of then applying for Permanent Residency in Canada.
+                </p>
+              </div>
+
+              {/* Program ranking explanation */}
+              <p className="text-white/90 font-semibold mb-2">Rank programs (1 = highest preference)</p>
+              <p className="text-white/70 text-sm mb-2">We offer: BBA, BCIS, and BAID. Select each program exactly once.</p>
+              <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-6">
+                {(['First', 'Second', 'Third'] as const).map((order, i) => {
+                  const key = `programRank${['First', 'Second', 'Third'][i]}` as 'programRankFirst' | 'programRankSecond' | 'programRankThird'
+                  return (
+                    <div key={key}>
+                      <label htmlFor={key} className="block text-white/80 text-sm mb-1">{order} choice</label>
+                      <select
+                        id={key}
+                        name={key}
+                        value={formData[key]}
+                        onChange={handleChange}
+                        required
+                        className="w-full px-4 py-3 rounded-lg border border-gray-300 bg-white text-gray-900 focus:outline-none focus:border-[#ffd700] focus:ring-2 focus:ring-[#ffd700]/20 transition-all"
+                      >
+                        <option value="">Select</option>
+                        {PROGRAMS.map((p) => (
+                          <option key={p.value} value={p.value}>{p.label}</option>
+                        ))}
+                      </select>
+                    </div>
+                  )
+                })}
+              </div>
+
+              {/* Application fee disclosure */}
+              <div className="bg-white/10 border border-white/20 p-4 mb-4 rounded-lg">
+                <p className="text-white/95 text-sm leading-relaxed">
+                  <strong>Application fee:</strong> €100. <strong>€50 is refundable</strong> if we cannot obtain a visa for you in any of the four countries where we run campuses (France, Germany, Romania, UAE).
+                </p>
+              </div>
+
+              {/* Program cost & refund disclosure */}
+              <div className="bg-white/10 border border-white/20 p-4 mb-4 rounded-lg">
+                <p className="text-white/95 text-sm leading-relaxed">
+                  <strong>Program cost:</strong> €12,000 per year (approximately ₹12 Lakh per year). Before a visa application can be submitted, the full first-year amount must be deposited with us. <strong className="text-[#ffd700]">This amount is FULLY REFUNDABLE</strong> if we cannot obtain a visa for you in any of the four countries where we run campuses.
+                </p>
+              </div>
+
+              <div className="flex items-start gap-3">
+                <input
+                  type="checkbox"
+                  id="acknowledgedFeesAndRefund"
+                  name="acknowledgedFeesAndRefund"
+                  checked={formData.acknowledgedFeesAndRefund}
+                  onChange={handleCheckboxChange}
+                  required
+                  className="mt-1 w-5 h-5 rounded border-gray-300 bg-white text-[#8b1538] focus:ring-[#8b1538]"
+                />
+                <label htmlFor="acknowledgedFeesAndRefund" className="text-white/90 text-sm leading-relaxed">
+                  I have read and understood the application fee (€100, €50 refundable if no visa) and the program cost (€12,000/year, fully refundable if no visa in any of the four campus countries).
+                </label>
+              </div>
+            </motion.div>
+          )}
+
+          {/* Step 5: Required Documents */}
+          {currentStep === 5 && (
+            <motion.div
+              key="step5"
               initial={{ opacity: 0, x: 20 }}
               animate={{ opacity: 1, x: 0 }}
               exit={{ opacity: 0, x: -20 }}
@@ -694,7 +871,7 @@ const ApplyNowForm = () => {
             Previous
           </button>
 
-          {currentStep < 4 ? (
+          {currentStep < 5 ? (
             <button
               type="button"
               onClick={nextStep}
