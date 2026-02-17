@@ -73,12 +73,47 @@ const ApplyNowForm = () => {
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>) => {
     const { name, value, type } = e.target
+    // File inputs
     if (type === 'file') {
       const file = (e.target as HTMLInputElement).files?.[0] || null
       setFormData(prev => ({ ...prev, [name]: file }))
-    } else {
-      setFormData(prev => ({ ...prev, [name]: value }))
+      return
     }
+
+    // Handle campus/program rank selections to avoid duplicates
+    if (name.startsWith('campusRank')) {
+      const campusKeys = ['campusRankFirst', 'campusRankSecond', 'campusRankThird', 'campusRankFourth']
+      const idx = campusKeys.indexOf(name)
+      setFormData(prev => {
+        const updated = { ...(prev as any), [name]: value } as any
+        // Clear same value from lower-ranked fields (to keep uniqueness)
+        for (let j = idx + 1; j < campusKeys.length; j++) {
+          if (updated[campusKeys[j]] === value) {
+            updated[campusKeys[j]] = ''
+          }
+        }
+        return updated as any
+      })
+      return
+    }
+
+    if (name.startsWith('programRank')) {
+      const programKeys = ['programRankFirst', 'programRankSecond', 'programRankThird']
+      const idx = programKeys.indexOf(name)
+      setFormData(prev => {
+        const updated = { ...(prev as any), [name]: value } as any
+        for (let j = idx + 1; j < programKeys.length; j++) {
+          if (updated[programKeys[j]] === value) {
+            updated[programKeys[j]] = ''
+          }
+        }
+        return updated as any
+      })
+      return
+    }
+
+    // Default handler
+    setFormData(prev => ({ ...prev, [name]: value }))
   }
 
   const handleCheckboxChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -637,9 +672,14 @@ const ApplyNowForm = () => {
                         className="w-full px-4 py-3 rounded-lg border border-gray-300 bg-white text-gray-900 focus:outline-none focus:border-[#ffd700] focus:ring-2 focus:ring-[#ffd700]/20 transition-all"
                       >
                         <option value="">Select</option>
-                        {CAMPUSES.map((c) => (
-                          <option key={c.value} value={c.value}>{c.label}</option>
-                        ))}
+                        {(() => {
+                          const campusKeys = ['campusRankFirst', 'campusRankSecond', 'campusRankThird', 'campusRankFourth']
+                          const index = ['First', 'Second', 'Third', 'Fourth'].indexOf(order)
+                          const excluded = campusKeys.slice(0, index).map(k => (formData as any)[k]).filter(Boolean)
+                          return CAMPUSES.filter(c => !excluded.includes(c.value)).map(c => (
+                            <option key={c.value} value={c.value}>{c.label}</option>
+                          ))
+                        })()}
                       </select>
                     </div>
                   )
@@ -684,9 +724,14 @@ const ApplyNowForm = () => {
                         className="w-full px-4 py-3 rounded-lg border border-gray-300 bg-white text-gray-900 focus:outline-none focus:border-[#ffd700] focus:ring-2 focus:ring-[#ffd700]/20 transition-all"
                       >
                         <option value="">Select</option>
-                        {PROGRAMS.map((p) => (
-                          <option key={p.value} value={p.value}>{p.label}</option>
-                        ))}
+                        {(() => {
+                          const programKeys = ['programRankFirst', 'programRankSecond', 'programRankThird']
+                          const index = ['First', 'Second', 'Third'].indexOf(order)
+                          const excluded = programKeys.slice(0, index).map(k => (formData as any)[k]).filter(Boolean)
+                          return PROGRAMS.filter(p => !excluded.includes(p.value)).map(p => (
+                            <option key={p.value} value={p.value}>{p.label}</option>
+                          ))
+                        })()}
                       </select>
                     </div>
                   )
