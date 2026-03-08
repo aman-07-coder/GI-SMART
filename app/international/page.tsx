@@ -19,7 +19,7 @@ export default function InternationalPage() {
             International Experience
           </h1>
           <p className="text-xl md:text-2xl text-white/90 max-w-3xl mx-auto">
-            Study across four global campuses and build a truly international network
+            Study at our campus in Paris, France and build a truly international network
           </p>
         </div>
       </section>
@@ -43,9 +43,9 @@ export default function InternationalPage() {
               <div className="flex justify-center mb-4">
                 <FaGlobe className="text-5xl text-[#8b1538]" />
               </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-3">Multi-Campus Experience</h3>
+              <h3 className="text-xl font-bold text-gray-900 mb-3">Our Campus in Paris</h3>
               <p className="text-gray-700">
-                Study at multiple campuses across different countries and continents
+                Study at our campus in Paris, France — the creative capital of Europe
               </p>
             </div>
             

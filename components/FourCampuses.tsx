@@ -7,35 +7,11 @@ const FourCampuses = () => {
   const campuses = [
     {
       id: 1,
-      name: 'Paris',
+      name: 'Paris, France',
       description: 'The creative capital of Europe — design thinking, culture, and advanced AI research',
       specialization: 'AI Design & Cognitive Systems',
       image: 'https://images.unsplash.com/photo-1502602898657-3e91760cbb34?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80',
       color: 'from-blue-500 to-indigo-600'
-    },
-    {
-      id: 2,
-      name: 'Dubai',
-      description: 'The hub of innovation and entrepreneurship in the smart economy',
-      specialization: 'Data Analytics & Business Intelligence',
-      image: 'https://images.unsplash.com/photo-1512453979798-5ea266f8880c?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80',
-      color: 'from-amber-500 to-orange-600'
-    },
-    {
-      id: 3,
-      name: 'Germany',
-      description: 'The home of precision engineering and robotics excellence',
-      specialization: 'Robotics, Automation & Mechatronics',
-      image: 'https://images.unsplash.com/photo-1467269204594-9661b134dd2b?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80',
-      color: 'from-gray-600 to-gray-800'
-    },
-    {
-      id: 4,
-      name: 'Bucharest',
-      description: 'The rising European tech hub for digital transformation and systems integration',
-      specialization: 'Systems Innovation & Applied Research',
-      image: 'https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80',
-      color: 'from-green-500 to-emerald-600'
     }
   ]
 
@@ -49,14 +25,14 @@ const FourCampuses = () => {
           className="text-center mb-16"
         >
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-            Four Campuses - One Global Identity
+            Our Campus — Paris, France
           </h2>
           <p className="text-lg text-gray-600 max-w-3xl mx-auto leading-relaxed">
-            At GI-SMART, your education transcends borders. Each campus offers a unique cultural and professional context — yet all share a unified academic vision.
+            At GI-SMART, your education is rooted in the creative capital of Europe — a unique cultural and professional context with a unified academic vision.
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+        <div className="grid grid-cols-1 max-w-2xl mx-auto gap-6 mb-12">
           {campuses.map((campus, index) => (
             <motion.div
               key={campus.id}
@@ -87,7 +63,7 @@ const FourCampuses = () => {
                 </p>
                 <div className="pt-4 border-t border-gray-200 mt-auto">
                   <p className="text-xs text-gray-500">
-                    Choose as your anchor campus or rotate during your program
+                    Our campus in Paris, France
                   </p>
                 </div>
               </div>
@@ -102,10 +78,10 @@ const FourCampuses = () => {
           className="bg-gradient-to-br from-[#0a1628] to-[#1a2332] rounded-xl p-8 md:p-12 text-white text-center"
         >
           <h3 className="text-2xl md:text-3xl font-bold mb-4">
-            Global Agility Through Multi-Campus Learning
+            Global Agility From Our Paris Campus
           </h3>
           <p className="text-lg text-white/90 max-w-3xl mx-auto leading-relaxed">
-            This structure ensures every graduate embodies global agility — academically strong, culturally aware, and professionally adaptable. By graduation, you will not only be educated globally, but also connected globally — equipped with the experience to live and work anywhere in the world.
+            Our Paris campus ensures every graduate embodies global agility — academically strong, culturally aware, and professionally adaptable. You will be educated and connected globally — equipped with the experience to live and work anywhere in the world.
           </p>
         </motion.div>
       </div>

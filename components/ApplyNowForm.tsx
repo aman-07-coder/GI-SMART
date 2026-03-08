@@ -4,13 +4,6 @@ import { motion, AnimatePresence } from 'framer-motion'
 import { FaCalendar, FaExternalLinkAlt } from 'react-icons/fa'
 import { useState } from 'react'
 
-const CAMPUSES = [
-  { value: 'paris', label: 'Paris, France' },
-  { value: 'karlsruhe', label: 'Karlsruhe, Germany' },
-  { value: 'bucharest', label: 'Bucharest, Romania' },
-  { value: 'dubai', label: 'Dubai' },
-] as const
-
 const PROGRAMS = [
   { value: 'bba', label: 'BBA – Bachelor of Business Administration' },
   { value: 'bcis', label: 'BCIS – Bachelor of Computer Information Systems' },
@@ -49,8 +42,8 @@ const ApplyNowForm = () => {
     testScore: '',
     workExperience: '',
     
-    // Campus & Program Preferences (Step 4)
-    campusRankFirst: '',
+    // Campus & Program Preferences (Step 4) — only Paris for now
+    campusRankFirst: 'paris',
     campusRankSecond: '',
     campusRankThird: '',
     campusRankFourth: '',
@@ -80,23 +73,6 @@ const ApplyNowForm = () => {
       return
     }
 
-    // Handle campus/program rank selections to avoid duplicates
-    if (name.startsWith('campusRank')) {
-      const campusKeys = ['campusRankFirst', 'campusRankSecond', 'campusRankThird', 'campusRankFourth']
-      const idx = campusKeys.indexOf(name)
-      setFormData(prev => {
-        const updated = { ...(prev as any), [name]: value } as any
-        // Clear same value from lower-ranked fields (to keep uniqueness)
-        for (let j = idx + 1; j < campusKeys.length; j++) {
-          if (updated[campusKeys[j]] === value) {
-            updated[campusKeys[j]] = ''
-          }
-        }
-        return updated as any
-      })
-      return
-    }
-
     if (name.startsWith('programRank')) {
       const programKeys = ['programRankFirst', 'programRankSecond', 'programRankThird']
       const idx = programKeys.indexOf(name)
@@ -120,15 +96,14 @@ const ApplyNowForm = () => {
     setFormData(prev => ({ ...prev, [e.target.name]: e.target.checked }))
   }
 
-  const campusRanks = [formData.campusRankFirst, formData.campusRankSecond, formData.campusRankThird, formData.campusRankFourth].filter(Boolean)
   const programRanks = [formData.programRankFirst, formData.programRankSecond, formData.programRankThird].filter(Boolean)
-  const campusRanksUnique = new Set(campusRanks).size === campusRanks.length && campusRanks.length === 4
+  const campusRanksUnique = true // Only Paris campus for now
   const programRanksUnique = new Set(programRanks).size === programRanks.length && programRanks.length === 3
 
   const nextStep = () => {
     if (currentStep === 4) {
       if (!campusRanksUnique || !programRanksUnique) {
-        setPreferenceError('Please rank each campus and each program exactly once (no duplicates).')
+        setPreferenceError('Please rank each program exactly once (no duplicates).')
         return
       }
       setPreferenceError('')
@@ -632,58 +607,18 @@ const ApplyNowForm = () => {
                 Campus & Program Preferences
               </h2>
 
-              {/* Our campuses list */}
-              <div className="mt-6 mb-4">
-                <p className="text-white/90 font-semibold mb-2">Our campuses</p>
-                <ul className="text-white/80 text-sm space-y-1 list-disc list-inside">
-                  <li>Paris, France</li>
-                  <li>Karlsruhe, Germany</li>
-                  <li>Bucharest, Romania</li>
-                  <li>Dubai</li>
-                </ul>
-              </div>
-
-              {/* Campus ranking explanation */}
-              <div className="bg-[#ffd700]/15 border-l-4 border-[#ffd700] p-4 mb-6 rounded">
-                <p className="text-sm text-white/95 leading-relaxed">
-                  <strong>How campus preference works:</strong> Rank the four destinations above from your highest to lowest preference. If we cannot obtain a visa for your first-choice country (e.g. Germany), we will proceed with your next preference and try to secure a visa in another of our campus countries. This way we aim to place you at one of our campuses even if one country declines your application.
-                </p>
-              </div>
-
-              {preferenceError && (
-                <div className="mb-4 p-3 rounded-lg bg-red-500/20 border border-red-400/50 text-red-200 text-sm">
-                  {preferenceError}
+              {/* Campus: only Paris, France for now */}
+              <div className="mt-6 mb-6">
+                <div className="bg-[#ffd700]/15 border-l-4 border-[#ffd700] p-4 mb-4 rounded">
+                  <p className="text-sm text-white/95 leading-relaxed">
+                    We are currently offering one campus: <strong>Paris, France</strong>.
+                  </p>
                 </div>
-              )}
-              <p className="text-white/90 font-semibold mb-2">Rank campuses (1 = highest preference)</p>
-              <p className="text-white/60 text-xs mb-2">Select each campus exactly once.</p>
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-6">
-                {(['First', 'Second', 'Third', 'Fourth'] as const).map((order, i) => {
-                  const key = `campusRank${['First', 'Second', 'Third', 'Fourth'][i]}` as 'campusRankFirst' | 'campusRankSecond' | 'campusRankThird' | 'campusRankFourth'
-                  return (
-                    <div key={key}>
-                      <label htmlFor={key} className="block text-white/80 text-sm mb-1">{order} preference</label>
-                      <select
-                        id={key}
-                        name={key}
-                        value={formData[key]}
-                        onChange={handleChange}
-                        required
-                        className="w-full px-4 py-3 rounded-lg border border-gray-300 bg-white text-gray-900 focus:outline-none focus:border-[#ffd700] focus:ring-2 focus:ring-[#ffd700]/20 transition-all"
-                      >
-                        <option value="">Select</option>
-                        {(() => {
-                          const campusKeys = ['campusRankFirst', 'campusRankSecond', 'campusRankThird', 'campusRankFourth']
-                          const index = ['First', 'Second', 'Third', 'Fourth'].indexOf(order)
-                          const excluded = campusKeys.slice(0, index).map(k => (formData as any)[k]).filter(Boolean)
-                          return CAMPUSES.filter(c => !excluded.includes(c.value)).map(c => (
-                            <option key={c.value} value={c.value}>{c.label}</option>
-                          ))
-                        })()}
-                      </select>
-                    </div>
-                  )
-                })}
+                <p className="text-white/90 font-semibold mb-2">Your campus</p>
+                <div className="px-4 py-3 rounded-lg border border-white/30 bg-white/10 text-white font-medium">
+                  Paris, France
+                </div>
+                <input type="hidden" name="campusRankFirst" value="paris" />
               </div>
 
               {/* 2+2 option */}
@@ -698,7 +633,7 @@ const ApplyNowForm = () => {
                     className="mt-1 w-5 h-5 rounded border-gray-300 bg-white text-[#8b1538] focus:ring-[#8b1538]"
                   />
                   <span className="text-white/90 text-sm leading-relaxed">
-                    I am interested in the <strong>2+2 option</strong>: 2 years at one of our four campuses above, then 2 years in Canada at the University of the Fraser Valley.
+                    I am interested in the <strong>2+2 option</strong>: 2 years at our Paris campus, then 2 years in Canada at the University of the Fraser Valley.
                   </span>
                 </label>
                 <p className="text-white/80 text-sm mt-2 ml-8">
@@ -741,14 +676,14 @@ const ApplyNowForm = () => {
               {/* Application fee disclosure */}
               <div className="bg-white/10 border border-white/20 p-4 mb-4 rounded-lg">
                 <p className="text-white/95 text-sm leading-relaxed">
-                  <strong>Application fee:</strong> €100. <strong>€50 is refundable</strong> if we cannot obtain a visa for you in any of the four countries where we run campuses (France, Germany, Romania, UAE).
+                  <strong>Application fee:</strong> €100. <strong>€50 is refundable</strong> if we cannot obtain a visa for you in France.
                 </p>
               </div>
 
               {/* Program cost & refund disclosure */}
               <div className="bg-white/10 border border-white/20 p-4 mb-4 rounded-lg">
                 <p className="text-white/95 text-sm leading-relaxed">
-                  <strong>Program cost:</strong> €12,000 per year (approximately ₹12 Lakh per year). Before a visa application can be submitted, the full first-year amount must be deposited with us. <strong className="text-[#ffd700]">This amount is FULLY REFUNDABLE</strong> if we cannot obtain a visa for you in any of the four countries where we run campuses.
+                  <strong>Program cost:</strong> €12,000 per year (approximately ₹12 Lakh per year). Before a visa application can be submitted, the full first-year amount must be deposited with us. <strong className="text-[#ffd700]">This amount is FULLY REFUNDABLE</strong> if we cannot obtain a visa for you in France.
                 </p>
               </div>
 
@@ -763,7 +698,7 @@ const ApplyNowForm = () => {
                   className="mt-1 w-5 h-5 rounded border-gray-300 bg-white text-[#8b1538] focus:ring-[#8b1538]"
                 />
                 <label htmlFor="acknowledgedFeesAndRefund" className="text-white/90 text-sm leading-relaxed">
-                  I have read and understood the application fee (€100, €50 refundable if no visa) and the program cost (€12,000/year, fully refundable if no visa in any of the four campus countries).
+                  I have read and understood the application fee (€100, €50 refundable if no visa) and the program cost (€12,000/year, fully refundable if no visa in France).
                 </label>
               </div>
             </motion.div>

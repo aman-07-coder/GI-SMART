@@ -14,10 +14,10 @@ const BAIDCampusMobility = () => {
           className="text-center mb-12"
         >
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-            Multi-Campus Global Mobility
+            Our Campus — Paris, France
           </h2>
           <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-            Choose an anchor campus and rotate across four global locations for an immersive, culture-rich learning experience.
+            Study at our campus in Paris, France for an immersive, culture-rich learning experience in the heart of Europe.
           </p>
         </motion.div>
 
@@ -28,22 +28,22 @@ const BAIDCampusMobility = () => {
             viewport={{ once: true }}
             className="bg-white rounded-xl p-8 shadow-lg border-2 border-[#8b1538]"
           >
-            <h3 className="text-2xl font-bold text-[#8b1538] mb-4">Anchor Campus Experience</h3>
+            <h3 className="text-2xl font-bold text-[#8b1538] mb-4">Paris Campus Experience</h3>
             <p className="text-gray-700 mb-4 leading-relaxed">
-              Choose an anchor campus (Paris, Dubai, Germany, or Bucharest) as your academic base and spend six terms there.
+              Our campus in Paris, France is your academic base — the creative capital of Europe for design thinking, culture, and advanced AI research.
             </p>
             <ul className="space-y-2 text-gray-700">
               <li className="flex items-start gap-2">
                 <FaCheck className="text-[#ffd700] font-bold mt-1 flex-shrink-0" />
-                <span>Deep immersion in one location</span>
+                <span>Deep immersion in Paris</span>
               </li>
               <li className="flex items-start gap-2">
                 <FaCheck className="text-[#ffd700] font-bold mt-1 flex-shrink-0" />
-                <span>Build strong local networks</span>
+                <span>Build strong local and European networks</span>
               </li>
               <li className="flex items-start gap-2">
                 <FaCheck className="text-[#ffd700] font-bold mt-1 flex-shrink-0" />
-                <span>Potential residency opportunities</span>
+                <span>Potential residency opportunities in France / EU</span>
               </li>
             </ul>
           </motion.div>
@@ -54,9 +54,9 @@ const BAIDCampusMobility = () => {
             viewport={{ once: true }}
             className="bg-[#8b1538] rounded-xl p-8 text-white shadow-lg"
           >
-            <h3 className="text-2xl font-bold mb-4">Global Rotation Experience</h3>
+            <h3 className="text-2xl font-bold mb-4">Global Perspective</h3>
             <p className="text-white/90 mb-4 leading-relaxed">
-              Rotate across the other three campuses for immersive, culture-rich learning experiences — gaining exposure to new industries, languages, and networks.
+              From our Paris campus, gain exposure to European industries, languages, and international professional networks.
             </p>
             <ul className="space-y-2 text-white/90">
               <li className="flex items-start gap-2">
@@ -65,7 +65,7 @@ const BAIDCampusMobility = () => {
               </li>
               <li className="flex items-start gap-2">
                 <FaCheck className="text-[#ffd700] font-bold mt-1 flex-shrink-0" />
-                <span>Language and cultural immersion</span>
+                <span>Language and cultural immersion in France</span>
               </li>
               <li className="flex items-start gap-2">
                 <FaCheck className="text-[#ffd700] font-bold mt-1 flex-shrink-0" />
