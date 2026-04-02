@@ -27,7 +27,7 @@ const TetrWay = () => {
             className="relative"
           >
             <div className="h-96 bg-gradient-to-br from-blue-400 to-purple-600 rounded-lg overflow-hidden">
-              <div className="w-full h-full bg-[url('https://images.unsplash.com/photo-1522202176988-66273c2fd55f')] bg-cover bg-center" />
+              <div className="w-full h-full bg-[url('https://images.unsplash.com/photo-1504384308090-c894fdcc538d')] bg-cover bg-center" />
             </div>
           </motion.div>
         </div>

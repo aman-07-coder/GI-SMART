@@ -13,6 +13,9 @@ const PROGRAMS = [
 const ApplyNowForm = () => {
   const [currentStep, setCurrentStep] = useState(1)
   const [preferenceError, setPreferenceError] = useState('')
+  const [submitting, setSubmitting] = useState(false)
+  const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle')
+  const [submitErrorMsg, setSubmitErrorMsg] = useState('')
   const [formData, setFormData] = useState({
     // Personal Information
     firstName: '',
@@ -120,10 +123,75 @@ const ApplyNowForm = () => {
     }
   }
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const submitFormOnlyOnSubmitButton = (e: React.FormEvent) => {
     e.preventDefault()
-    console.log('Form submitted:', formData)
-    // Handle form submission
+  }
+
+  const sendApplication = async () => {
+    setSubmitting(true)
+    setSubmitStatus('idle')
+    setSubmitErrorMsg('')
+    let timeoutId: ReturnType<typeof setTimeout> | undefined
+    try {
+      const formDataToSend = new FormData()
+      const fileKeys = ['cvResume', 'passport', 'academicTranscripts', 'academicCertificates', 'englishTestCertificate']
+      Object.entries(formData).forEach(([key, value]) => {
+        if (fileKeys.includes(key)) {
+          if (value instanceof File) formDataToSend.append(key, value)
+        } else {
+          formDataToSend.append(key, value === null || value === undefined ? '' : String(value))
+        }
+      })
+      const formspreeId = process.env.NEXT_PUBLIC_FORMSPREE_FORM_ID?.trim()
+      let submitUrl = '/api/submit-application'
+      let useFormspree = false
+      if (formspreeId) {
+        submitUrl = `https://formspree.io/f/${formspreeId}`
+        useFormspree = true
+      } else if (typeof window !== 'undefined' && window.location?.hostname) {
+        const host = window.location.hostname.toLowerCase()
+        if (host !== 'localhost' && host !== '127.0.0.1') {
+          submitUrl = window.location.origin + '/submit.php'
+        } else if (process.env.NEXT_PUBLIC_SUBMIT_URL) {
+          submitUrl = process.env.NEXT_PUBLIC_SUBMIT_URL
+        }
+      } else if (process.env.NEXT_PUBLIC_SUBMIT_URL) {
+        submitUrl = process.env.NEXT_PUBLIC_SUBMIT_URL
+      }
+      if (typeof window !== 'undefined') console.log('[GI-SMART Form] Submitting to:', submitUrl)
+      const controller = new AbortController()
+      timeoutId = setTimeout(() => controller.abort(), 90000)
+      const headers: HeadersInit = useFormspree ? { Accept: 'application/json' } : {}
+      const res = await fetch(submitUrl, {
+        method: 'POST',
+        body: formDataToSend,
+        signal: controller.signal,
+        ...(Object.keys(headers).length ? { headers } : {}),
+      })
+      const data = await res.json().catch(() => ({}))
+      const success = useFormspree ? res.ok && !(Array.isArray(data.errors) && data.errors.length) : (res.ok && !!data.success)
+      if (success) {
+        setSubmitStatus('success')
+      } else {
+        setSubmitStatus('error')
+        const msg = useFormspree && Array.isArray(data.errors)
+          ? data.errors.map((e: { message?: string }) => e?.message).filter(Boolean).join(', ') || 'Submission failed.'
+          : (typeof data?.message === 'string' ? data.message : '')
+        setSubmitErrorMsg(msg || (res.ok ? 'Submission failed.' : `Server error (${res.status}). Please try again.`))
+      }
+    } catch (err) {
+      setSubmitStatus('error')
+      const isAbort = err instanceof Error && err.name === 'AbortError'
+      setSubmitErrorMsg(isAbort ? 'Request took too long. Please try again.' : 'Network error. Please check your connection and try again.')
+    } finally {
+      if (timeoutId !== undefined) clearTimeout(timeoutId)
+      setSubmitting(false)
+    }
+  }
+
+  const handleSubmitButtonClick = () => {
+    if (currentStep !== 5) return
+    sendApplication()
   }
 
   const steps = [
@@ -135,15 +203,15 @@ const ApplyNowForm = () => {
   ]
 
   return (
-    <div className="max-w-4xl mx-auto bg-gradient-to-br from-[#0a1628] to-[#1a2332] rounded-lg shadow-xl overflow-hidden">
-      {/* Progress Indicator */}
-      <div className="bg-white px-8 py-6 border-b border-gray-200">
-        <div className="flex items-center justify-between">
+    <div className="w-full max-w-4xl mx-auto bg-gradient-to-br from-[#0a1628] to-[#1a2332] rounded-none sm:rounded-lg shadow-xl overflow-hidden min-w-0">
+      {/* Progress Indicator - compact on mobile, no clip */}
+      <div className="bg-white px-3 sm:px-6 lg:px-8 py-3 sm:py-6 border-b border-gray-200 overflow-visible">
+        <div className="flex items-center justify-between gap-1">
           {steps.map((step, index) => (
-            <div key={step.number} className="flex items-center flex-1">
-              <div className="flex flex-col items-center">
+            <div key={step.number} className="flex items-center flex-1 min-w-0">
+              <div className="flex flex-col items-center w-full min-w-0">
                 <div
-                  className={`w-12 h-12 rounded-full flex items-center justify-center font-bold text-sm transition-all duration-300 ${
+                  className={`w-9 h-9 sm:w-12 sm:h-12 rounded-full flex items-center justify-center font-bold text-xs sm:text-sm transition-all duration-300 shrink-0 ${
                     currentStep >= step.number
                       ? 'bg-gradient-to-br from-[#0a1628] to-[#1a2332] text-white'
                       : 'bg-gray-200 text-gray-500'
@@ -152,16 +220,17 @@ const ApplyNowForm = () => {
                   {step.number}
                 </div>
                 <span
-                  className={`text-xs font-semibold mt-2 ${
+                  className={`text-[10px] sm:text-xs font-semibold mt-1 sm:mt-2 truncate w-full text-center block ${
                     currentStep >= step.number ? 'text-[#8b1538]' : 'text-gray-400'
                   }`}
+                  title={step.label}
                 >
                   {step.label}
                 </span>
               </div>
               {index < steps.length - 1 && (
                 <div
-                  className={`flex-1 h-1 mx-2 transition-all duration-300 ${
+                  className={`flex-1 h-1 mx-0.5 sm:mx-2 min-w-2 transition-all duration-300 shrink ${
                     currentStep > step.number ? 'bg-gradient-to-br from-[#0a1628] to-[#1a2332]' : 'bg-gray-200'
                   }`}
                 />
@@ -172,7 +241,7 @@ const ApplyNowForm = () => {
       </div>
 
       {/* Form Content */}
-      <form onSubmit={handleSubmit} className="p-8">
+      <form onSubmit={submitFormOnlyOnSubmitButton} className="p-4 min-[480px]:p-5 sm:p-6 lg:p-8">
         <AnimatePresence mode="wait">
           {/* Step 1: Personal Information */}
           {currentStep === 1 && (
@@ -187,7 +256,7 @@ const ApplyNowForm = () => {
                 Personal Information
               </h2>
 
-              <div className="grid grid-cols-2 gap-6 mt-6">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-6">
                 <div>
                   <label htmlFor="firstName" className="block text-white/90 font-semibold mb-2">
                     First Name <span className="text-red-400">*</span>
@@ -289,7 +358,7 @@ const ApplyNowForm = () => {
                   />
                 </div>
 
-                <div className="col-span-2">
+                <div className="md:col-span-2">
                   <label htmlFor="passportExpiryDate" className="block text-white/90 font-semibold mb-2">
                     Passport Expiry Date <span className="text-red-500">*</span>
                   </label>
@@ -323,7 +392,7 @@ const ApplyNowForm = () => {
                 Contact Information
               </h2>
 
-              <div className="grid grid-cols-2 gap-6 mt-6">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-6">
                 <div>
                   <label htmlFor="email" className="block text-white/90 font-semibold mb-2">
                     Email Address <span className="text-red-500">*</span>
@@ -356,7 +425,7 @@ const ApplyNowForm = () => {
                   />
                 </div>
 
-                <div className="col-span-2">
+                <div className="md:col-span-2">
                   <label htmlFor="address" className="block text-white/90 font-semibold mb-2">
                     Address <span className="text-red-500">*</span>
                   </label>
@@ -435,7 +504,7 @@ const ApplyNowForm = () => {
                 Academic Information
               </h2>
 
-              <div className="grid grid-cols-2 gap-6 mt-6">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-6">
                 <div>
                   <label htmlFor="programOfInterest" className="block text-white/90 font-semibold mb-2">
                     Program of Interest <span className="text-red-500">*</span>
@@ -576,7 +645,7 @@ const ApplyNowForm = () => {
                   />
                 </div>
 
-                <div className="col-span-2">
+                <div className="md:col-span-2">
                   <label htmlFor="workExperience" className="block text-white/90 font-semibold mb-2">
                     Work Experience (if any)
                   </label>
@@ -644,7 +713,7 @@ const ApplyNowForm = () => {
               {/* Program ranking explanation */}
               <p className="text-white/90 font-semibold mb-2">Rank programs (1 = highest preference)</p>
               <p className="text-white/70 text-sm mb-2">We offer: BBA, BCIS, and BAID. Select each program exactly once.</p>
-              <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-6">
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
                 {(['First', 'Second', 'Third'] as const).map((order, i) => {
                   const key = `programRank${['First', 'Second', 'Third'][i]}` as 'programRankFirst' | 'programRankSecond' | 'programRankThird'
                   return (
@@ -836,14 +905,25 @@ const ApplyNowForm = () => {
           )}
         </AnimatePresence>
 
+        {submitStatus === 'success' && (
+          <div className="mt-6 p-4 rounded-lg bg-green-500/20 border border-green-400/50 text-green-200 text-center">
+            Thank you! Your application has been submitted successfully. We will be in touch soon.
+          </div>
+        )}
+        {submitStatus === 'error' && (
+          <div className="mt-6 p-4 rounded-lg bg-red-500/20 border border-red-400/50 text-red-200 text-center">
+            {submitErrorMsg || 'Something went wrong. Please try again or contact us directly.'}
+          </div>
+        )}
+
         {/* Navigation Buttons */}
         <div className="flex justify-between items-center mt-8 pt-6 border-t border-white/20">
           <button
             type="button"
             onClick={previousStep}
-            disabled={currentStep === 1}
+            disabled={currentStep === 1 || submitting}
             className={`px-8 py-3 rounded-full font-semibold transition-all duration-300 ${
-              currentStep === 1
+              currentStep === 1 || submitting
                 ? 'bg-white/20 text-white/50 cursor-not-allowed'
                 : 'bg-white border-2 border-white text-[#8b1538] hover:bg-white/90'
             }`}
@@ -862,10 +942,12 @@ const ApplyNowForm = () => {
             </button>
           ) : (
             <button
-              type="submit"
-              className="px-8 py-3 rounded-full font-semibold bg-gradient-to-b from-[#0a1628] to-[#8b1538] text-white hover:from-[#8b1538] hover:to-[#0a1628] transition-all duration-300 flex items-center gap-2"
+              type="button"
+              disabled={submitting}
+              onClick={handleSubmitButtonClick}
+              className="px-8 py-3 rounded-full font-semibold bg-gradient-to-b from-[#0a1628] to-[#8b1538] text-white hover:from-[#8b1538] hover:to-[#0a1628] transition-all duration-300 flex items-center gap-2 disabled:opacity-70 disabled:cursor-not-allowed"
             >
-              Submit Application
+              {submitting ? 'Submitting...' : 'Submit Application'}
               <FaExternalLinkAlt />
             </button>
           )}

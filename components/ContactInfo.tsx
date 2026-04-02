@@ -147,7 +147,7 @@ const ContactInfo = () => {
                     href="mailto:studentsupport-ug@GI-SMART.org"
                     className="font-bold text-lg md:text-xl text-[#00ff88] hover:underline inline-block group-hover:text-[#00ff88] transition-colors"
                   >
-                    studentsupport-ug@GI-SMART.org
+                    Inquiries@gi-smart.com
                   </a>
                 </motion.div>
                 <motion.div
@@ -163,7 +163,7 @@ const ContactInfo = () => {
                     href="mailto:studentsupport-pg@GI-SMART.com"
                     className="font-bold text-lg md:text-xl text-[#00ff88] hover:underline inline-block group-hover:text-[#00ff88] transition-colors"
                   >
-                    studentsupport-pg@GI-SMART.com
+                    studentsupport-@gi-smart.com
                   </a>
                 </motion.div>
                 <motion.div
@@ -176,10 +176,10 @@ const ContactInfo = () => {
                 >
                   <p className="text-white/80 mb-2 text-sm">For general inquiries, reach out to:</p>
                   <a
-                    href="mailto:info@GI-SMART.org"
+                    href="mailto:info@GI-SMART.com"
                     className="font-bold text-lg md:text-xl text-[#00ff88] hover:underline inline-block group-hover:text-[#00ff88] transition-colors"
                   >
-                    info@GI-SMART.org
+                    info@gi-smart.com
                   </a>
                 </motion.div>
               </div>

@@ -166,11 +166,11 @@ const BBATourismCurriculumSection = () => {
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto mb-8">
             <div className="bg-[#f0f8f0] rounded-lg p-6">
-              <div className="text-3xl font-bold text-[#8b1538] mb-2">4 Years</div>
+              <div className="text-3xl font-bold text-[#8b1538] mb-2">3 Years</div>
               <div className="text-gray-700">Program Duration</div>
             </div>
             <div className="bg-[#f0f8f0] rounded-lg p-6">
-              <div className="text-3xl font-bold text-[#8b1538] mb-2">12 Terms</div>
+              <div className="text-3xl font-bold text-[#8b1538] mb-2">9 Terms</div>
               <div className="text-gray-700">3 Terms per Year</div>
             </div>
             <div className="bg-[#f0f8f0] rounded-lg p-6">
@@ -182,7 +182,7 @@ const BBATourismCurriculumSection = () => {
 
         {/* Year Selector */}
         <div className="flex flex-wrap justify-center gap-4 mb-12">
-          {[1, 2, 3, 4].map((year) => (
+          {[1, 2, 3].map((year) => (
             <button
               key={year}
               onClick={() => {

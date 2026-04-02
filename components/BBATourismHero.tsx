@@ -25,7 +25,7 @@ const BBATourismHero = () => {
               Bachelor of Business Administration in <span className="font-extrabold">Tourism and Hospitality Innovation</span>
             </h1>
             <p className="text-lg md:text-xl mb-6 text-white/90">
-              4 Years • 12 Academic Terms • Global Service Ecosystems
+              3 Years • 9 Academic Terms • Global Service Ecosystems
             </p>
             <p className="text-base md:text-lg mb-8 text-white/80 leading-relaxed">
               Prepare for the next generation of smart tourism, luxury experiences, and sustainable hospitality management. Learn how to integrate innovation, digital systems, and sustainability into global service ecosystems.

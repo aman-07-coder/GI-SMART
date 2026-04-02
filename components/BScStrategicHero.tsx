@@ -25,7 +25,7 @@ const BScStrategicHero = () => {
               Bachelor of Science in <span className="font-extrabold">Strategic Management</span>
             </h1>
             <p className="text-lg md:text-xl mb-6 text-white/90">
-              4 Years • 12 Academic Terms • Global Leadership Focus
+              3 Years • 9 Academic Terms • Global Leadership Focus
             </p>
             <p className="text-base md:text-lg mb-8 text-white/80 leading-relaxed">
               Prepare globally minded leaders who can navigate complex, data-driven organizations. Blends strategic analysis, financial literacy, and technological innovation to build resilient and future-ready professionals.
@@ -62,7 +62,7 @@ const BScStrategicHero = () => {
           >
             <div className="relative rounded-lg overflow-hidden">
               <div className="aspect-[4/5] bg-gray-900 rounded-lg relative overflow-hidden">
-                <div className="w-full h-full bg-[url('https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80')] bg-cover bg-center" />
+                <div className="w-full h-full bg-[url('https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80')] bg-cover bg-center" />
               </div>
             </div>
             

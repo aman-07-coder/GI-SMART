@@ -6,13 +6,9 @@ import MScAAIDSCurriculumSection from '@/components/MScAAIDSCurriculumSection'
 import MScAAIDSSpecializations from '@/components/MScAAIDSSpecializations'
 import MScAAIDSInfoSection from '@/components/MScAAIDSInfoSection'
 import AIDegreeAccreditation from '@/components/AIDegreeAccreditation'
-import LearningInAction from '@/components/LearningInAction'
-import ProgramFaculty from '@/components/ProgramFaculty'
 import AdmissionsProcess from '@/components/AdmissionsProcess'
-import AIFeeStructure from '@/components/AIFeeStructure'
 import ProgramScholarships from '@/components/ProgramScholarships'
 import ProgramCareers from '@/components/ProgramCareers'
-import TetrInTheNews from '@/components/TetrInTheNews'
 import ProgramFAQ from '@/components/ProgramFAQ'
 
 export default function MScAppliedAIDataSystemsPage() {
@@ -30,13 +26,9 @@ export default function MScAppliedAIDataSystemsPage() {
       <MScAAIDSCurriculumSection />
       <MScAAIDSSpecializations />
       <MScAAIDSInfoSection />
-      <LearningInAction />
-      <ProgramFaculty />
       <AdmissionsProcess />
-      <AIFeeStructure />
       <ProgramScholarships />
       <ProgramCareers />
-      <TetrInTheNews />
       <ProgramFAQ />
       <Footer />
     </main>

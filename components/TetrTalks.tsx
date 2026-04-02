@@ -8,19 +8,19 @@ const videos = [
     id: 1,
     title: "Parents' Message to the GI-SMART Tribe",
     description: "Meet the proud Parents of GI-SMART's first landmark cohort.",
-    image: 'https://images.unsplash.com/photo-1522202176988-66273c2fd55f',
+    image: 'https://images.unsplash.com/photo-1461749280684-dccba630e2f6',
   },
   {
     id: 2,
     title: "GI-SMART Talks Ep 2: Sabeer Bhatia, Inventor of Email",
     description: "Sabeer Bhatia shares his insights on entrepreneurship, Silicon Valley and AI's future.",
-    image: 'https://images.unsplash.com/photo-1552664730-d307ca884978',
+    image: 'https://images.unsplash.com/photo-1521737604893-d14cc237f11d',
   },
   {
     id: 3,
     title: "Meet the GI-SMART Tribe: Class of 2028",
     description: "Our diverse cohort of 120 exceptional achievers come from 45 nations.",
-    image: 'https://images.unsplash.com/photo-1524178232363-1fb2b075b655',
+    image: 'https://images.unsplash.com/photo-1518600506278-4e8ef466b810',
   },
 ]
 

@@ -13,8 +13,8 @@ const WeekAtTetr = () => {
     {
       day: 'Tuesday',
       activities: [
-        { title: 'CXO Lesson: Mr. Sven Hering, CTO, Talbat', image: 'https://images.unsplash.com/photo-1524178232363-1fb2b075b655?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80' },
-        { title: 'Dropshipping Hours: Term Project', image: 'https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80' },
+        { title: 'CXO Lesson: Mr. Sven Hering, CTO, Talbat', image: 'https://images.unsplash.com/photo-1519389950473-47ba0277781c?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80' },
+        { title: 'Dropshipping Hours: Term Project', image: 'https://images.unsplash.com/photo-1461749280684-dccba630e2f6?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80' },
         { title: 'Academic Immersion: How to develop a product mindset', image: 'https://images.unsplash.com/photo-1522542554221-31fd19f3e6a4?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80' },
         { title: 'Networking Dinner', image: null },
       ]
@@ -22,8 +22,8 @@ const WeekAtTetr = () => {
     {
       day: 'Wednesday',
       activities: [
-        { title: 'Dropshipping Hours: Term Project', image: 'https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80' },
-        { title: 'Skill Shop: How to run digital ads on Tik Tok & Meta', image: 'https://images.unsplash.com/photo-1522542554221-31fd19f3e6a4?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80' },
+        { title: 'Dropshipping Hours: Term Project', image: 'https://images.unsplash.com/photo-1559136555-9303baea8ebd?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80' },
+        { title: 'Skill Shop: How to run digital ads on Tik Tok & Meta', image: 'https://images.unsplash.com/photo-1496171367470-9ed9a91ea931?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80' },
         { title: 'Networking Dinner', image: null },
       ]
     },
@@ -31,15 +31,15 @@ const WeekAtTetr = () => {
       day: 'Thursday',
       activities: [
         { title: 'Personal Development: Meditation Sprint', image: 'https://images.unsplash.com/photo-1506126613408-eca07ce68773?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80' },
-        { title: 'Personal Development: Weekly Reflection Seminar', image: 'https://images.unsplash.com/photo-1524178232363-1fb2b075b655?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80' },
+        { title: 'Personal Development: Weekly Reflection Seminar', image: 'https://images.unsplash.com/photo-1521737711867-e3b97375f902?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80' },
         { title: 'Dropshipping Hours: Term Project', image: null },
       ]
     },
     {
       day: 'Friday',
       activities: [
-        { title: 'Academic Immersion: Consumer Behavior & Research', image: 'https://images.unsplash.com/photo-1524178232363-1fb2b075b655?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80' },
-        { title: 'Personal Development: How to become a better leader', image: 'https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80' },
+        { title: 'Academic Immersion: Consumer Behavior & Research', image: 'https://images.unsplash.com/photo-1515169067868-5387ec356754?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80' },
+        { title: 'Personal Development: How to become a better leader', image: 'https://images.unsplash.com/photo-1551836022-deb4988cc6c0?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80' },
         { title: 'Leaders Roundtable: Finance Professionals', image: null },
         { title: 'Networking Dinner', image: null },
       ]
@@ -47,7 +47,7 @@ const WeekAtTetr = () => {
     {
       day: 'Saturday',
       activities: [
-        { title: 'Business Immersion: Meet the Emaar leadership at their Global HQ', image: 'https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80' },
+        { title: 'Business Immersion: Meet the Emaar leadership at their Global HQ', image: 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80' },
       ]
     },
     {

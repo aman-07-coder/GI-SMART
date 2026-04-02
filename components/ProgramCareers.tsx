@@ -127,7 +127,7 @@ const ProgramCareers = () => {
               <div className="absolute -bottom-4 -left-4 w-16 h-16 bg-pink-400 opacity-30 rounded-lg"></div>
               <div className="rounded-lg overflow-hidden shadow-lg relative z-10">
                 <div className="aspect-[4/5] bg-gray-200">
-                  <div className="w-full h-full bg-[url('https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80')] bg-cover bg-center" />
+                  <div className="w-full h-full bg-[url('https://images.unsplash.com/photo-1521791136064-7986c2920216?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80')] bg-cover bg-center" />
                 </div>
               </div>
             </div>

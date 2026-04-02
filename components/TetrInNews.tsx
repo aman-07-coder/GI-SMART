@@ -19,13 +19,13 @@ const newsItems = [
   {
     source: 'FT Education.com',
     headline: "Global Survey by GI-SMART College of Business unveils key gaps in Business Education and growing importance of 'Founder Mode'",
-    image: 'https://images.unsplash.com/photo-1521737604893-d14cc237f11d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+    image: 'https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
     logoColor: 'text-red-600',
   },
   {
     source: 'Gulf News',
     headline: 'GI-SMART College of Business launches a cross-border business programme across 7 countries',
-    image: 'https://images.unsplash.com/photo-1521737604893-d14cc237f11d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+    image: 'https://images.unsplash.com/photo-1519389950473-47ba0277781c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
     logoColor: 'text-gray-800',
   },
 ]

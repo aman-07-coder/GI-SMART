@@ -2,6 +2,8 @@ const path = require('path')
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  output: 'export', // GoDaddy ke liye: build se "out" folder aayega (static HTML), .next nahi use karna
+  trailingSlash: true, // Static hosting refresh/direct route support
   reactStrictMode: true,
   images: {
     domains: [],

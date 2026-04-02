@@ -43,7 +43,7 @@ const Footer = () => {
                 </a>
               </div>
               <div className="text-white/80 text-xs sm:text-sm">
-                Email: info@gismart.org
+                Email: info@gismart.com
               </div>
             </div>
           </div>

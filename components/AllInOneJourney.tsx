@@ -22,7 +22,7 @@ const videos = [
   },
   {
     title: 'GI-SMART Tribe @ GITEX 2024 Dubai',
-    image: 'https://images.unsplash.com/photo-1522202176988-66273c2fd55f',
+    image: 'https://images.unsplash.com/photo-1517248135467-4c7edcad34c4',
   },
 ]
 

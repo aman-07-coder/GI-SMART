@@ -6,15 +6,10 @@ import BAIDCurriculumSection from '@/components/BAIDCurriculumSection'
 import BAIDSpecializations from '@/components/BAIDSpecializations'
 import BAIDCampusMobility from '@/components/BAIDCampusMobility'
 import AIDegreeAccreditation from '@/components/AIDegreeAccreditation'
-import WeekAtTetr from '@/components/WeekAtTetr'
-import LearningInAction from '@/components/LearningInAction'
-import ProgramFaculty from '@/components/ProgramFaculty'
 import AdmissionsProcess from '@/components/AdmissionsProcess'
-import AIFeeStructure from '@/components/AIFeeStructure'
 import LivingCosts from '@/components/LivingCosts'
 import ProgramScholarships from '@/components/ProgramScholarships'
 import ProgramCareers from '@/components/ProgramCareers'
-import TetrInTheNews from '@/components/TetrInTheNews'
 import ProgramFAQ from '@/components/ProgramFAQ'
 
 export default function BachelorAIDesignPage() {
@@ -23,7 +18,7 @@ export default function BachelorAIDesignPage() {
       <Navbar />
       <BachelorAIDHero />
       <ProgramOverview 
-        duration="4 Years"
+        duration="3 Years (France)"
         location="Hybrid (Online + In-Lab + Studio)"
         eligibility="Grade XII"
         format="Trimester System"
@@ -33,15 +28,10 @@ export default function BachelorAIDesignPage() {
       <BAIDCampusMobility />
       <BAIDSpecializations />
       <AIDegreeAccreditation />
-      <WeekAtTetr />
-      <LearningInAction />
-      <ProgramFaculty />
       <AdmissionsProcess />
-      <AIFeeStructure />
       <LivingCosts />
       <ProgramScholarships />
       <ProgramCareers />
-      <TetrInTheNews />
       <ProgramFAQ />
       <Footer />
     </main>

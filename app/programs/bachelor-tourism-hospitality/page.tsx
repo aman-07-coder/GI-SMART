@@ -4,14 +4,9 @@ import BBATourismHero from '@/components/BBATourismHero'
 import ProgramOverview from '@/components/ProgramOverview'
 import BBATourismCurriculumSection from '@/components/BBATourismCurriculumSection'
 import AIDegreeAccreditation from '@/components/AIDegreeAccreditation'
-import WeekAtTetr from '@/components/WeekAtTetr'
-import LearningInAction from '@/components/LearningInAction'
-import ProgramFaculty from '@/components/ProgramFaculty'
 import AdmissionsProcess from '@/components/AdmissionsProcess'
-import AIFeeStructure from '@/components/AIFeeStructure'
 import ProgramScholarships from '@/components/ProgramScholarships'
 import ProgramCareers from '@/components/ProgramCareers'
-import TetrInTheNews from '@/components/TetrInTheNews'
 import ProgramFAQ from '@/components/ProgramFAQ'
 
 export default function BBATourismHospitalityPage() {
@@ -20,22 +15,17 @@ export default function BBATourismHospitalityPage() {
       <Navbar />
       <BBATourismHero />
       <ProgramOverview 
-        duration="4 Years"
+        duration="3 Years"
         location="Multi-Campus Global"
         eligibility="Grade XII"
-        format="12 Terms (3 per Year)"
+        format="9 Terms (3 per Year)"
         startDate="Fall 2026"
       />
       <BBATourismCurriculumSection />
       <AIDegreeAccreditation />
-      <WeekAtTetr />
-      <LearningInAction />
-      <ProgramFaculty />
       <AdmissionsProcess />
-      <AIFeeStructure />
       <ProgramScholarships />
       <ProgramCareers />
-      <TetrInTheNews />
       <ProgramFAQ />
       <Footer />
     </main>

@@ -42,7 +42,7 @@ const TetrLaunchpad = () => {
             className="relative"
           >
             <div className="aspect-video bg-gray-900 rounded-lg overflow-hidden relative group cursor-pointer">
-              <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1522202176988-66273c2fd55f')] bg-cover bg-center" />
+              <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1559136555-9303baea8ebd')] bg-cover bg-center" />
               <div className="absolute inset-0 flex items-center justify-center">
                 <motion.div
                   whileHover={{ scale: 1.1 }}

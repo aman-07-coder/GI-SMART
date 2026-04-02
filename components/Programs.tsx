@@ -21,7 +21,7 @@ const programs = [
   {
     id: 3,
     title: 'Undergraduate Programs',
-    duration: '4 Years',
+    duration: '3 Years',
     description: 'Foundation-building programs with modern curriculum and practical experience.',
     features: ['Internships', 'Study Abroad', 'Research'],
   },

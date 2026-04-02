@@ -8,19 +8,19 @@ const creators = [
     name: 'ANJALI CHHETRI',
     handle: '@anjalichh.127',
     country: '🇧🇹',
-    image: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330',
+    image: 'https://images.unsplash.com/photo-1544005313-94ddf0286df2',
   },
   {
     name: 'ANUSKA SUBEDI',
     handle: '@anuska._.subedi',
     country: '🇳🇵',
-    image: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80',
+    image: 'https://images.unsplash.com/photo-1488426862026-3ee34a7d66df',
   },
   {
     name: 'Creator 3',
     handle: '@creator3',
     country: '🇮🇳',
-    image: 'https://images.unsplash.com/photo-1522202176988-66273c2fd55f',
+    image: 'https://images.unsplash.com/photo-1524504388940-b1c1722653e1',
   },
 ]
 

@@ -9,7 +9,7 @@ const programs = [
   {
     id: 1,
     title: 'Bachelor of Artificial Intelligence Design (BAID)',
-    tags: ['4 Years', '12 Terms', 'Hybrid Model'],
+    tags: ['3 Years (France)', '9 Terms', 'Hybrid Model'],
     partner: 'PEARSON HIGHER EDUCATION',
     partnerText: 'Anchor Publisher: Pearson Higher Education',
     image: 'https://images.unsplash.com/photo-1485827404703-89b55fcc595e',
@@ -27,7 +27,7 @@ const programs = [
   {
     id: 3,
     title: 'BBA in Tourism & Hospitality Innovation',
-    tags: ['4 Years', '12 Terms', 'Global Service'],
+    tags: ['3 Years', '9 Terms', 'Global Service'],
     partner: 'GI-SMART',
     partnerText: 'Smart tourism, luxury experiences & sustainable hospitality',
     image: 'https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80',
@@ -36,7 +36,7 @@ const programs = [
   {
     id: 4,
     title: 'BSc in Strategic Management',
-    tags: ['4 Years', '12 Terms', 'Global Leadership'],
+    tags: ['3 Years', '9 Terms', 'Global Leadership'],
     partner: 'GI-SMART',
     partnerText: 'Strategic analysis, financial literacy & technological innovation',
     image: 'https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80',

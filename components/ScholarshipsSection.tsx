@@ -17,7 +17,7 @@ const ScholarshipsSection = () => {
             className="lg:col-span-2 relative"
           >
             <div className="aspect-[16/10] bg-gray-200 rounded-lg overflow-hidden">
-              <div className="w-full h-full bg-[url('https://images.unsplash.com/photo-1522202176988-66273c2fd55f')] bg-cover bg-center" />
+              <div className="w-full h-full bg-[url('https://images.unsplash.com/photo-1523240795612-9a054b0db644')] bg-cover bg-center" />
             </div>
           </motion.div>
 

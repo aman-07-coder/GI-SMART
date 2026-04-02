@@ -17,7 +17,7 @@ const Startups = () => {
             className="relative"
           >
             <div className="aspect-[9/16] bg-gray-900 rounded-lg overflow-hidden relative">
-              <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1522202176988-66273c2fd55f')] bg-cover bg-center" />
+              <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1553028826-f4804a6dba3b')] bg-cover bg-center" />
               <div className="absolute inset-0 flex items-center justify-center">
                 <div className="w-20 h-20 bg-[#ffd700] rounded-full flex items-center justify-center cursor-pointer hover:scale-110 transition-transform border-4 border-black">
                   <FaPlay className="text-2xl text-black ml-1" />

@@ -88,10 +88,10 @@ export default function TuitionPathwayPage() {
                     </tr>
                     <tr className="hover:bg-gray-50 bg-[#f0f8f0]">
                       <td className="px-3 sm:px-4 md:px-6 py-2 sm:py-3 md:py-4 font-semibold text-gray-900 text-xs sm:text-sm md:text-base">Degree</td>
-                      <td className="px-3 sm:px-4 md:px-6 py-2 sm:py-3 md:py-4 text-gray-700 text-xs sm:text-sm md:text-base">4 Years</td>
+                      <td className="px-3 sm:px-4 md:px-6 py-2 sm:py-3 md:py-4 text-gray-700 text-xs sm:text-sm md:text-base">3 Years (France)</td>
                       <td className="px-3 sm:px-4 md:px-6 py-2 sm:py-3 md:py-4 text-gray-700 text-xs sm:text-sm md:text-base">Bachelor of Artificial Intelligence Design</td>
                       <td className="px-3 sm:px-4 md:px-6 py-2 sm:py-3 md:py-4 font-bold text-[#8b1538] text-xs sm:text-sm md:text-base">€40,000</td>
-                      <td className="px-3 sm:px-4 md:px-6 py-2 sm:py-3 md:py-4 text-gray-700 text-xs sm:text-sm md:text-base">A globally recognized four-year degree integrating technology, design, and strategy for the AI-driven world. Includes cross-campus mobility options (Paris, Dubai, Germany, Bucharest).</td>
+                      <td className="px-3 sm:px-4 md:px-6 py-2 sm:py-3 md:py-4 text-gray-700 text-xs sm:text-sm md:text-base">A globally recognized three-year degree in France integrating technology, design, and strategy for the AI-driven world.</td>
                     </tr>
                   </tbody>
                 </table>

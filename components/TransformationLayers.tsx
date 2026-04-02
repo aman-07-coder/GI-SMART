@@ -100,7 +100,7 @@ const TransformationLayers = () => {
                 <div className="grid grid-cols-3 gap-4 mt-8">
                   {[1, 2, 3].map((i) => (
                     <div key={i} className="aspect-square bg-white/10 rounded-lg overflow-hidden">
-                      <div className="w-full h-full bg-[url('https://images.unsplash.com/photo-1522202176988-66273c2fd55f')] bg-cover bg-center" />
+                      <div className="w-full h-full bg-[url('https://images.unsplash.com/photo-1498050108023-c5249f4df085')] bg-cover bg-center" />
                     </div>
                   ))}
                 </div>
@@ -145,17 +145,17 @@ const TransformationLayers = () => {
                     { 
                       title: 'Immerse yourself in the history and heritage of Singapore.', 
                       subtitle: 'Singapore National Museum',
-                      image: 'https://images.unsplash.com/photo-1522202176988-66273c2fd55f'
+                      image: 'https://images.unsplash.com/photo-1485217988980-11786ced9454'
                     },
                     { 
                       title: 'Immerse into the business of Soccer at Flamengo, Brazil\'s most famous football club',
                       subtitle: '',
-                      image: 'https://images.unsplash.com/photo-1552664730-d307ca884978'
+                      image: 'https://images.unsplash.com/photo-1517048676732-d65bc937f952'
                     },
                     { 
                       title: 'Explore the business of high fashion at the Milan Fashion Week',
                       subtitle: '',
-                      image: 'https://images.unsplash.com/photo-1524178232363-1fb2b075b655'
+                      image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f'
                     },
                   ].map((exp, idx) => (
                     <div key={idx} className="bg-white rounded-lg overflow-hidden">
@@ -194,19 +194,19 @@ const TransformationLayers = () => {
                       title: 'Learn & practice proven', 
                       highlight: 'mental models', 
                       desc: 'to maximize performance and well being',
-                      image: 'https://images.unsplash.com/photo-1522202176988-66273c2fd55f'
+                      image: 'https://images.unsplash.com/photo-1506126613408-eca07ce68773'
                     },
                     { 
                       title: 'Spend mandated time in group', 
                       highlight: 'reflection therapies & journaling', 
                       desc: 'to nurture self development',
-                      image: 'https://images.unsplash.com/photo-1552664730-d307ca884978'
+                      image: 'https://images.unsplash.com/photo-1544717302-de2939b7ef71'
                     },
                     { 
                       title: 'From', 
                       highlight: 'Yoga to Tai Chi', 
                       desc: 'find the physical therapy that works the best for you',
-                      image: 'https://images.unsplash.com/photo-1524178232363-1fb2b075b655'
+                      image: 'https://images.unsplash.com/photo-1518611012118-696072aa579a'
                     },
                   ].map((item, idx) => (
                     <div key={idx} className="bg-white rounded-lg overflow-hidden">

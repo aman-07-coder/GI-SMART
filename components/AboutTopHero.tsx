@@ -89,7 +89,7 @@ const AboutTopHero = () => {
           >
             <div className="relative aspect-[4/5] rounded-lg overflow-hidden">
               {/* Main Image */}
-              <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1522202176988-66273c2fd55f')] bg-cover bg-center" />
+              <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1519085360753-af0119f7cbe7')] bg-cover bg-center" />
               
               {/* Overlay gradient */}
               <div className="absolute inset-0 bg-gradient-to-t from-[#0a0a0a] via-transparent to-transparent" />

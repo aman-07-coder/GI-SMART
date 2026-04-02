@@ -30,7 +30,7 @@ const LivingCosts = () => {
                 <div>
                   <h3 className="font-bold text-gray-900 mb-2">Residential and Amenities Costs</h3>
                   <p className="text-gray-700">
-                    Annually: <span className="font-bold">$8,854</span> | Total (4 Years): <span className="font-bold">$35,415</span>
+                    Annually: <span className="font-bold">$8,854</span> | Total (3 Years): <span className="font-bold">$26,562</span>
                   </p>
                 </div>
               </div>
@@ -41,7 +41,7 @@ const LivingCosts = () => {
                 <div>
                   <h3 className="font-bold text-gray-900 mb-2">Immigration, Travel & Local Charges</h3>
                   <p className="text-gray-700">
-                    Annually: <span className="font-bold">$2,050</span> | Total (4 Years): <span className="font-bold">$8,200</span>
+                    Annually: <span className="font-bold">$2,050</span> | Total (3 Years): <span className="font-bold">$6,150</span>
                   </p>
                 </div>
               </div>
@@ -52,7 +52,7 @@ const LivingCosts = () => {
                 <div>
                   <h3 className="font-bold text-gray-900 mb-2">Total Living Expenses</h3>
                   <p className="text-gray-700">
-                    Annually: <span className="font-bold">$10,904</span> | Total (4 Years): <span className="font-bold">$43,615</span>
+                    Annually: <span className="font-bold">$10,904</span> | Total (3 Years): <span className="font-bold">$32,712</span>
                   </p>
                 </div>
               </div>

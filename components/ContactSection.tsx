@@ -118,8 +118,8 @@ const ContactSection = () => {
                 </div>
                 <div>
                   <p className="text-white/90 mb-2">For general inquiries, reach out to:</p>
-                  <Link href="mailto:info@GI-SMART.org" className="text-[#ffd700] underline">
-                    info@GI-SMART.org
+                  <Link href="mailto:info@GI-SMART.com" className="text-[#ffd700] underline">
+                    info@GI-SMART.com
                   </Link>
                 </div>
               </div>

@@ -175,7 +175,7 @@ const BAIDCurriculumSection = () => {
 
         {/* Year Selector */}
         <div className="flex flex-wrap justify-center gap-4 mb-12">
-          {[1, 2, 3, 4].map((year) => (
+          {[1, 2, 3].map((year) => (
             <button
               key={year}
               onClick={() => {

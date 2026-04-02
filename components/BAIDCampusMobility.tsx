@@ -90,7 +90,7 @@ const BAIDCampusMobility = () => {
               <p className="text-sm text-gray-600 mt-3">Fostering community, diversity, and collaboration</p>
             </div>
             <div className="bg-[#8b1538] rounded-lg p-6 text-white">
-              <h4 className="text-xl font-bold mb-2">Years 3–4</h4>
+              <h4 className="text-xl font-bold mb-2">Year 3</h4>
               <p className="text-3xl font-bold mb-2">30–35</p>
               <p className="text-white/90">students per class</p>
               <p className="text-sm text-white/80 mt-3">Emphasizing mentorship, specialization, and project mastery</p>

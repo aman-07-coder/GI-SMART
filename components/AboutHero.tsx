@@ -245,7 +245,7 @@ const AboutHero = () => {
                       <div className="grid grid-cols-3 gap-3 md:gap-4 mt-8">
                         {[1, 2, 3].map((i) => (
                           <div key={i} className="aspect-square bg-white/10 rounded-lg overflow-hidden">
-                            <div className="w-full h-full bg-[url('https://images.unsplash.com/photo-1522202176988-66273c2fd55f')] bg-cover bg-center" />
+                            <div className="w-full h-full bg-[url('https://images.unsplash.com/photo-1504384308090-c894fdcc538d')] bg-cover bg-center" />
                           </div>
                         ))}
                       </div>

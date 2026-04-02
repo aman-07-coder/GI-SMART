@@ -25,7 +25,7 @@ const BachelorAIDHero = () => {
               Bachelor of Artificial Intelligence Design <span className="font-extrabold">(BAID)</span>
             </h1>
             <p className="text-lg md:text-xl mb-6 text-white/90">
-              4 Years • 12 Academic Terms • Hybrid Model (Online + In-Lab + Studio)
+              3 Years (France) • 9 Academic Terms • Hybrid Model (Online + In-Lab + Studio)
             </p>
             <p className="text-base md:text-lg mb-8 text-white/80">
               Anchor Publisher: <span className="font-semibold">Pearson Higher Education</span>

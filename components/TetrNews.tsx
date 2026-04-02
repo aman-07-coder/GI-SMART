@@ -23,7 +23,7 @@ const newsItems = [
   {
     source: 'GULF NEWS',
     title: 'GI-SMART College of Business launches a cross-border business programme across 7 continents',
-    image: 'https://images.unsplash.com/photo-1522202176988-66273c2fd55f',
+    image: 'https://images.unsplash.com/photo-1497215842964-222b430dc094',
   },
 ]
 

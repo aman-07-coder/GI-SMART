@@ -22,7 +22,7 @@ const BachelorAIHero = () => {
             className="text-white"
           >
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-8 leading-tight">
-              A 4 years <span className="font-extrabold">Bachelor of Science in Artificial Intelligence</span> in partnership with Illinois Institute of Technology.
+              A 3-year <span className="font-extrabold">Bachelor of Science in Artificial Intelligence</span> in partnership with Illinois Institute of Technology.
             </h1>
             
             <div className="flex flex-col sm:flex-row gap-4 mb-8">
